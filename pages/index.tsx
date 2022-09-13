@@ -1,7 +1,5 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 const Index: React.FC = () => {
@@ -9,19 +7,13 @@ const Index: React.FC = () => {
   return (
     <>
       <Head>
-        <title>{t('pageTitle')}</title>
-        <meta name="description" content={t('pageDescription')} />
+        <title>Ejemplo de página de EMP en TW</title>
+        <meta name="description" content="Ejemplo de página de EMP en TW" />
         <meta property="og:image" content="/assets/rocketLaptop.png" />
       </Head>
-      <h1>{t('pageTitle')}</h1>
+      <h1>Ejemplo de página de EMP en TW</h1>
     </>
   );
 };
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale || 'es', ['index'])),
-  },
-});
 
 export default Index;
