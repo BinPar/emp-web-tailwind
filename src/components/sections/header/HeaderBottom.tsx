@@ -13,7 +13,7 @@ const HeaderBottom: React.FC = () => (
             <a href='https://www.medicapanamericana.com/es/general/libros' className='h-16 flex items-center'>libros
             <ArrowDown strokeWidth={4} className='ml-2 w-4 h-4 group-hover:rotate-180 transition-all'/>
             <ul className='group-hover:block hidden absolute bg-white border-t-4 border-t-yellowmenu w-44 -bottom-full -left-2/4 p-5 border border-gray-200 '>
-              <li className='capitalize text-gray-500 hover:text-primary last:mb-4'>Papel</li>
+              <li className='capitalize text-gray-500 hover:text-primary'>Papel</li>
               <li className='capitalize text-gray-500 hover:text-primary last:mb-4'>Digital</li>
               <li className='capitalize text-gray-500 hover:text-primary last:mb-4'>DÚO</li>
             </ul>
