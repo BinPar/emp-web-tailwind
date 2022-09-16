@@ -1,5 +1,5 @@
 const plugin = require('tailwindcss/plugin');
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
@@ -13,24 +13,30 @@ module.exports = {
         yellowmenu: '#eedb4c',
         lightgray: '#f9f9f9',
         lightmidlegray: '#d2d2d2',
-        secondarygray: '#7a94a4'
+        darkgray: '#828282',
+        secondarygray: '#7a94a4',
       },
       backgroundImage: {
-        'slide': "url('/img/home.jpeg')",
+        slide: "url('/img/home.jpeg')",
       },
-      screens: {
-      },
+      screens: {},
       fontFamily: {
-        'sans': ['Muli', ...defaultTheme.fontFamily.sans],
+        sans: ['Muli', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
-        '1xs': ['0.815rem', {
-          letterSpacing: '1.15',
-        }],
-        '2xs': ['0.6rem', {
-          letterSpacing: '1.15',
-        }],
-      }
+        '1xs': [
+          '0.815rem',
+          {
+            letterSpacing: '1.15',
+          },
+        ],
+        '2xs': [
+          '0.6rem',
+          {
+            letterSpacing: '1.15',
+          },
+        ],
+      },
     },
   },
   plugins: [
