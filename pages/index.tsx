@@ -8,8 +8,6 @@ import HeaderBottom from '../src/components/sections/header/HeaderBottom';
 import SectionBanner from '../src/components/sections/banner/SectionBanner';
 
 
-
-
 const Index: React.FC = () => (
   <>
     <Head>
