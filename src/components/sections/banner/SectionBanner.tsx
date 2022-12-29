@@ -14,7 +14,7 @@ const HeaderBottom: React.FC = () => (
       <div className="bg-slide h-[430px] w-full bg-center bg-cover" />
     </a>
     <div className="flex justify-center mt-2.5">
-      <span className="w-2 h-2 bg-primaryvariant rounded-md mr-5" />
+      <span className="w-2 h-2 bg-primary variant rounded-md mr-5" />
       <span className="w-2 h-2 bg-slate-300 rounded-md mr-5" />
       <span className="w-2 h-2 bg-slate-300 rounded-md mr-5" />
       <span className="w-2 h-2 bg-slate-300 rounded-md mr-5" />

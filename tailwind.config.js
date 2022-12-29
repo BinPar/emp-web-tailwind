@@ -27,13 +27,20 @@ module.exports = {
         '1xs': [
           '0.815rem',
           {
-            letterSpacing: '1.15',
+            letterSpacing: '1.15px',
           },
         ],
         '2xs': [
           '0.6rem',
           {
             letterSpacing: '1.15',
+          },
+        ],
+        '2sm': [
+          '0.95rem',
+          {
+            lineHeight: '1.1rem',
+            letterSpacing: '1.5px',
           },
         ],
       },
