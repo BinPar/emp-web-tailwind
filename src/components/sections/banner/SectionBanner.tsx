@@ -5,7 +5,7 @@ import Card from '../../icons/Card';
 import Warranties from '../../icons/Warranties';
 import Lock from '../../icons/Lock';
 
-const HeaderBottom: React.FC = () => (
+const SectionBanner: React.FC = () => (
   <section className="mt-2.5">
     <a
       href="https://www.medicapanamericana.com/es/general/formacion/profesional-fisioterapeuta"
@@ -55,4 +55,4 @@ const HeaderBottom: React.FC = () => (
   </section>
 );
 
-export default HeaderBottom;
+export default SectionBanner;
