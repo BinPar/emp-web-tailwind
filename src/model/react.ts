@@ -7,7 +7,11 @@ export type WithChildren<T = {}> = { children?: React.ReactNode | undefined } & 
 
 export type WithClassName<T = {}> = { className?: string } & T;
 
-export type WithViewBox<T = {}> = { viewBox?: string } & T;
+export type WithHref<T = {}> = { href?: string } & T;
+
+export type WithInitials<T = {}> = { initials?: string } & T;
+
+export type WithFullText<T = {}> = { fullText?: string } & T;
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
