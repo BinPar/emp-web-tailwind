@@ -44,25 +44,27 @@ const currentPrice = ['1.351,50', '1.436,50'];
 const ItemNumber = 2;
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
 const ShortItem: React.FC<ShortItemProps> = ({src, title, author, type, initial, fullText, oldPrice, currentPrice}) => (
-  <li className="flex gap-4 items-start pb-5 min-w-[356px]">
-    <NormalLink href="#" className="block w-[155px] min-w-[155px]">
+  <li className="flex gap-4 items-start pb-5 lg:min-w-[356px]">
+    <NormalLink href="#" className="block min-w-[100px] w-[100px] lg:w-[155px] lg:min-w-[145px] text-center">
       <Image alt="item" src={src} width="1038" height="1046" />
+      <TypeLink href="#" className='lg:hidden inline'>{type}</TypeLink>
     </NormalLink>
-    <div className='pt-1'>
+    <div className='pt-1 w-full'>
       <NormalLink href="#" className='mb-2 block'>
         <BaseText>{title}</BaseText>
       </NormalLink>
       <NormalLink href="#" className='mb-2 block'>
-        <TinyText>{author}</TinyText>
+        <TinyText className='group-hover:text-primary'>{author}</TinyText>
       </NormalLink>
       <div className="flex items-center gap-2 mb-4">
-        <TypeLink href="#">{type}</TypeLink>
-        {initial === '' ? null : <NewItemBadge initials={initial} fullText={fullText} />}
+        <TypeLink href="#" className='hidden lg:inline'>{type}</TypeLink>
+        {initial === '' ? null : <NewItemBadge className='hidden lg:block' initials={initial} fullText={fullText} />}
       </div>
       <InfoWrap>
-        <Price className='mt-0'>
+        <Price className='mt-0 relative'>
           <OldPrice>{oldPrice}</OldPrice>
           <CurrentPrice>{currentPrice}</CurrentPrice>
+          {initial === '' ? null : <NewItemBadge className='block lg:hidden absolute left-44' initials={initial} fullText={fullText} />}
         </Price>
       </InfoWrap>
     </div>
@@ -95,7 +97,7 @@ const ItemShort: React.FC = () => {
 
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    <ul className="flex flex-col pl-12 ml-12 pt-5 border-l border-gray-200 gap-10">{itemsShort}</ul>
+    <ul className="flex flex-col md:flex-row lg:flex-col lg:pl-12 lg:ml-12 lg:pt-5 pt-8 mt-8 border-t lg:border-t-0 lg:border-l border-gray-200 gap-6">{itemsShort}</ul>
   );
 };
 

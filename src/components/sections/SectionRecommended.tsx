@@ -6,9 +6,9 @@ import SubHeader from './items/SubHeader';
 
 const Recommended: React.FC = () => (
   <Section className="bg-gray-50">
-    <DivWrapper>
+    <DivWrapper className='w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)]'>
       <SubHeader>RECOMENDADOS PANAMERICANA</SubHeader>
-      <div className="flex">
+      <div className="flex lg:flex-row flex-col">
         <ItemFull />
         <ItemsShort />
       </div>

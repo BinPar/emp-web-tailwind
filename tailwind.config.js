@@ -36,6 +36,12 @@ module.exports = {
             letterSpacing: '1.15',
           },
         ],
+        '3xs': [
+          '0.49rem',
+          {
+            letterSpacing: '1.15',
+          },
+        ],
         '2sm': [
           '0.95rem',
           {
@@ -47,6 +53,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/line-clamp'),
     plugin(function ({ addVariant }) {
       addVariant('current', "[aria-current='true']&");
     }),
