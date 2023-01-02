@@ -7,6 +7,7 @@ import HeaderMiddle from '../src/components/sections/header/HeaderMiddle';
 import HeaderBottom from '../src/components/sections/header/HeaderBottom';
 import SectionBanner from '../src/components/sections/banner/SectionBanner';
 import SectionRecommended from '../src/components/sections/SectionRecommended';
+import SectionExpert from '../src/components/sections/SectionExpert';
 
 const Index: React.FC = () => (
   <>
@@ -25,6 +26,7 @@ const Index: React.FC = () => (
     <main>
       <SectionBanner />
       <SectionRecommended />
+      <SectionExpert/>
     </main>
   </>
 );
