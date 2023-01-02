@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowDown from '../../icons/ArrowDown';
 
 const HeaderBottom: React.FC = () => (
-  <div className="mt-1 border-b border-gray-300">
+  <div className="mt-1 border-b border-gray-200">
     <ul className="uppercase text-1xs text-gray-500 tracking-widest flex justify-center">
       <li className="hover:text-primary border-b-4 border-b-white hover:border-yellowmenu group transition-all duration-300 relative">
         <a

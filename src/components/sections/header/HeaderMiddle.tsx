@@ -29,7 +29,7 @@ const HeaderMiddle: React.FC = () => (
         type="search"
         placeholder="Buscar..."
         id="search"
-        className="w-full outline-none placeholder-gray-400 font-thin tracking-widest py-2 border-b border-gray-300"
+        className="w-full outline-none placeholder-gray-400 font-thin tracking-widest py-2 border-b border-gray-200"
         autoComplete="off"
       />
       <button type="button" className="text-gray-400">
