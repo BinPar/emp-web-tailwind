@@ -14,7 +14,9 @@ const Expert: React.FC = () => (
       </div>
       <div className="w-1/2">
         <SubHeader>MÁSTERES</SubHeader>
-        <div className="flex lg:flex-row flex-col">HOLA</div>
+        <div className="flex lg:flex-row flex-col">
+        <ItemNormal/>
+        </div>
       </div>
     </DivWrapper>
   </Section>
