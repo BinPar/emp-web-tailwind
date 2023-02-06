@@ -39,7 +39,10 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
         />
       )}
     </div>
-    <NormalLink href="#" className="mb-2 lg:my-3 flex-col h-full justify-center !flex xl:min-h-[53px]">
+    <NormalLink
+      href="#"
+      className="mb-2 lg:my-3 flex-col h-full justify-center !flex xl:min-h-[53px]"
+    >
       <BaseText className="line-clamp-3 max-w-[250px]">{title}</BaseText>
     </NormalLink>
     <div className="flex h-full justify-end flex-col w-full">
@@ -53,7 +56,7 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
 
       <InfoWrap>
         <Price className="mt-0 relative lg:justify-center">
-          <OldPrice>{oldPrice}</OldPrice>
+          {oldPrice === '' ? null : <OldPrice>{oldPrice}</OldPrice>}
           <CurrentPrice>{currentPrice}</CurrentPrice>
           {initial === '' ? null : (
             <NewItemBadge
