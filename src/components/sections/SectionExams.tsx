@@ -46,7 +46,7 @@ const ItemNumber = 4;
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
 const NormalItem: React.FC<NormalItemProps> = ({src, title, author, type, initial, fullText, oldPrice, currentPrice,
 }) => (
-  <li className="flex items-start pb-5 flex-1 lg:flex-col lg:text-center md:min-w-[calc(50%_-_20px)]">
+  <li className="flex items-start pb-5 flex-1 lg:flex-col lg:text-center md:min-w-[calc(50%_-_20px)] lg:min-w-min">
     <ImageGroup src={src} type={type} />
     <InfoGroup
       title={title}
@@ -60,11 +60,11 @@ const NormalItem: React.FC<NormalItemProps> = ({src, title, author, type, initia
   </li>
 );
 
-const ItemNormal: React.FC = () => {
-  const [itemsExpert, setItemsExpert] = useState<React.ReactNode>();
+const ItemExams: React.FC = () => {
+  const [itemsExams, setItemsExams] = useState<React.ReactNode>();
 
   useEffect(() => {
-    setItemsExpert(
+    setItemsExams(
       Array(ItemNumber)
         .fill(0)
         .map((_, i) => (
@@ -92,7 +92,7 @@ const ItemNormal: React.FC = () => {
           <SubHeader>PREPARACIÓN DE EXÁMENES</SubHeader>
           <div className="flex lg:flex-row flex-col xl:h-[calc(100%_-_41px)] xl:max-h-[395px] justify-center">
             <ul className="flex flex-col md:flex-row xl:gap-16 gap-10 w-full md:flex-wrap lg:flex-nowrap gap">
-              {itemsExpert}
+              {itemsExams}
             </ul>
           </div>
         </div>
@@ -101,4 +101,4 @@ const ItemNormal: React.FC = () => {
   );
 };
 
-export default ItemNormal;
+export default ItemExams;

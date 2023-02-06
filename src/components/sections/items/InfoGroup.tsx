@@ -2,6 +2,7 @@ import BaseText from './BaseText';
 import CurrentPrice from './CurrentPrice';
 import InfoWrap from './InfoWrap';
 import NewItemBadge from './NewItemBadge';
+import NextPost from './NextPost';
 import NormalLink from './NormalLink';
 import OldPrice from './OldPrice';
 import Price from './Price';
@@ -12,6 +13,7 @@ interface InfoGroupProps {
   title: string;
   author: string;
   type: string;
+  type2?: string;
   initial: string;
   fullText: string;
   oldPrice: string;
@@ -21,6 +23,7 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
   title,
   author,
   type,
+  type2,
   initial,
   fullText,
   oldPrice,
@@ -28,9 +31,20 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
 }) => (
   <div className="pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0">
     <div className="flex items-center gap-2 justify-center lg:my-3 relative">
-      <TypeLink href="#" className="hidden lg:inline">
-        {type}
-      </TypeLink>
+      {type2 === undefined ? (
+        <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
+          {type}
+        </TypeLink>
+      ) : (
+        <>
+          <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
+            {type}
+          </TypeLink>
+          <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
+            {type2}
+          </TypeLink>
+        </>
+      )}
       {initial === '' ? null : (
         <NewItemBadge
           className="hidden lg:block absolute left-[calc(100%_+_5px);]"
@@ -57,7 +71,11 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
       <InfoWrap>
         <Price className="mt-0 relative lg:justify-center">
           {oldPrice === '' ? null : <OldPrice>{oldPrice}</OldPrice>}
-          <CurrentPrice>{currentPrice}</CurrentPrice>
+          {currentPrice !== 'prox' ? (
+            <CurrentPrice>{currentPrice}</CurrentPrice>
+          ) : (
+            <NextPost className="text-sm">Próxima publicación</NextPost>
+          )}
           {initial === '' ? null : (
             <NewItemBadge
               className="block lg:hidden absolute left-44"
