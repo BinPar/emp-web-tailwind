@@ -26,8 +26,8 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
   oldPrice,
   currentPrice,
 }) => (
-  <div className="pt-1 w-full flex flex-col h-full items-center">
-    <div className="flex items-center gap-2 justify-center my-3 relative">
+  <div className="pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0">
+    <div className="flex items-center gap-2 justify-center lg:my-3 relative">
       <TypeLink href="#" className="hidden lg:inline">
         {type}
       </TypeLink>
@@ -39,10 +39,10 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
         />
       )}
     </div>
-    <NormalLink href="#" className="mb-2 my-3 flex-col h-full justify-center !flex">
-      <BaseText className="line-clamp-3">{title}</BaseText>
+    <NormalLink href="#" className="mb-2 lg:my-3 flex-col h-full justify-center !flex xl:min-h-[53px]">
+      <BaseText className="line-clamp-3 max-w-[250px]">{title}</BaseText>
     </NormalLink>
-    <div className="flex h-full justify-end flex-col">
+    <div className="flex h-full justify-end flex-col w-full">
       <div className="min-h-[37px] max-h-[37px] line-clamp-2 ">
         <TinyText>
           <NormalLink href="#" className="block hover:text-primary">
@@ -52,7 +52,7 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
       </div>
 
       <InfoWrap>
-        <Price className="mt-0 relative justify-center">
+        <Price className="mt-0 relative lg:justify-center">
           <OldPrice>{oldPrice}</OldPrice>
           <CurrentPrice>{currentPrice}</CurrentPrice>
           {initial === '' ? null : (
