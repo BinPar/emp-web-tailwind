@@ -10,6 +10,7 @@ import SectionRecommended from '../src/components/sections/SectionRecommended';
 import SectionExpert from '../src/components/sections/SectionExpert';
 import SectionExams from '../src/components/sections/SectionExams';
 import SectionBooks from '../src/components/sections/SectionBooks';
+import Footer from '../src/components/sections/Footer';
 
 const Index: React.FC = () => (
   <>
@@ -32,6 +33,7 @@ const Index: React.FC = () => (
       <SectionExams/>
       <SectionBooks/>
     </main>
+    <Footer/>
   </>
 );
 

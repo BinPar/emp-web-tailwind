@@ -97,7 +97,7 @@ const SectionBooks: React.FC = () => {
       <DivWrapper className="flex md:gap-10 w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] flex-col md:flex-row gap-8">
         <div className="w-full">
           <SubHeader>LIBROS</SubHeader>
-          <div className="flex lg:flex-row flex-col xl:h-[calc(100%_-_41px)] xl:max-h-[395px] justify-center">
+          <div className="flex lg:flex-row flex-col justify-center">
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 flex-col md:flex-row xl:gap-16 gap-10 w-full md:flex-wrap gap">
               {itemsBooks}
             </ul>
