@@ -1,3 +1,6 @@
+import { twMerge } from 'tailwind-merge';
+import { WithClassName } from '../../../model/react';
+
 import BaseText from './BaseText';
 import CurrentPrice from './CurrentPrice';
 import InfoWrap from './InfoWrap';
@@ -19,7 +22,8 @@ interface InfoGroupProps {
   oldPrice: string;
   currentPrice: string;
 }
-const InfoGroup: React.FC<InfoGroupProps> = ({
+const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
+  className,
   title,
   author,
   type,
@@ -29,7 +33,9 @@ const InfoGroup: React.FC<InfoGroupProps> = ({
   oldPrice,
   currentPrice,
 }) => (
-  <div className="pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0">
+  <div
+    className={twMerge('pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0', className)}
+  >
     <div className="flex items-center gap-2 justify-center lg:my-3 relative">
       {type2 === undefined ? (
         <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">

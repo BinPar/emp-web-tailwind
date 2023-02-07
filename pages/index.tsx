@@ -11,6 +11,7 @@ import SectionExpert from '../src/components/sections/SectionExpert';
 import SectionExams from '../src/components/sections/SectionExams';
 import SectionBooks from '../src/components/sections/SectionBooks';
 import Footer from '../src/components/sections/Footer';
+import SectionCarousel from '../src/components/sections/items/SectionCarousel';
 
 const Index: React.FC = () => (
   <>
@@ -29,11 +30,12 @@ const Index: React.FC = () => (
     <main>
       <SectionBanner />
       <SectionRecommended />
-      <SectionExpert/>
-      <SectionExams/>
-      <SectionBooks/>
+      <SectionExpert />
+      <SectionExams />
+      <SectionBooks />
+      <SectionCarousel />
     </main>
-    <Footer/>
+    <Footer />
   </>
 );
 
