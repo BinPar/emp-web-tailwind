@@ -1,47 +1,37 @@
 import React from 'react';
 import Image from 'next/image';
+
 import DivWrapper from './items/DivWrapper';
+import ListLinks from './items/ListLinks';
+import MediaIconList from './items/MediaIconList';
+import SecurityIconList from './items/SecurityIconList';
 
 const footer: React.FC = () => (
   <footer className="bg-primary py-5 text-white">
-    <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] flex">
+    <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] flex justify-between mb-5 items-center flex-col lg:flex-row lg:border-b-0 pb-4 lg:pb-0">
       <a href="#">
         <div className="max-w-[280px]">
           <Image
             width={608}
-            height={410}
+            height={180}
             alt="Claim Editorial Médica Panamericana"
             src="/assets/empWhite.svg"
           />
         </div>
       </a>
-      <ul className="grid grid-cols-2">
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        <li className="my-1 text-xs font-normal tracking-[1.2px]">
-          <a href="#">Condiciones de la Licencia de Acceso</a>
-        </li>
-        
-      </ul>
+      <span className="border-t-2 w-full border-[rgba(255,255,255,.3)] block md:hidden my-3 md:my-4" />
+
+      <ListLinks />
+      <div className="w-full lg:w-40 flex flex-col lg:block mt-3 md:mt-10 lg:mt-0 md:border-t-0 pt-3 md:pt-0 border-t-2 border-[rgba(255,255,255,.3)]">
+        <MediaIconList />
+        <span className="border-t-2 border-[rgba(255,255,255,.3)] block lg:hidden my-3 md:my-4" />
+        <SecurityIconList />
+      </div>
+    </DivWrapper>
+    <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] text-center">
+      <p className="uppercase font-extrabold opacity-50 text-3xs tracking-widest">
+        © 2021 Editorial Médica Panamericana. Todos los derechos reservados
+      </p>
     </DivWrapper>
   </footer>
 );
