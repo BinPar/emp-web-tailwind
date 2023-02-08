@@ -1,7 +1,7 @@
 import React from 'react';
 import FaceBook from '../../icons/FaceBook';
 import Linkeding from '../../icons/Linkeding';
-import Twitter from '../../icons/twitter';
+import Twitter from '../../icons/Twitter';
 import Youtube from '../../icons/Youtube';
 
 const MediaIconList: React.FC = () => (
