@@ -1,9 +1,10 @@
 import { Children, cloneElement, ReactElement, useEffect, useMemo, useRef } from 'react';
+import { WithChildren } from '../../../model/react';
 import ArrowRight from '../../icons/ArrowRight';
 
 const maxItemsInViewport = 4;
 
-const Carousel: React.FC = ({ children }) => {
+const Carousel: React.FC<WithChildren<{}>> = ({ children }) => {
   const wrapper = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLDivElement>(null);
   const firstItem = useRef<HTMLElement>(null);

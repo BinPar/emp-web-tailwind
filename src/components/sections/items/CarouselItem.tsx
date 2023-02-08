@@ -1,9 +1,10 @@
 import { forwardRef } from 'react';
+import { WithChildren } from '../../../model/react';
 
-interface CarouselItemProps {
+type CarouselItemProps = WithChildren<{
   // eslint-disable-next-line react/require-default-props
   index?: number;
-}
+}>;
 
 const CarouselItem: React.FC<CarouselItemProps> = forwardRef<HTMLElement, CarouselItemProps>(
   ({ index, children }, ref) => (
