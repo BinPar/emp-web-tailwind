@@ -7,7 +7,7 @@ import User from '../../icons/User';
 
 const HeaderTop: React.FC = () => (
   <div className="bg-lightgray absolute w-full">
-    <div className="flex flex-row items-center justify-end text-secondarygray text-2xs uppercase h-[35px] tracking-widest w-[calc(100%_-_150px)] m-auto">
+    <div className="flex flex-row items-center justify-end text-secondarygray text-2xs uppercase h-[35px] tracking-widest lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_150px)] m-auto">
       <div>
         <a href="/es/somos">Editorial</a>
         <a className="ml-2.5 pl-2.5 border-l border-secondarygray" href="/es/autores">

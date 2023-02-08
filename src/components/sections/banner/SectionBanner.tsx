@@ -6,7 +6,7 @@ import Warranties from '../../icons/Warranties';
 import Lock from '../../icons/Lock';
 
 const SectionBanner: React.FC = () => (
-  <section className="mt-2.5">
+  <section className="lg:mt-2.5">
     <a
       href="https://www.medicapanamericana.com/es/general/formacion/profesional-fisioterapeuta"
       className="h-full w-full"

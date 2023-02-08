@@ -1,21 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
-import EmpLogo from '../../icons/EmpLogo';
 import Search from '../../icons/Search';
 import Cart from '../../icons/Cart';
 
 const HeaderMiddle: React.FC = () => (
-  <div className="flex items-end tracking-widest w-[calc(100%_-_150px)] m-auto">
+  <div className="flex items-end tracking-widest lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_150px)] m-auto">
     <a
       href="https://www.medicapanamericana.com/es"
-      className="text-primary flex flex-col items-center w-56 min-w-[220px] mr-8"
+      className="text-primary flex flex-col items-center w-56 min-w-[221px] lg2:min-w-[280px] mr-4 lg2:mr-8"
     >
-      <EmpLogo className="mb-2" />
       <Image
-        width={208}
-        height={10}
-        alt="Claim Editorial Médica Panamericana"
-        src="/assets/claim-blue.svg"
+        width={608}
+        height={155}
+        alt="logo Editorial Médica Panamericana"
+        src="/assets/anniversary.svg"
       />
     </a>
     <a
