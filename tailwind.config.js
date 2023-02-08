@@ -15,6 +15,8 @@ module.exports = {
 
       lg: '1024px',
       // => @media (min-width: 1024px) { ... }
+      lg2: '1100px',
+      // => @media (min-width: 1024px) { ... }
 
       xl: '1280px',
       // => @media (min-width: 1280px) { ... }
@@ -54,6 +56,13 @@ module.exports = {
             letterSpacing: '1.15',
           },
         ],
+        '2.5xs': [
+          '0.7rem',
+          {
+            letterSpacing: '0.56',
+          },
+        ],
+
         '3xs': [
           '0.49rem',
           {

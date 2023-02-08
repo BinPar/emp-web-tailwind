@@ -12,6 +12,7 @@ import SectionExams from '../src/components/sections/SectionExams';
 import SectionBooks from '../src/components/sections/SectionBooks';
 import Footer from '../src/components/sections/Footer';
 import SectionCarousel from '../src/components/sections/items/SectionCarousel';
+import HeaderMobile from '../src/components/sections/header/HeaderMobile';
 
 const Index: React.FC = () => (
   <>
@@ -22,9 +23,14 @@ const Index: React.FC = () => (
     </Head>
     <BannerPromo />
     <header className="relative">
-      <HeaderTop />
-      <HeaderMiddle />
-      <HeaderBottom />
+      <div className="hidden lg:block">
+        <HeaderTop />
+        <HeaderMiddle />
+        <HeaderBottom />
+      </div>
+      <div className="block lg:hidden">
+        <HeaderMobile />
+      </div>
     </header>
 
     <main>
