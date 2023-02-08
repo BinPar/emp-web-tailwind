@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Close from '../../icons/close';
+import Close from '../../icons/Close';
 
 const BannerPromo: React.FC = () => {
   const [closeBanner, setCloseBanner] = useState<boolean>(false);
