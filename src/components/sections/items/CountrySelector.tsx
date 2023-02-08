@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import Close from '../../icons/close';
+import Close from '../../icons/Close';
 
 interface CountryProps {
   value: string;

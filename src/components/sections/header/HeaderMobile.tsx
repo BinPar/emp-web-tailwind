@@ -5,7 +5,7 @@ import SearchMv from '../../icons/SearchMv';
 import MobileSearch from '../items/MobileSearch';
 import CloseCircled from '../../icons/CloseCircled';
 import NavigationOpen from '../items/NavigationOpen';
-import Close from '../../icons/close';
+import Close from '../../icons/Close';
 import NavContent from '../items/NavContent';
 import CountrySelector from '../items/CountrySelector';
 import NavListLinks from '../items/NavListLinks';
