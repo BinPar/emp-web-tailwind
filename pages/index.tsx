@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 
 import BannerPromo from '../src/components/sections/header/BannerPromo';
@@ -14,35 +14,37 @@ import Footer from '../src/components/sections/Footer';
 import SectionCarousel from '../src/components/sections/items/SectionCarousel';
 import HeaderMobile from '../src/components/sections/header/HeaderMobile';
 
-const Index: React.FC = () => (
-  <>
-    <Head>
-      <title>Ejemplo de página de EMP en TW</title>
-      <meta name="description" content="Ejemplo de página de EMP en TW" />
-      <meta property="og:image" content="/assets/rocketLaptop.png" />
-    </Head>
-    <BannerPromo />
-    <header className="relative">
-      <div className="hidden lg:block">
-        <HeaderTop />
-        <HeaderMiddle />
-        <HeaderBottom />
-      </div>
-      <div className="block lg:hidden">
-        <HeaderMobile />
-      </div>
-    </header>
+const Index: React.FC = () => {
+  return (
+    <>
+      <Head>
+        <title>Ejemplo de página de EMP en TW</title>
+        <meta name="description" content="Ejemplo de página de EMP en TW" />
+        <meta property="og:image" content="/assets/rocketLaptop.png" />
+      </Head>
+      <BannerPromo />
+      <header className="relative" id="header">
+        <div className="hidden lg:block">
+          <HeaderTop />
+          <HeaderMiddle />
+          <HeaderBottom />
+        </div>
+        <div className="block lg:hidden">
+          <HeaderMobile />
+        </div>
+      </header>
 
-    <main>
-      <SectionBanner />
-      <SectionRecommended />
-      <SectionExpert />
-      <SectionExams />
-      <SectionBooks />
-      <SectionCarousel />
-    </main>
-    <Footer />
-  </>
-);
+      <main>
+        <SectionBanner />
+        <SectionRecommended />
+        <SectionExpert />
+        <SectionExams />
+        <SectionBooks />
+        <SectionCarousel />
+      </main>
+      <Footer />
+    </>
+  );
+};
 
 export default Index;
