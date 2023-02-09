@@ -1,8 +1,8 @@
-interface CloseProps {
+interface MailProps {
   className?: string;
 }
 
-const mail: React.FC<CloseProps> = ({ className }) => (
+const Mail: React.FC<MailProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
@@ -19,4 +19,4 @@ const mail: React.FC<CloseProps> = ({ className }) => (
   </svg>
 );
 
-export default mail;
+export default Mail;
