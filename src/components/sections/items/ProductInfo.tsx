@@ -8,7 +8,7 @@ import PillLink from './PillLink';
 const ProductInfo: React.FC = () => {
   return (
     <div>
-      <div className="mt-12 lg:mt-0 w-full xl:w-[calc(100%-310px)] lg:px-12 flex">
+      <div className="mt-12 lg:mt-0 w-full lg:px-12 flex">
         <div className="hidden md:flex flex-col items-center min-w-[300px] mr-10">
           <div className="w-[200px] min-w-[200px] lg:w-[350px] lg:min-w-[350px]">
             <Image alt="item" src="/img/expert1.jpg" width="1038" height="1046" />
