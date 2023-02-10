@@ -11,13 +11,7 @@ import Footer from '../src/components/sections/Footer';
 import HeaderMobile from '../src/components/sections/header/HeaderMobile';
 import DivWrapper from '../src/components/sections/items/DivWrapper';
 import ProductInfo from '../src/components/sections/items/ProductInfo';
-import CartLight from '../src/components/icons/CartLight';
-import Checked from '../src/components/icons/Checked';
-import ProductSelection from '../src/components/sections/items/ProductSelection';
-import ProductType from '../src/components/sections/items/ProductType';
-import ProductMessage from '../src/components/sections/items/ProductMessage';
-import ProductPrice from '../src/components/sections/items/ProductPrice';
-import ProductBuy from '../src/components/sections/items/ProductBuy';
+
 import SectionSelection from '../src/components/sections/SectionSelection';
 
 const Index: React.FC = () => {
