@@ -9,6 +9,12 @@ import ProductInfo from './ProductInfo';
 import IntroductionModule from './IntroductionModule';
 import ContentModule from './ContentModule';
 
+import SampleModule from './SampleModule';
+
+import TitleModule from './TitleModule';
+import PaymentModule from './PaymentModule';
+import MethodModule from './MethodModule';
+
 const ProductMainContent: React.FC = () => (
   <>
     <ProductInfo />
@@ -30,7 +36,19 @@ const ProductMainContent: React.FC = () => (
       <ObjetivesModule />
     </ItemAcordeon>
     <ItemAcordeon title="CONTENIDOS">
-      <ContentModule/>
+      <ContentModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="TEMA DE MUESTRA">
+      <SampleModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="TITULACIÓN">
+      <TitleModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="MÉTODO">
+      <MethodModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="MÉTODOS DE PAGO">
+      <PaymentModule />
     </ItemAcordeon>
   </>
 );
