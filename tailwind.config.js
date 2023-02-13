@@ -23,6 +23,8 @@ module.exports = {
 
       xl2: '1440px',
       // => @media (min-width: 1536px) { ... }
+      xl3: '1920px',
+      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       colors: {

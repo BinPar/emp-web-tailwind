@@ -8,12 +8,11 @@ import ItemAcordeon from './ItemAcordeon';
 import ProductInfo from './ProductInfo';
 import IntroductionModule from './IntroductionModule';
 import ContentModule from './ContentModule';
-
 import SampleModule from './SampleModule';
-
 import TitleModule from './TitleModule';
 import PaymentModule from './PaymentModule';
 import MethodModule from './MethodModule';
+import AuthorsModule from './AuthorsModule';
 
 const ProductMainContent: React.FC = () => (
   <>
@@ -49,6 +48,9 @@ const ProductMainContent: React.FC = () => (
     </ItemAcordeon>
     <ItemAcordeon title="MÉTODOS DE PAGO">
       <PaymentModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="AUTORES">
+      <AuthorsModule />
     </ItemAcordeon>
   </>
 );
