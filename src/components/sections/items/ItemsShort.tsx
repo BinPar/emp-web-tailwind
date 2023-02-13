@@ -35,15 +35,7 @@ const currentPrice = ['1.351,50', '1.436,50'];
 
 const ItemNumber = 2;
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
-const ShortItem: React.FC<ShortItemProps> = ({
-  src,
-  title,
-  author,
-  type,
-  initial,
-  fullText,
-  oldPrice,
-  currentPrice,
+const ShortItem: React.FC<ShortItemProps> = ({ src, title, author, type, initial, fullText, oldPrice, currentPrice,
 }) => (
   <li className="flex gap-4 items-start pb-5 lg:min-w-[356px]">
     <NormalLink

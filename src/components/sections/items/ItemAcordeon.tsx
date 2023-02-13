@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { twMerge } from 'tailwind-merge';
-import { WithChildren, WithClassName } from '../../../model/react';
+
+import { WithChildren } from '../../../model/react';
 import ArrowDown from '../../icons/ArrowDown';
 import SubHeader from './SubHeader';
+
 interface ItemAcordeonProps {
   title: string;
 }
@@ -10,7 +11,7 @@ const ItemAcordeon: React.FC<WithChildren<ItemAcordeonProps>> = ({ children, tit
   const [closeInfoWrap, setCloseInfoWrap] = useState<boolean>(false);
   return (
     <article
-      className={`text-lg font-normal text-gray-400 w-full${closeInfoWrap ? ' mb-0' : ' mb-5'}`}
+      className={`text-lg font-normal text-gray-500 w-full${closeInfoWrap ? ' mb-0' : ' mb-5'}`}
     >
       <SubHeader className="w-full">
         <button

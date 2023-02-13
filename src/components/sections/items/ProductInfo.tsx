@@ -5,8 +5,8 @@ import Ficha from './Ficha';
 import ProductAutor from './ProductAutor';
 import PillLink from './PillLink';
 
-const ProductInfo: React.FC = () => {
-  return (
+const ProductInfo: React.FC = () => (
+
     <div>
       <div className="mt-12 lg:mt-0 w-full lg:px-12 flex">
         <div className="hidden md:flex flex-col items-center min-w-[300px] mr-10">
@@ -28,6 +28,6 @@ const ProductInfo: React.FC = () => {
       </div>
     </div>
   );
-};
+
 
 export default ProductInfo;

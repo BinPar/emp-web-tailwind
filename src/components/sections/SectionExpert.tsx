@@ -43,15 +43,7 @@ const currentPrice2 = ['1.436,50', '1.436,50'];
 
 const ItemNumber = 2;
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
-const NormalItem: React.FC<NormalItemProps> = ({
-  src,
-  title,
-  author,
-  type,
-  initial,
-  fullText,
-  oldPrice,
-  currentPrice,
+const NormalItem: React.FC<NormalItemProps> = ({ src, title, author, type, initial, fullText, oldPrice, currentPrice,
 }) => (
   <li className="flex items-start pb-5 flex-1 lg:flex-col lg:text-center">
     <ImageGroup src={src} type={type} />

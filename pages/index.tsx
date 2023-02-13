@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 
 import BannerPromo from '../src/components/sections/header/BannerPromo';
@@ -14,8 +14,8 @@ import Footer from '../src/components/sections/Footer';
 import SectionCarousel from '../src/components/sections/items/SectionCarousel';
 import HeaderMobile from '../src/components/sections/header/HeaderMobile';
 
-const Index: React.FC = () => {
-  return (
+const Index: React.FC = () => (
+
     <>
       <Head>
         <title>Ejemplo de página de EMP en TW</title>
@@ -45,6 +45,6 @@ const Index: React.FC = () => {
       <Footer />
     </>
   );
-};
+
 
 export default Index;
