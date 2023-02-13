@@ -13,6 +13,7 @@ import TitleModule from './TitleModule';
 import PaymentModule from './PaymentModule';
 import MethodModule from './MethodModule';
 import AuthorsModule from './AuthorsModule';
+import TagsModule from './TagsModule';
 
 const ProductMainContent: React.FC = () => (
   <>
@@ -51,6 +52,9 @@ const ProductMainContent: React.FC = () => (
     </ItemAcordeon>
     <ItemAcordeon title="AUTORES">
       <AuthorsModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="ETIQUETAS">
+      <TagsModule />
     </ItemAcordeon>
   </>
 );
