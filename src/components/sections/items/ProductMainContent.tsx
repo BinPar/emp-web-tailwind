@@ -7,6 +7,7 @@ import DescriptionModule from './DescriptionModule';
 import ItemAcordeon from './ItemAcordeon';
 import ProductInfo from './ProductInfo';
 import IntroductionModule from './IntroductionModule';
+import ContentModule from './ContentModule';
 
 const ProductMainContent: React.FC = () => (
   <>
@@ -27,6 +28,9 @@ const ProductMainContent: React.FC = () => (
     </ItemAcordeon>
     <ItemAcordeon title="OBJETIVOS">
       <ObjetivesModule />
+    </ItemAcordeon>
+    <ItemAcordeon title="CONTENIDOS">
+      <ContentModule/>
     </ItemAcordeon>
   </>
 );
