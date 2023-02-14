@@ -4,12 +4,11 @@ import Head from 'next/head';
 
 import Footer from '../src/components/sections/Footer';
 import Header from '../src/components/sections/header/Header';
-import DivWrapper from '../src/components/sections/items/DivWrapper';
 import AuthorData from '../src/components/sections/authors/AthorData';
+import AuthorPublications from '../src/components/sections/authors/AuthorPublications';
 
-const name = 'ÍÑIGO IRIARTE POSSE'
-const src = '/img/autor1.jpeg'
-
+const name = 'ÍÑIGO IRIARTE POSSE';
+const src = '/img/autor1.jpeg';
 
 const AuthorPage: React.FC = () => (
   <>
@@ -20,9 +19,8 @@ const AuthorPage: React.FC = () => (
     </Head>
     <Header />
     <main>
-      <DivWrapper className="flex md:gap-10 w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] flex-col md:flex-row gap-8 relative">
-        <AuthorData src={src} name={name} />
-      </DivWrapper>
+      <AuthorData src={src} name={name} />
+      <AuthorPublications />
     </main>
     <Footer />
   </>

@@ -1,7 +1,8 @@
 import React from 'react';
+import AuthorItem from '../authors/AuthorItem';
 
 import InfoText from './InfoText';
-import AuthorItem from './AuthorItem';
+
 
 const AuthorsModule: React.FC = () => (
   <>

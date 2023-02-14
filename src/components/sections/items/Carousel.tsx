@@ -4,7 +4,7 @@ import ArrowRight from '../../icons/ArrowRight';
 
 const maxItemsInViewport = 4;
 
-const Carousel: React.FC<WithChildren<{}>> = ({ children }) => {
+const Carousel: React.FC<WithChildren> = ({ children }) => {
   const wrapper = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLDivElement>(null);
   const firstItem = useRef<HTMLElement>(null);
