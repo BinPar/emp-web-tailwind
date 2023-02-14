@@ -10,6 +10,7 @@ import HeaderMobile from '../src/components/sections/header/HeaderMobile';
 import DivWrapper from '../src/components/sections/items/DivWrapper';
 import ProductMainContent from '../src/components/sections/items/ProductMainContent';
 import FloatingMenu from '../src/components/sections/items/FloatingMenu';
+import StickyBuy from '../src/components/sections/items/StickyBuy';
 
 const Index: React.FC = () => (
   <>
@@ -36,8 +37,8 @@ const Index: React.FC = () => (
         <section className="mt-12 lg:mt-0 w-full lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:px-12 flex flex-col">
           <ProductMainContent />
         </section>
-  
       </DivWrapper>
+      <StickyBuy type='Expertos' oldPrice='1.790' price='1.611,01' link='#'/>
     </main>
     <Footer />
   </>

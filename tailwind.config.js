@@ -29,6 +29,9 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
     extend: {
+      boxShadow: {
+        'up': '0 -1px 2px rgba(0,0,0,.1), 0 -2px 4px rgba(0,0,0,.1)',
+      },
       colors: {
         primary: '#0074a7',
         primaryvariant: '#196696',
