@@ -15,7 +15,7 @@ const name = [
   'CARLES PEDRET CARBALLIDO',
 ];
 
-const link = ['#', '#', '#', '#'];
+const link = ['/authorPage', '/authorPage', '/authorPage', '/authorPage'];
 
 const ItemNumber = 4;
 
