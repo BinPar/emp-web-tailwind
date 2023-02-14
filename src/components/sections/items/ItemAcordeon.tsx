@@ -6,11 +6,12 @@ import SubHeader from './SubHeader';
 
 interface ItemAcordeonProps {
   title: string;
+  id: string;
 }
-const ItemAcordeon: React.FC<WithChildren<ItemAcordeonProps>> = ({ children, title }) => {
+const ItemAcordeon: React.FC<WithChildren<ItemAcordeonProps>> = ({ children, title, id }) => {
   const [closeInfoWrap, setCloseInfoWrap] = useState<boolean>(false);
   return (
-    <article
+    <article id={id}
       className={`text-lg font-normal text-gray-500 w-full${closeInfoWrap ? ' mb-0' : ' mb-5'}`}
     >
       <SubHeader className="w-full">

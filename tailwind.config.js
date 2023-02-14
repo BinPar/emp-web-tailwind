@@ -22,9 +22,11 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
 
       xl2: '1440px',
-      // => @media (min-width: 1536px) { ... }
-      xl3: '1920px',
-      // => @media (min-width: 1536px) { ... }
+      // => @media (min-width: 1440px) { ... }
+      xl3: '1660px',
+      // => @media (min-width: 1660px) { ... }
+      xl4: '1920px',
+      // => @media (min-width: 1920px) { ... }
     },
     extend: {
       colors: {
@@ -71,11 +73,23 @@ module.exports = {
             letterSpacing: '1.15',
           },
         ],
+        '3.5xs': [
+          '0.5rem',
+          {
+            letterSpacing: '1.15',
+          },
+        ],
         '2sm': [
           '0.95rem',
           {
             lineHeight: '1.1rem',
             letterSpacing: '1.5px',
+          },
+        ],
+        '2.5xl': [
+          '1.8rem',
+          {
+            lineHeight: '33px',
           },
         ],
       },

@@ -1,7 +1,7 @@
 import Checked from '../../icons/Checked';
 
 const ProductType: React.FC = () => (
-  <article className="flex text-gray-400 w-full mb-1 py-5 pl-5 bg-[#f9f9f9] relative">
+  <div className="flex text-gray-400 w-full mb-1 py-5 pl-5 bg-[#f9f9f9] relative">
     <form>
       <div className="flex">
         <Checked className="w-4" />
@@ -18,6 +18,6 @@ const ProductType: React.FC = () => (
         </label>
       </div>
     </form>
-  </article>
+  </div>
 );
 export default ProductType;

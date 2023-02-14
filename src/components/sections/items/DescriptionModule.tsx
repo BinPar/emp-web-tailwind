@@ -5,7 +5,7 @@ import InfoText from './InfoText';
 
 const DescriptionModule: React.FC = () => (
   <>
-    <div className="w-72 float-right ml-5 mb-5">
+    <div className="w-[270px] m-auto md:float-right md:ml-5 mb-5">
       <Image alt="ufv" src="/assets/imagenProduct.jpeg" width={270} height={180} />
     </div>
     <InfoText>

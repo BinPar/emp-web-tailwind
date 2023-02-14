@@ -49,17 +49,18 @@ const Ficha: React.FC = () => {
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 
-    <ul className="p-6 bg-[#f0f7fa]">
-      {fichaInfo}
-      <li>
-        <p className="text-xs tracking-widest uppercase text-[#7a94a4] font-light">
-          Enlaces
-          <a href="#" className="normal-case font-medium text-sm ml-2 text-primary">
-            Descarga el dossier completo
-          </a>
-        </p>
-      </li>
-    </ul>
+      <ul className="p-6 bg-[#f0f7fa]">
+        {fichaInfo}
+        <li>
+          <p className="text-xs tracking-widest uppercase text-[#7a94a4] font-light">
+            Enlaces
+            <a href="#" className="normal-case font-medium text-sm ml-2 text-primary">
+              Descarga el dossier completo
+            </a>
+          </p>
+        </li>
+      </ul>
+
   );
 };
 

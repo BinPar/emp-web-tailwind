@@ -2,7 +2,7 @@ import { ClassAttributes, RefObject } from 'react';
 
 export interface CustomResponse {
   ok: boolean;
-  error?: string 
+  error?: string;
 }
 export function isOffsetGreaterThanZero<T extends HTMLElement>(
   selector: string | RefObject<T>,
@@ -23,7 +23,7 @@ export function isOffsetGreaterThanZero<T extends HTMLElement>(
   }
 
   if (element.offsetTop > 0) {
-    element.className = element.className + classToAdd;
+    element.className += classToAdd;
     return {
       ok: true,
     }

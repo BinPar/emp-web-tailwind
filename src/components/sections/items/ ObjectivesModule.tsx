@@ -6,7 +6,7 @@ import InfoListItem from './InfoListIlem';
 const ObjetivesModule: React.FC = () => (
   <>
     <InfoText className="font-bold border-b pb-2 text-gray-400">Objetivos generales</InfoText>
-    <ul className="columns-2 pl-9 gap-12">
+    <ul className="lg:columns-2 pl-9 gap-12">
       <InfoListItem>
         <InfoText className="pl-2 mb-2">
           Aprender a localizar las diferentes estructuras anatómicas de la región
@@ -29,7 +29,7 @@ const ObjetivesModule: React.FC = () => (
     <InfoText className="font-bold border-b pb-2 text-gray-400 mt-5">
       Módulo 1. Ecografía básica
     </InfoText>
-    <ul className="columns-2 pl-9 gap-12">
+    <ul className="lg:columns-2 pl-9 gap-12">
       <InfoListItem>
         <InfoText className="pl-2 mb-2">
           Aprender en qué consiste el ultrasonido, como se aplica a la medicina y su historia además
@@ -54,7 +54,7 @@ const ObjetivesModule: React.FC = () => (
     <InfoText className="font-bold border-b pb-2 text-gray-400 mt-5">
       Módulo 2. Ecografía de miembro superior: hombro
     </InfoText>
-    <ul className="columns-2 pl-9 gap-12">
+    <ul className="lg:columns-2 pl-9 gap-12">
       <InfoListItem>
         <InfoText className="pl-2 mb-2">
           Conocer todas las estructuras anatómicas del hombro y como verlas a través de la

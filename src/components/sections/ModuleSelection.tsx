@@ -7,8 +7,8 @@ import ProductType from './items/ProductType';
 import ProductValoration from './items/ProductValoration';
 import ProductWarrantie from './items/ProductWarrantie';
 
-const SectionSelection: React.FC = () => (
-  <section className="max-w-[250px] xl:max-w-[310px] absolute right-0 border-l-2 border-[#f9f9f9] bg-white">
+const ModuleSelection: React.FC = () => (
+  <article className="w-[calc(100%_+_50px)] -left-6 lg:left-auto mt-11 lg:mt-0 lg:max-w-[250px] xl:max-w-[310px] relative lg:absolute right-0 border-l-2 border-[#f9f9f9] bg-white">
     <ProductSelection />
     <ProductType />
     <ProductMessage />
@@ -17,6 +17,6 @@ const SectionSelection: React.FC = () => (
     <ProductValoration />
     <ProductWarrantie />
     <ProductNetWorks />
-  </section>
+  </article>
 );
-export default SectionSelection;
+export default ModuleSelection;

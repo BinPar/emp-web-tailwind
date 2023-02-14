@@ -6,7 +6,7 @@ import InfoListItem from './InfoListIlem';
 
 const MethodModule: React.FC = () => (
   <>
-    <div className="w-72 float-left mr-5 mb-5">
+    <div className="w-[270px] m-auto md:float-left md:mr-5 mb-5">
       <Image alt="ufv" src="/assets/imagenMetodo.jpeg" width={270} height={180} />
     </div>
     <InfoText>

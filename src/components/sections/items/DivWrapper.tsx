@@ -3,7 +3,7 @@ import { WithChildren, WithClassName } from '../../../model/react';
 
 
 const DivWrapper: React.FC<WithClassName<WithChildren>> = ({className, children}) =>(
-       <div className={twMerge('m-auto max-w-[1440px]', className)}>{children}</div>
+       <div className={twMerge('m-auto xl3:max-w-[1440px]', className)}>{children}</div>
 )
 
 export default DivWrapper;

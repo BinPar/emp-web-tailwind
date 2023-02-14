@@ -1,7 +1,7 @@
 import WarrantieItem from './WarratieItem';
 
 const WarrantiesList: React.FC = () => (
-  <ul className="w-[150px] pl-4">
+  <ul className="w-[calc(100%_-_112px)] lg:w-[150px] pl-4">
     <WarrantieItem>
       ENVÍO <span className="font-bold">GRATIS</span>
     </WarrantieItem>

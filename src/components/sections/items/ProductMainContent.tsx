@@ -14,46 +14,48 @@ import PaymentModule from './PaymentModule';
 import MethodModule from './MethodModule';
 import AuthorsModule from './AuthorsModule';
 import TagsModule from './TagsModule';
+import ModuleSelection from '../ModuleSelection';
 
 const ProductMainContent: React.FC = () => (
   <>
     <ProductInfo />
-    <ItemAcordeon title="INTRODUCCION">
+    <ModuleSelection />
+    <ItemAcordeon id='introduction' title="INTRODUCCION">
       <IntroductionModule />
     </ItemAcordeon>
-    <ItemAcordeon title="UNIVERSIDAD">
+    <ItemAcordeon id='university' title="UNIVERSIDAD">
       <div className="w-52 m-auto">
         <Image alt="ufv" src="/assets/ufv.png" width={1400} height={377} />
       </div>
     </ItemAcordeon>
-    <ItemAcordeon title="DESCRIPCIÓN">
+    <ItemAcordeon id='description' title="DESCRIPCIÓN">
       <DescriptionModule />
     </ItemAcordeon>
-    <ItemAcordeon title="DIRIGIDO A">
+    <ItemAcordeon id='addressed' title="DIRIGIDO A">
       <AddressedModule />
     </ItemAcordeon>
-    <ItemAcordeon title="OBJETIVOS">
+    <ItemAcordeon id='objectives' title="OBJETIVOS">
       <ObjetivesModule />
     </ItemAcordeon>
-    <ItemAcordeon title="CONTENIDOS">
+    <ItemAcordeon id='contents' title="CONTENIDOS">
       <ContentModule />
     </ItemAcordeon>
-    <ItemAcordeon title="TEMA DE MUESTRA">
+    <ItemAcordeon id='sample' title="TEMA DE MUESTRA">
       <SampleModule />
     </ItemAcordeon>
-    <ItemAcordeon title="TITULACIÓN">
+    <ItemAcordeon id='title' title="TITULACIÓN">
       <TitleModule />
     </ItemAcordeon>
-    <ItemAcordeon title="MÉTODO">
+    <ItemAcordeon id='method' title="MÉTODO">
       <MethodModule />
     </ItemAcordeon>
-    <ItemAcordeon title="MÉTODOS DE PAGO">
+    <ItemAcordeon id='payment' title="MÉTODOS DE PAGO">
       <PaymentModule />
     </ItemAcordeon>
-    <ItemAcordeon title="AUTORES">
+    <ItemAcordeon id='author' title="AUTORES">
       <AuthorsModule />
     </ItemAcordeon>
-    <ItemAcordeon title="ETIQUETAS">
+    <ItemAcordeon id='tags' title="ETIQUETAS">
       <TagsModule />
     </ItemAcordeon>
   </>

@@ -17,9 +17,9 @@ const ItemNumber = 4;
 
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
 const Author: React.FC<AuthorProps> = ({ title }) => (
-  <li className="inline">
+  <li className="inline ml-1 first:ml-0">
     <NormalLink href="#">
-      <BaseText className="ml-1 inline">{title}</BaseText>
+      <BaseText className="inline lg:text-1xs xl:text-2sm">{title}</BaseText>
     </NormalLink>
   </li>
 );
@@ -44,7 +44,7 @@ const Ficha: React.FC = () => {
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 
-    <ul className="my-4 text-center md:text-left">{author}</ul>
+    <ul className="mb-4 text-center md:text-left">{author}</ul>
   );
 };
 
