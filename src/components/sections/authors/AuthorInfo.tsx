@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface AuthorInfoProps {
   info: string;
@@ -13,7 +13,7 @@ const info = [
   'Director de los cursos de Ecografía Ars.',
 ];
 
-const ItemNumber = 6;
+const ItemNumber = React.Children.count(info);
 
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
 const AuthorInfo: React.FC<AuthorInfoProps> = ({ info }) => (
