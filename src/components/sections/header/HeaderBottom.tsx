@@ -25,6 +25,9 @@ const HeaderBottom: React.FC = () => (
           <li className="capitalize text-gray-500 hover:text-primary mb-4 last:mb-0">
             <a href="https://www.medicapanamericana.com/es/general/duo">DÚO</a>
           </li>
+          <li className="capitalize text-gray-500 hover:text-primary mb-4 last:mb-0">
+            <a href="/collections">Colecciones</a>
+          </li>
         </ul>
       </ItemMainNav>
       <ItemMainNav className="relative ml-14">
