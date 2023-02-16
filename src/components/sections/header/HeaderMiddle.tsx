@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Search from '../../icons/Search';
 import Cart from '../../icons/Cart';
 
+
 const HeaderMiddle: React.FC = () => (
-  <div className="flex items-end tracking-widest lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_150px)] m-auto">
+  <div className="flex items-end tracking-widest w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto">
     <a
       href="https://www.medicapanamericana.com/es"
       className="text-primary flex flex-col items-center w-56 min-w-[221px] lg2:min-w-[280px] mr-4 lg2:mr-8"

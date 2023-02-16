@@ -67,7 +67,7 @@ const CountryItem: React.FC<CountryProps> = ({ value, title }) => (
   </li>
 );
 
-const SectionBooks: React.FC = () => {
+const CountrySelector: React.FC = () => {
   const [openCountry, setOpenCountry] = useState<boolean>(false);
   const [itemsCountry, setItemsCountry] = useState<React.ReactNode>();
   useEffect(() => {
@@ -126,4 +126,4 @@ const SectionBooks: React.FC = () => {
   );
 };
 
-export default SectionBooks;
+export default CountrySelector;
