@@ -21,13 +21,13 @@ const Collections: React.FC = () => (
       <CollectionsNav />
       <section id='professional'>
         <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] bg-lightgray py-8 px-4 mt-5 rounded">
-          <SubHeader className="border-b-gray-200">MI EUREKA - COLECCIONES PROFESIONALES</SubHeader>
+          <SubHeader className="border-b-gray-200 text-base">MI EUREKA - COLECCIONES PROFESIONALES</SubHeader>
           <CollectionSection />
         </DivWrapper>
       </section>
-      <section id='student'>
+      <section id='student' className='mb-20'>
         <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] bg-lightgray py-8 px-4 mt-5 rounded">
-          <SubHeader className="border-b-gray-200">MI EUREKA - COLECCIONES PARA ESTUDIANTES</SubHeader>
+          <SubHeader className="border-b-gray-200 text-base">MI EUREKA - COLECCIONES PARA ESTUDIANTES</SubHeader>
           <CollectionSection />
         </DivWrapper>
       </section>

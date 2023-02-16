@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import ImageGroup from '../items/ImageGroup';
-import InfoGroup from '../items/InfoGroup';
 
-interface CollectionItemProps {
+import ItemColecciones from './ItemColecciones';
+
+interface CollectionsListProps {
   src: string;
   title: string;
-  author: string;
+  quantity: number;
   type: string;
-  initial: string;
-  fullText: string;
-  oldPrice: string;
+  href: string;
   currentPrice: string;
 }
 const src = [
@@ -32,6 +30,27 @@ const src = [
   '/img/collection2.jpg',
   '/img/collection3.jpg',
   '/img/collection4.jpg',
+];
+const href = [
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
+  '/productPage',
 ];
 
 const title = [
@@ -56,26 +75,26 @@ const title = [
   'Mi Eureka - Biblioteca de Cirugía',
 ];
 
-const author = [
-  '26 Obras',
-  '37 Obras',
-  '33 Obras',
-  '44 Obras',
-  '54 Obras',
-  '26 Obras',
-  '37 Obras',
-  '33 Obras',
-  '44 Obras',
-  '54 Obras',
-  '26 Obras',
-  '37 Obras',
-  '33 Obras',
-  '44 Obras',
-  '54 Obras',
-  '26 Obras',
-  '37 Obras',
-  '33 Obras',
-  '44 Obras',
+const quantity = [
+  26,
+  37,
+  33,
+  44,
+  54,
+  26,
+  37,
+  33,
+  44,
+  54,
+  26,
+  37,
+  33,
+  44,
+  54,
+  26,
+  37,
+  33,
+  44,
 ];
 
 const type = [
@@ -99,12 +118,6 @@ const type = [
   'colecciones',
   'colecciones',
 ];
-
-const initial = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-
-const fullText = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-
-const oldPrice = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
 const currentPrice = [
   '24,90',
@@ -130,40 +143,29 @@ const currentPrice = [
 
 const ItemNumber = React.Children.count(src);
 // eslint-disable-next-line @typescript-eslint/no-shadow, max-len
-const CollectionItem: React.FC<CollectionItemProps> = ({src, title, author, type, initial, fullText, oldPrice, currentPrice,
+const CollectionLi: React.FC<CollectionsListProps> = ({src, href, title, quantity, type, currentPrice,
 }) => (
-  <li className="flex items-start pb-5 flex-1 lg:flex-col lg:text-center md:min-w-[calc(50%_-_20px)] lg:min-w-min">
-    <ImageGroup src={src} type={type} />
-    <InfoGroup
-      title={title}
-      author={author}
-      type={type}
-      initial={initial}
-      fullText={fullText}
-      oldPrice={oldPrice}
-      currentPrice={`${currentPrice} / MES`}
-    />
+  <li className="flex items-start pb-5 flex-1 flex-col text-center">
+        <ItemColecciones src={src} href={href} title={title} quantity={quantity} type={type} currentPrice={currentPrice}/>
   </li>
 );
 
-const ItemCollection: React.FC = () => {
-  const [itemsCollection, setItemsCollection] = useState<React.ReactNode>();
+const ItemsCollections: React.FC = () => {
+  const [liCollection, setLiCollection] = useState<React.ReactNode>();
 
   useEffect(() => {
-    setItemsCollection(
+    setLiCollection(
       Array(ItemNumber)
         .fill(0)
         .map((_, i) => (
-          <CollectionItem
+          <CollectionLi
             // eslint-disable-next-line react/no-array-index-key
             key={`${i}`}
             src={src[i]}
+            href={href[i]}
             title={title[i]}
-            author={author[i]}
+            quantity={quantity[i]}
             type={type[i]}
-            initial={initial[i]}
-            fullText={fullText[i]}
-            oldPrice={oldPrice[i]}
             currentPrice={currentPrice[i]}
           />
         )),
@@ -174,10 +176,10 @@ const ItemCollection: React.FC = () => {
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     <article>
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl2:grid-cols-5 xl:gap-16 gap-10">
-        {itemsCollection}
+        {liCollection}
       </ul>
     </article>
   );
 };
 
-export default ItemCollection;
+export default ItemsCollections;

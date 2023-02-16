@@ -11,7 +11,7 @@ const CollectionLink: React.FC<WithClassName<WithChildren<CollectionLinkProps>>>
 }) => (
   <li
     className={twMerge(
-      'py-2 w-1/2 rounded hover:bg-gray-100 transition-all duration-300 text-center',
+      'py-2 w-full sm:w-1/2 rounded hover:bg-gray-100 transition-all duration-300 text-center',
       className,
     )}
   >
