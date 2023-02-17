@@ -5,7 +5,7 @@ const SubHeader: React.FC<WithClassName<WithChildren>> = ({ className, children 
   <h2
     className={twMerge(
       'pb-3 border-b border-b-yellowmenu mb-5 text-lg font-normal text-gray-400',
-      className,
+      className
     )}
   >
     {children}

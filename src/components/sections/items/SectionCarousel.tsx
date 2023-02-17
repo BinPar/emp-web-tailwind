@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-shadow */
+import Section from '../Section';
 import Carousel from './Carousel';
 import CarouselItem from './CarouselItem';
-import DivWrapper from './DivWrapper';
 import ImageGroup from './ImageGroup';
 import InfoGroup from './InfoGroup';
-import Section from './Section';
 import SubHeader from './SubHeader';
 
 const src1 = '/img/promir.jpg';
@@ -57,80 +56,78 @@ const oldPrice5 = '';
 const currentPrice5 = '1.490';
 
 const footer: React.FC = () => (
-  <Section className="bg-lightgray">
-    <DivWrapper className="flex md:gap-10 w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] flex-col md:flex-row gap-8">
-      <div className="w-full">
-        <SubHeader>TUS CONSULTAS RECIENTES</SubHeader>
-        <Carousel>
-          <CarouselItem>
-            <ImageGroup src={src1} type={type1} />
-            <InfoGroup
-              className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
-              title={title1}
-              author={author1}
-              type={type1}
-              initial={initial1}
-              fullText={fullText1}
-              oldPrice={oldPrice1}
-              currentPrice={currentPrice1}
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <ImageGroup src={src2} type={type2} />
-            <InfoGroup
-              className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
-              title={title2}
-              author={author2}
-              type={type2}
-              type2={type22}
-              initial={initial2}
-              fullText={fullText2}
-              oldPrice={oldPrice2}
-              currentPrice={currentPrice2}
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <ImageGroup src={src3} type={type3} />
-            <InfoGroup
-              className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
-              title={title3}
-              author={author3}
-              type={type3}
-              initial={initial3}
-              fullText={fullText3}
-              oldPrice={oldPrice3}
-              currentPrice={currentPrice3}
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <ImageGroup src={src4} type={type4} />
-            <InfoGroup
-              className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
-              title={title4}
-              author={author4}
-              type={type4}
-              initial={initial4}
-              fullText={fullText4}
-              oldPrice={oldPrice4}
-              currentPrice={currentPrice4}
-            />
-          </CarouselItem>
-          <CarouselItem>
-            <ImageGroup src={src5} type={type5} />
-            <InfoGroup
-              className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
-              title={title5}
-              author={author5}
-              type={type5}
-              initial={initial5}
-              fullText={fullText5}
-              oldPrice={oldPrice5}
-              currentPrice={currentPrice5}
-            />
-          </CarouselItem>
-        </Carousel>
-      </div>
-    </DivWrapper>
+  <Section className="bg-lightgray" secondClassName="flex md:gap-10 flex-col md:flex-row gap-8">
+    <div className="w-full">
+      <SubHeader>TUS CONSULTAS RECIENTES</SubHeader>
+      <Carousel>
+        <CarouselItem>
+          <ImageGroup src={src1} type={type1} />
+          <InfoGroup
+            className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
+            title={title1}
+            author={author1}
+            type={type1}
+            initial={initial1}
+            fullText={fullText1}
+            oldPrice={oldPrice1}
+            currentPrice={currentPrice1}
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <ImageGroup src={src2} type={type2} />
+          <InfoGroup
+            className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
+            title={title2}
+            author={author2}
+            type={type2}
+            type2={type22}
+            initial={initial2}
+            fullText={fullText2}
+            oldPrice={oldPrice2}
+            currentPrice={currentPrice2}
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <ImageGroup src={src3} type={type3} />
+          <InfoGroup
+            className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
+            title={title3}
+            author={author3}
+            type={type3}
+            initial={initial3}
+            fullText={fullText3}
+            oldPrice={oldPrice3}
+            currentPrice={currentPrice3}
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <ImageGroup src={src4} type={type4} />
+          <InfoGroup
+            className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
+            title={title4}
+            author={author4}
+            type={type4}
+            initial={initial4}
+            fullText={fullText4}
+            oldPrice={oldPrice4}
+            currentPrice={currentPrice4}
+          />
+        </CarouselItem>
+        <CarouselItem>
+          <ImageGroup src={src5} type={type5} />
+          <InfoGroup
+            className="h-[auto] lg:h-[calc(100%_-_178px)] items-start lg:items-center text-left lg:text-center"
+            title={title5}
+            author={author5}
+            type={type5}
+            initial={initial5}
+            fullText={fullText5}
+            oldPrice={oldPrice5}
+            currentPrice={currentPrice5}
+          />
+        </CarouselItem>
+      </Carousel>
+    </div>
   </Section>
 );
 

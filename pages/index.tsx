@@ -4,13 +4,12 @@ import Head from 'next/head';
 import SectionBanner from '../src/components/sections/banner/SectionBanner';
 import SectionRecommended from '../src/components/sections/SectionRecommended';
 import SectionExpert from '../src/components/sections/SectionExpert';
-import SectionExams from '../src/components/sections/SectionExams';
 import Footer from '../src/components/sections/Footer';
 import SectionCarousel from '../src/components/sections/items/SectionCarousel';
 import Header from '../src/components/sections/header/Header';
-import BookList from '../src/components/sections/BookList';
-import SectionBooks from '../src/components/sections/SectionBooks';
 
+import SectionExams from '../src/components/sections/SectionExams';
+import SectionBooks from '../src/components/sections/SectionBooks';
 
 const Index: React.FC = () => (
   <>
@@ -25,10 +24,7 @@ const Index: React.FC = () => (
       <SectionRecommended />
       <SectionExpert />
       <SectionExams />
-      <SectionBooks>
-        <BookList />
-      </SectionBooks>
-
+      <SectionBooks/>
       <SectionCarousel />
     </main>
     <Footer />

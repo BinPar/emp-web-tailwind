@@ -2,11 +2,24 @@ import React from 'react';
 
 import Head from 'next/head';
 import Footer from '../src/components/sections/Footer';
-import DivWrapper from '../src/components/sections/items/DivWrapper';
 
 import Header from '../src/components/sections/header/Header';
 import SubHeader from '../src/components/sections/items/SubHeader';
-import BookList from '../src/components/sections/BookList';
+import ItemList from '../src/components/sections/ItemsList';
+import Section from '../src/components/sections/Section';
+
+import {
+  authorBooks,
+  currentPriceBooks,
+  fullTextBooks,
+  initialBooks,
+  oldPriceBooks,
+  srcBooks,
+  titleBooks,
+  typeBooks,
+  type2Books,
+} from '../src/utils/dataInfoTest/booksInfo';
+
 
 
 const Books: React.FC = () => (
@@ -18,14 +31,21 @@ const Books: React.FC = () => (
     </Head>
     <Header />
     <main>
-      <section>
-        <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)]">
-          <SubHeader className="border-b-gray-200 text-base mt-5">LIBROS</SubHeader>
-            <BookList/>
-            <BookList/>
-            <BookList/>
-        </DivWrapper>
-      </section>
+      <Section className="py-0">
+        <SubHeader className="border-b-gray-200 text-base mt-5">LIBROS</SubHeader>
+        <ItemList
+          className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl2:grid-cols-5"
+          srcList={srcBooks}
+          titleList={titleBooks}
+          authorList={authorBooks}
+          typeList={typeBooks}
+          type2List={type2Books}
+          initialList={initialBooks}
+          fullTextList={fullTextBooks}
+          oldPriceList={oldPriceBooks}
+          currentPriceList={currentPriceBooks}
+        />
+      </Section>
     </main>
     <Footer />
   </>

@@ -17,9 +17,9 @@ const ProductPage: React.FC = () => (
     </Head>
     <Header />
     <main>
-      <DivWrapper className="flex md:gap-10 w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] flex-col md:flex-row gap-8 relative">
+      <DivWrapper className="flex md:gap-10 flex-col md:flex-row gap-8 relative">
         <FloatingMenu />
-        <section className="mt-12 lg:mt-0 w-full lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:px-12 flex flex-col">
+        <section className="mt-12 lg:mt-0 w-full lg:px-12 flex flex-col">
           <ProductMainContent />
         </section>
       </DivWrapper>

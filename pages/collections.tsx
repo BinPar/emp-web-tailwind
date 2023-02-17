@@ -1,13 +1,13 @@
-import React from 'react';
 
+import React from 'react';
 import Head from 'next/head';
 import Footer from '../src/components/sections/Footer';
-import DivWrapper from '../src/components/sections/items/DivWrapper';
 
 import Header from '../src/components/sections/header/Header';
 import CollectionsNav from '../src/components/sections/collections/CollectionsNav';
 import SubHeader from '../src/components/sections/items/SubHeader';
 import CollectionSection from '../src/components/sections/collections/CollectionSection';
+import Section from '../src/components/sections/Section';
 
 const Collections: React.FC = () => (
   <>
@@ -19,18 +19,14 @@ const Collections: React.FC = () => (
     <Header />
     <main>
       <CollectionsNav />
-      <section id='professional'>
-        <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] bg-lightgray py-8 px-4 mt-5 rounded">
+      <Section id='professional' className='py-0' secondClassName='bg-lightgray py-8 px-4 mt-5 rounded'>
           <SubHeader className="border-b-gray-200 text-base">MI EUREKA - COLECCIONES PROFESIONALES</SubHeader>
           <CollectionSection />
-        </DivWrapper>
-      </section>
-      <section id='student' className='mb-20'>
-        <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] bg-lightgray py-8 px-4 mt-5 rounded">
+      </Section>
+      <Section id='student' className='py-0 mb-20' secondClassName=" bg-lightgray py-8 px-4 mt-5 rounded">
           <SubHeader className="border-b-gray-200 text-base">MI EUREKA - COLECCIONES PARA ESTUDIANTES</SubHeader>
           <CollectionSection />
-        </DivWrapper>
-      </section>
+      </Section>
     </main>
     <Footer />
   </>

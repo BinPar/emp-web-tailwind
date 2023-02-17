@@ -1,14 +1,27 @@
-import { WithChildren } from '../../model/react';
-import DivWrapper from './items/DivWrapper';
-import Section from './items/Section';
+import React from 'react';
+
+import Section from './Section';
+import ItemList from './ItemsList';
 import SubHeader from './items/SubHeader';
 
-const SectionBooks: React.FC<WithChildren> = ({ children }) => (
+import { authorHomeBooks, currentPriceHomeBooks, fullTextHomeBooks, initialHomeBooks, oldPriceHomeBooks, srcHomeBooks, titleHomeBooks, type2HomeBooks, typeHomeBooks } from '../../utils/dataInfoTest/homeBooksInfo';
+
+const SectionBooks: React.FC = () => (
   <Section>
-    <DivWrapper className="flex md:gap-10 w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] flex-col md:flex-row gap-8">
-      <SubHeader>LIBROS</SubHeader>
-      <div className="flex lg:flex-row flex-col justify-center">{children}</div>
-    </DivWrapper>
+    <SubHeader>LIBROS</SubHeader>
+    <ItemList
+      srcList={srcHomeBooks}
+      itemClassName="md:min-w-[calc(25%_-_20px)]"
+      className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      titleList={titleHomeBooks}
+      authorList={authorHomeBooks}
+      typeList={typeHomeBooks}
+      type2List={type2HomeBooks}
+      initialList={initialHomeBooks}
+      fullTextList={fullTextHomeBooks}
+      oldPriceList={oldPriceHomeBooks}
+      currentPriceList={currentPriceHomeBooks}
+    />
   </Section>
 );
 

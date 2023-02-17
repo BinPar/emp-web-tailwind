@@ -8,7 +8,7 @@ import SecurityIconList from './items/SecurityIconList';
 
 const footer: React.FC = () => (
   <footer className="bg-primary py-5 text-white">
-    <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] flex justify-between mb-5 items-center flex-col lg:flex-row lg:border-b-0 pb-4 lg:pb-0">
+    <DivWrapper className="flex justify-between mb-5 items-center flex-col lg:flex-row lg:border-b-0 pb-4 lg:pb-0">
       <a href="#">
         <div className="max-w-[280px]">
           <Image
@@ -28,7 +28,7 @@ const footer: React.FC = () => (
         <SecurityIconList />
       </div>
     </DivWrapper>
-    <DivWrapper className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] text-center">
+    <DivWrapper className="text-center">
       <p className="uppercase font-extrabold opacity-50 text-3xs tracking-widest">
         © 2021 Editorial Médica Panamericana. Todos los derechos reservados
       </p>
