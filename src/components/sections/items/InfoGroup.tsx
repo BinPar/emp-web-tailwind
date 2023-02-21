@@ -37,7 +37,7 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
     className={twMerge('pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0', className)}
   >
     <div className="flex items-center gap-2 justify-center lg:my-3 relative">
-      {type2 === undefined ? (
+      {type2 === '' || undefined ? (
         <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
           {type}
         </TypeLink>

@@ -3,22 +3,23 @@
 import React, { useState, useEffect } from 'react';
 
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../model/react';
-import { RealData } from '../../utils/dataInfoTest/modelTemp';
+import { WithClassName } from '../../../model/react';
+import { RealData } from '../../../utils/dataInfoTest/modelTemp';
 
-import ItemGeneric from './items/ItemGeneric';
+import ItemGenericListView from './ItemGenericListView';
 
-interface ItemsListProps {
+interface ItemsListViewProps {
   itemClassName?: string;
   data: RealData[];
 }
 
-const ItemsList: React.FC<WithClassName<ItemsListProps>> = ({
+const ItemsListView: React.FC<WithClassName<ItemsListViewProps>> = ({
   className,
   itemClassName,
   data,
 }) => {
   const [itemLi, setItemLi] = useState<React.ReactNode>();
+
   useEffect(() => {
     setItemLi(
       data
@@ -26,18 +27,20 @@ const ItemsList: React.FC<WithClassName<ItemsListProps>> = ({
           src,
           title,
           author,
+          info,
           type,
           type2,
           initial,
           fullText,
           oldPrice,
           currentPrice,}, i) => (
-          <ItemGeneric
+          <ItemGenericListView
             // eslint-disable-next-line react/no-array-index-key
             key={`${i}`}
             className={itemClassName}
             src={src}
             title={title}
+            info={info}
             author={author}
             type={type}
             type2={type2}
@@ -57,4 +60,4 @@ const ItemsList: React.FC<WithClassName<ItemsListProps>> = ({
   );
 };
 
-export default ItemsList;
+export default ItemsListView;

@@ -1,4 +1,11 @@
-export const srcExams = ['/img/promir.jpg', '/img/profisio.jpg', '/img/prodea.jpg', '/img/protel.jpg'];
+import { RealData, TempData } from './modelTemp';
+
+export const srcExams = [
+  '/img/promir.jpg',
+  '/img/profisio.jpg',
+  '/img/prodea.jpg',
+  '/img/protel.jpg',
+];
 
 export const titleExams = [
   'PROREMIR 2024',
@@ -23,3 +30,37 @@ export const fullTextExams = ['NOVEDAD', '', '', ''];
 export const oldPriceExams = ['1.100', '', '', ''];
 
 export const currentPriceExams = ['880', '1.490', '590', '290'];
+
+const data: RealData[] = [];
+const tempData: TempData = {
+    authorList: authorExams,
+    currentPriceList: currentPriceExams,
+    fullTextList: fullTextExams,
+    initialList: initialExams,
+    oldPriceList: oldPriceExams,
+    srcList: srcExams,
+    titleList: titleExams,
+    typeList: typeExams
+};
+Object.keys(tempData).forEach((k) => {
+  const array = tempData[k as keyof typeof tempData];
+  if (array) {
+    array.forEach((str, i) => {
+      if (!data[i]) {
+        data[i] = {
+          author: '',
+          currentPrice: '',
+          fullText: '',
+          initial: '',
+          oldPrice: '',
+          src: '',
+          title: '',
+          type: '',
+        };
+      }
+      data[i][k.replace('List', '') as keyof RealData] = str;
+    });
+  }
+});
+
+export default data;
