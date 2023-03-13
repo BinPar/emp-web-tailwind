@@ -34,6 +34,7 @@ module.exports = {
       },
       colors: {
         primary: '#0074a7',
+        primarilight: '#f0f7fa',
         primaryvariant: '#196696',
         secondary: '#eedb4c',
         greencart: '#b1d141',

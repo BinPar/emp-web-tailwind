@@ -6,5 +6,6 @@ export interface FilterTempData {
   export interface FilterRealData {
     data: string;
     value: string;
+    drop?: boolean;
   }
   

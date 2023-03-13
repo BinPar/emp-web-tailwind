@@ -8,7 +8,7 @@ const SearchCircle: React.FC<SearchCircleProps> = ({ className = 'w-8 h-8 rotate
     fill="currentColor"
     stroke="currentColor"
     className={className}
-    viewBox="0 -50 1050 1000"
+    viewBox="0 -99 1055 1055"
   >
     <path
       strokeWidth="2"

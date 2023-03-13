@@ -9,6 +9,8 @@ import { FilterRealData } from '../../../utils/dataInfoTest/filterModelTemp';
 import ItemFilter from './ItemFilter';
 
 interface FilterListProps {
+  dropRight?: boolean;
+  specialty?: boolean;
   itemClassName?: string;
   data: FilterRealData[];
 }
@@ -16,15 +18,22 @@ interface FilterListProps {
 const FilterList: React.FC<WithClassName<FilterListProps>> = ({
   className,
   itemClassName,
+  specialty,
   data,
 }) => {
   const [itemFilter, setItemFilter] = useState<React.ReactNode>();
   useMemo(() => {
     setItemFilter(
-      data.map(({ data, value }, i) => (
-          <ItemFilter
+      data.map(({ data, value, drop }, i) => (
+        <ItemFilter
           // eslint-disable-next-line react/no-array-index-key
-          key={`${i}`} value={data} data={value} className={itemClassName} />
+          key={`${i}`}
+          value={value}
+          data={data}
+          className={itemClassName}
+          dropRight={drop}
+          specialty={specialty}
+        />
       )),
     );
   }, [data]);

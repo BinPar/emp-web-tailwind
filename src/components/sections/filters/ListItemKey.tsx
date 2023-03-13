@@ -3,34 +3,42 @@ import React, { Dispatch, SetStateAction } from 'react';
 
 import { twMerge } from 'tailwind-merge';
 import { WithClassName } from '../../../model/react';
-import { allAuthorsMap, keyAuthorFilter } from '../../../utils/dataInfoTest/filterAuthor';
+import { FilterRealData } from '../../../utils/dataInfoTest/filterModelTemp';
+
 
 import ItemKey from './ItemKey';
 
 interface ListItemKeyProps {
+  keyItemsFilter: string[];
+  allItemsKey: Map<string, FilterRealData[]>;
+  dropRight?: boolean;
+  checkable?: boolean;
   activeKey: string;
   changeValue: Dispatch<SetStateAction<string>>;
 }
 
 const ListItemKey: React.FC<WithClassName<ListItemKeyProps>> = ({
   className,
+  allItemsKey,
+  keyItemsFilter,
+  dropRight,
   activeKey,
   changeValue,
 }) => (
   <div className={twMerge('flex gap-5 items-center', className)}>
-    {keyAuthorFilter.map((key) => (
+    {keyItemsFilter.map((key) => (
+    
       <ItemKey
-        className={
-          allAuthorsMap.has(key)
-            ? activeKey === key
-              ? 'text-primary'
-              : 'text-gray-400'
-            : 'text-gray-200 pointer-events-none'
-        }
+        className={allItemsKey.has(key)
+          ? !dropRight && activeKey === key
+            ? 'text-primary'
+            : 'text-gray-400'
+          : 'text-gray-200 pointer-events-none'}
+        dropRight={dropRight}
         key={key}
         value={key}
-        changeValue={changeValue}
-      />
+        changeValue={changeValue} 
+        activeKey={activeKey}      />
     ))}
   </div>
 );

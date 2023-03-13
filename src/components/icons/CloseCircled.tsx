@@ -6,7 +6,7 @@ const Close: React.FC<CloseCircledProps> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className={className}
-    viewBox="0 -300 1050 1050"
+    viewBox="0 -310 1055 1055"
     fill="currentColor"
     stroke="currentColor"
   >
