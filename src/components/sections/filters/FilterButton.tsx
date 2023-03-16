@@ -7,8 +7,6 @@ interface FilterButtonProps {
   title: string;
   classWrap?: string;
 }
-
-// eslint-disable-next-line max-len
 const FilterButton: React.FC<WithChildren<FilterButtonProps>> = ({
   children,
   title,
@@ -31,7 +29,7 @@ const FilterButton: React.FC<WithChildren<FilterButtonProps>> = ({
         />
       </button>
       <div
-        className={`border-2 bg-white border-gray-200 absolute top-12 pt-5 pb-7 px-6 mt-3${
+        className={`border-2 bg-white border-gray-200 absolute top-12 py-5 px-6 mt-3${
           openFilter ? ' inline-block' : ' hidden'
         } ${classWrap || ''}`}
       >

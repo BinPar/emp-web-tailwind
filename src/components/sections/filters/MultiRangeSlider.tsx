@@ -1,5 +1,9 @@
-import { FC, useCallback, useEffect, useState, useRef } from 'react';
 
+
+import { useCallback, useEffect, useState, useRef } from 'react';
+import Minus from '../../icons/Minus';
+import Plus from '../../icons/Plus';
+import RangeInput from './RangeInput';
 
 export interface RangeValues {
   min: number;
@@ -9,13 +13,13 @@ interface MultiRangeSliderProps {
   min: number;
   max: number;
   onChange: (value: RangeValues) => void;
+  valueSuffix?: string;
 }
 
-const MultiRangeSlider: FC<MultiRangeSliderProps> = ({ min, max, onChange }) => {
+const MultiRangeSlider: React.FC<MultiRangeSliderProps> = ({ min, max, valueSuffix, onChange }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
-  const minValRef = useRef<HTMLInputElement>(null);
-  const maxValRef = useRef<HTMLInputElement>(null);
+
   const range = useRef<HTMLDivElement>(null);
 
   const getPercent = useCallback(
@@ -24,69 +28,59 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({ min, max, onChange }) => 
   );
 
   useEffect(() => {
-    if (maxValRef.current) {
-      const minPercent = getPercent(minVal);
-      const maxPercent = getPercent(+maxValRef.current.value);
+    const minPercent = getPercent(minVal);
+    const maxPercent = getPercent(maxVal);
 
-      if (range.current) {
-        range.current.style.left = `${minPercent}%`;
-        range.current.style.width = `${maxPercent - minPercent}%`;
-      }
+    if (range.current) {
+      range.current.style.left = `${minPercent}%`;
+      range.current.style.width = `${maxPercent - minPercent}%`;
     }
-  }, [minVal, getPercent]);
-
-  useEffect(() => {
-    if (minValRef.current) {
-      const minPercent = getPercent(+minValRef.current.value);
-      const maxPercent = getPercent(maxVal);
-
-      if (range.current) {
-        range.current.style.width = `${maxPercent - minPercent}%`;
-      }
-    }
-  }, [maxVal, getPercent]);
+  }, [minVal, maxVal, getPercent]);
 
   useEffect(() => {
     onChange({ min: minVal, max: maxVal });
   }, [minVal, maxVal, onChange]);
 
+  const onChangeMinVal = (newValue: string): void => {
+    const value = Math.min(+newValue, maxVal - 1);
+    setMinVal(value);
+  };
+  const onChangeMaxVal = (newValue: string): void => {
+    const value = Math.max(+newValue, minVal + 1);
+    setMaxVal(value);
+  };
   return (
     <>
-      <input
-        className="appearance-none absolute pointer-events-none h-0 w-[374px] outline-none z-[3] left-5 mt-[19px]"
-        type="range"
+      <RangeInput
         min={min}
         max={max}
         value={minVal}
-        ref={minValRef}
-        onChange={(event): void => {
-          const value = Math.min(+event.target.value, maxVal - 1);
-          setMinVal(value);
-        }}
+        onChangeVal={onChangeMinVal}
+        className="z-[3] left-5"
       />
-      <input
-        type="range"
+      <RangeInput
         min={min}
         max={max}
         value={maxVal}
-        ref={maxValRef}
-        onChange={(event): void => {
-          const value = Math.max(+event.target.value, minVal + 1);
-          setMaxVal(value);
-        }}
-        className="appearance-none absolute pointer-events-none h-0 w-[374px] outline-none z-[4] right-5 mt-[19px]"
+        onChangeVal={onChangeMaxVal}
+        className="z-[4] right-5"
       />
-      
-        <div className="relative min-w-[374px] mt-5">
-          <div className="absolute rounded-md h-[2.5px] bg-gray-200 z-[1] w-full" />
-          <div ref={range} className="absolute rounded-md h-[2.5px] bg-primary z-[2]" />
-        </div>
-
-
+      <div className="relative min-w-[374px] mt-5">
+        <div className="absolute rounded-md h-[2.5px] bg-gray-200 z-[1] w-full" />
+        <div ref={range} className="absolute rounded-md h-[2.5px] bg-primary z-[2]" />
+      </div>
+      <Minus className="w-6 text-gray-200 absolute left-4 top-14" />
+      <Plus className="w-6 text-gray-200 absolute right-[14px] top-14" />
       <div className="flex items-center justify-center gap-2 mt-9">
-        <p className="text-primary text-sm">{minVal}€</p>
+        <p className="text-primary text-sm">
+          {minVal}
+          {valueSuffix}
+        </p>
         <span className="text-primary text-sm">-</span>
-        <p className="text-primary text-sm">{maxVal}€</p>
+        <p className="text-primary text-sm">
+          {maxVal}
+          {valueSuffix}
+        </p>
       </div>
     </>
   );
