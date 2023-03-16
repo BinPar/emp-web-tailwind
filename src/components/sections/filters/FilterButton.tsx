@@ -29,7 +29,7 @@ const FilterButton: React.FC<WithChildren<FilterButtonProps>> = ({
         />
       </button>
       <div
-        className={`border-2 bg-white border-gray-200 absolute top-12 py-5 px-6 mt-3${
+        className={`border-2 bg-white border-gray-200 absolute top-12 py-5 px-6 mt-3 max-w-[calc(100%_-_50px)] lg:max-w-[calc(100%_-_100px)] xl:max-w-[calc(100%_-_160px)] xl3:max-w-[1440px]${
           openFilter ? ' inline-block' : ' hidden'
         } ${classWrap || ''}`}
       >

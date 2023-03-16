@@ -16,7 +16,7 @@ const RangeInput: React.FC<WithClassName<RangeProps>> = ({
 }) => (
   <input
     className={twMerge(
-      'appearance-none absolute pointer-events-none h-0 w-[374px] outline-none mt-[19px]',
+      'appearance-none absolute pointer-events-none h-0 w-[374px] outline-none',
       className,
     )}
     type="range"

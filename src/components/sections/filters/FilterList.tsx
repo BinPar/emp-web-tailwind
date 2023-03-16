@@ -12,6 +12,7 @@ interface FilterListProps {
   dropRight?: boolean;
   specialty?: boolean;
   itemClassName?: string;
+  tagType?: boolean;
   data: FilterRealData[];
 }
 
@@ -19,9 +20,11 @@ const FilterList: React.FC<WithClassName<FilterListProps>> = ({
   className,
   itemClassName,
   specialty,
+  tagType,
   data,
 }) => {
   const [itemFilter, setItemFilter] = useState<React.ReactNode>();
+  console.log(tagType);
   useMemo(() => {
     setItemFilter(
       data.map(({ data, value, drop }, i) => (
@@ -32,6 +35,7 @@ const FilterList: React.FC<WithClassName<FilterListProps>> = ({
           data={data}
           className={itemClassName}
           dropRight={drop}
+          tagType={tagType}
           specialty={specialty}
         />
       )),

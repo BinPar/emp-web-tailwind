@@ -15,7 +15,7 @@ import ItemsListView from '../src/components/sections/items/ItemsListView';
 import TypeFilter from '../src/components/sections/filters/TypeFilter';
 import AuthorFilter from '../src/components/sections/filters/AuthorFilter';
 import SpecialtyFilter from '../src/components/sections/filters/SpecialityFilter';
-import PriceRangeFilter from '../src/components/sections/filters/PriceRangeFilte';
+import PriceRangeFilter from '../src/components/sections/filters/PriceRangeFilter';
 import OthersFilter from '../src/components/sections/filters/OthersFilter';
 
 const Books: React.FC = () => {
