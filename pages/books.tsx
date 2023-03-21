@@ -9,8 +9,6 @@ import ItemList from '../src/components/sections/ItemsList';
 import Section from '../src/components/sections/Section';
 
 import data from '../src/utils/dataInfoTest/booksInfo';
-import List from '../src/components/icons/List';
-import Items from '../src/components/icons/Items';
 import ItemsListView from '../src/components/sections/items/ItemsListView';
 import TypeFilter from '../src/components/sections/filters/TypeFilter';
 import AuthorFilter from '../src/components/sections/filters/AuthorFilter';
@@ -18,6 +16,7 @@ import SpecialtyFilter from '../src/components/sections/filters/SpecialityFilter
 import PriceRangeFilter from '../src/components/sections/filters/PriceRangeFilter';
 import OthersFilter from '../src/components/sections/filters/OthersFilter';
 import OrderBy from '../src/components/sections/filters/OrderBy';
+import VisualGroup from '../src/components/sections/filters/VisualGroup';
 
 
 
@@ -33,14 +32,8 @@ const Books: React.FC = () => {
       </Head>
       <Header />
       <main>
-        <div className="hidden lg:gap-5 lg:flex text-gray-400">
-          <button type="button" onClick={(): void => setSwitchItems(!switchItems)}>
-            <List className={`w-5${switchItems ? ' text-primary' : ''}`} />
-          </button>
-          <button type="button" onClick={(): void => setSwitchItems(!switchItems)}>
-            <Items className={`w-5${!switchItems ? ' text-primary' : ''}`} />
-          </button>
-        </div>
+        <VisualGroup method={setSwitchItems} state={switchItems}/>
+        
         <TypeFilter />
         <AuthorFilter />
         <SpecialtyFilter />
