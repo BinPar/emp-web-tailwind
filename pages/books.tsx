@@ -17,6 +17,10 @@ import AuthorFilter from '../src/components/sections/filters/AuthorFilter';
 import SpecialtyFilter from '../src/components/sections/filters/SpecialityFilter';
 import PriceRangeFilter from '../src/components/sections/filters/PriceRangeFilter';
 import OthersFilter from '../src/components/sections/filters/OthersFilter';
+import OrderBy from '../src/components/sections/filters/OrderBy';
+
+
+
 
 const Books: React.FC = () => {
   const [switchItems, setSwitchItems] = useState<boolean>(false);
@@ -42,6 +46,7 @@ const Books: React.FC = () => {
         <SpecialtyFilter />
         <PriceRangeFilter />
         <OthersFilter/>
+        <OrderBy/>
         <Section className="py-0">
           <SubHeader className="border-b-gray-200 text-base mt-5">LIBROS</SubHeader>
           {!switchItems ? (

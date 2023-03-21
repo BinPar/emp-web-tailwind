@@ -4,10 +4,10 @@ import { WithClassName } from '../../../model/react';
 import FullStar from '../../icons/FullStar';
 import EmptyStar from '../../icons/StarEmpty';
 
-interface ButtonStar {
+interface ButtonStarProps {
   value: number;
 }
-const ButtonStar: React.FC<WithClassName<ButtonStar>> = ({ className, value }) => (
+const ButtonStar: React.FC<WithClassName<ButtonStarProps>> = ({ className, value }) => (
   <button
     type="button"
     value={value}
