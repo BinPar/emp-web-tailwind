@@ -10,8 +10,8 @@ interface TypeFilterProps {
 }
 const TypeFilter: React.FC<TypeFilterProps> = ({openMethod, state}) => (
   <FilterWrap>
-    <FilterButton openMethod={openMethod} state={state} title="Tipo">
-      <FilterList data={dataType} />
+    <FilterButton openMethod={openMethod} state={state} title="Tipo" classWrap='text-left lg:text-center'>
+      <FilterList data={dataType}/>
     </FilterButton>
   </FilterWrap>
 );

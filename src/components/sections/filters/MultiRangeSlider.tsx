@@ -1,5 +1,3 @@
-
-
 import { useCallback, useEffect, useState, useRef } from 'react';
 import Minus from '../../icons/Minus';
 import Plus from '../../icons/Plus';
@@ -14,9 +12,16 @@ interface MultiRangeSliderProps {
   max: number;
   onChange: (value: RangeValues) => void;
   valueSuffix?: string;
+  className?: string;
 }
 
-const MultiRangeSlider: React.FC<MultiRangeSliderProps> = ({ min, max, valueSuffix, onChange }) => {
+const MultiRangeSlider: React.FC<MultiRangeSliderProps> = ({
+  min,
+  max,
+  valueSuffix,
+  onChange,
+  className,
+}) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
 
@@ -50,7 +55,7 @@ const MultiRangeSlider: React.FC<MultiRangeSliderProps> = ({ min, max, valueSuff
     setMaxVal(value);
   };
   return (
-    <div className='max-w-[374px] relative'>
+    <div className={`max-w-[374px] relative ${className || ''}`}>
       <RangeInput
         min={min}
         max={max}

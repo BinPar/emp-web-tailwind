@@ -4,7 +4,7 @@ import { WithChildren, WithClassName } from '../../../model/react';
 const FilterWrap: React.FC<WithClassName<WithChildren>> = ({ className, children }) => (
   <div
     className={twMerge(
-      'text-center flex justify-center',
+      'text-center lg:flex justify-center',
       className
     )}
   >

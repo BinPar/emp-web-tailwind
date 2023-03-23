@@ -16,6 +16,7 @@ const PriceRangeFilter: React.FC<PriceFilterProps> = ({ openMethod, state }) => 
         max={1000}
         valueSuffix="€"
         onChange={({ min, max }: RangeValues): void => console.log(`min = ${min}, max = ${max}`)}
+        className='m-auto lg:m-0'
       />
     </FilterButton>
   </FilterWrap>
