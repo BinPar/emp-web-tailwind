@@ -1,3 +1,4 @@
+import { SetStateAction } from 'react';
 import FilterButton from './FilterButton';
 import FilterWrap from './FilterWrap';
 import MultiRangeSlider, { RangeValues } from './MultiRangeSlider';
@@ -5,9 +6,14 @@ import { allTagsMap } from '../../../utils/dataInfoTest/filterTag';
 import SwitchButton from './SwitchButton';
 import TagFilter from './TagFilter';
 
-const OthersFilter: React.FC = () => (
+interface OthersFilterProps {
+  openMethod: React.Dispatch<SetStateAction<string>>;
+  state: string;
+}
+
+const OthersFilter: React.FC<OthersFilterProps> = ({openMethod, state}) => (
   <FilterWrap>
-    <FilterButton title="Más filtros" classWrap='z-20'>
+    <FilterButton title="Más filtros" classWrap="left-0 z-10" openMethod={openMethod} state={state}>
       <TagFilter data={allTagsMap.tags} title="etiquetas" />
       <TagFilter data={allTagsMap.editorial} title="editoriales" />
       <div className="flex gap-8 items-center">
@@ -16,7 +22,10 @@ const OthersFilter: React.FC = () => (
           max={2023}
           onChange={({ min, max }: RangeValues): void => console.log(`min = ${min}, max = ${max}`)}
         />
-        <TagFilter data={allTagsMap.availability} title="disponibilidad" />
+        <div className="max-w-[400px]">
+          <TagFilter data={allTagsMap.availability} title="disponibilidad" />
+        </div>
+
         <SwitchButton title="material complementario" />
       </div>
     </FilterButton>

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { SetStateAction, useMemo, useState } from 'react';
 import { allAuthorsMap, keyAuthorFilter } from '../../../utils/dataInfoTest/filterAuthor';
 import CloseCircled from '../../icons/CloseCircled';
 import SearchCircle from '../../icons/SearchCircle';
@@ -8,7 +8,11 @@ import FilterWrap from './FilterWrap';
 import ListItemKey from './ListItemKey';
 import SearchForm from './SearchForm';
 
-const AuthorFilter: React.FC = () => {
+interface AuthorFilterProps {
+  openMethod: React.Dispatch<SetStateAction<string>>;
+  state: string;
+}
+const AuthorFilter: React.FC<AuthorFilterProps> = ({ openMethod, state }) => {
   const [sowSearch, SetSowSearch] = useState<boolean>(true);
   const [activeKey, setActiveKey] = useState('A');
   const [authors, setAuthors] = useState(allAuthorsMap.get(activeKey) || []);
@@ -20,8 +24,10 @@ const AuthorFilter: React.FC = () => {
   return (
     <FilterWrap>
       <FilterButton
+        openMethod={openMethod}
+        state={state}
         title="Autor"
-        classWrap=" m-auto w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] z-10"
+        classWrap="w-full left-0 z-10"
       >
         <div className="flex justify-between border-b border-gray-200 mb-6 pb-2">
           {!sowSearch ? (

@@ -10,16 +10,7 @@ import Section from '../src/components/sections/Section';
 
 import data from '../src/utils/dataInfoTest/booksInfo';
 import ItemsListView from '../src/components/sections/items/ItemsListView';
-import TypeFilter from '../src/components/sections/filters/TypeFilter';
-import AuthorFilter from '../src/components/sections/filters/AuthorFilter';
-import SpecialtyFilter from '../src/components/sections/filters/SpecialityFilter';
-import PriceRangeFilter from '../src/components/sections/filters/PriceRangeFilter';
-import OthersFilter from '../src/components/sections/filters/OthersFilter';
-import OrderBy from '../src/components/sections/filters/OrderBy';
-import VisualGroup from '../src/components/sections/filters/VisualGroup';
-
-
-
+import Filters from '../src/components/sections/filters/Filters';
 
 const Books: React.FC = () => {
   const [switchItems, setSwitchItems] = useState<boolean>(false);
@@ -32,14 +23,7 @@ const Books: React.FC = () => {
       </Head>
       <Header />
       <main>
-        <VisualGroup method={setSwitchItems} state={switchItems}/>
-        
-        <TypeFilter />
-        <AuthorFilter />
-        <SpecialtyFilter />
-        <PriceRangeFilter />
-        <OthersFilter/>
-        <OrderBy/>
+        <Filters method={setSwitchItems} state={switchItems} />      
         <Section className="py-0">
           <SubHeader className="border-b-gray-200 text-base mt-5">LIBROS</SubHeader>
           {!switchItems ? (

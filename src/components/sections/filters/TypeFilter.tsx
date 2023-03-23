@@ -1,11 +1,16 @@
+import { SetStateAction } from 'react';
 import dataType from '../../../utils/dataInfoTest/filterType';
 import FilterButton from './FilterButton';
 import FilterList from './FilterList';
 import FilterWrap from './FilterWrap';
 
-const TypeFilter: React.FC = () => (
+interface TypeFilterProps {
+  openMethod: React.Dispatch<SetStateAction<string>>;
+  state: string;
+}
+const TypeFilter: React.FC<TypeFilterProps> = ({openMethod, state}) => (
   <FilterWrap>
-    <FilterButton title="Tipo">
+    <FilterButton openMethod={openMethod} state={state} title="Tipo">
       <FilterList data={dataType} />
     </FilterButton>
   </FilterWrap>
