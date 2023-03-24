@@ -20,42 +20,42 @@ const ProductMainContent: React.FC = () => (
   <>
     <ProductInfo />
     <ModuleSelection />
-    <ItemAcordeon id='introduction' title="INTRODUCCION">
+    <ItemAcordeon id="introduction" title="INTRODUCCION">
       <IntroductionModule />
     </ItemAcordeon>
-    <ItemAcordeon id='university' title="UNIVERSIDAD">
+    <ItemAcordeon id="university" title="UNIVERSIDAD">
       <div className="w-52 m-auto">
         <Image alt="ufv" src="/assets/ufv.png" width={1400} height={377} />
       </div>
     </ItemAcordeon>
-    <ItemAcordeon id='description' title="DESCRIPCIÓN">
+    <ItemAcordeon id="description" title="DESCRIPCIÓN">
       <DescriptionModule />
     </ItemAcordeon>
-    <ItemAcordeon id='addressed' title="DIRIGIDO A">
+    <ItemAcordeon id="addressed" title="DIRIGIDO A">
       <AddressedModule />
     </ItemAcordeon>
-    <ItemAcordeon id='objectives' title="OBJETIVOS">
+    <ItemAcordeon id="objectives" title="OBJETIVOS">
       <ObjetivesModule />
     </ItemAcordeon>
-    <ItemAcordeon id='contents' title="CONTENIDOS">
+    <ItemAcordeon id="contents" title="CONTENIDOS">
       <ContentModule />
     </ItemAcordeon>
-    <ItemAcordeon id='sample' title="TEMA DE MUESTRA">
+    <ItemAcordeon id="sample" title="TEMA DE MUESTRA">
       <SampleModule />
     </ItemAcordeon>
-    <ItemAcordeon id='title' title="TITULACIÓN">
+    <ItemAcordeon id="title" title="TITULACIÓN">
       <TitleModule />
     </ItemAcordeon>
-    <ItemAcordeon id='method' title="MÉTODO">
+    <ItemAcordeon id="method" title="MÉTODO">
       <MethodModule />
     </ItemAcordeon>
-    <ItemAcordeon id='payment' title="MÉTODOS DE PAGO">
+    <ItemAcordeon id="payment" title="MÉTODOS DE PAGO">
       <PaymentModule />
     </ItemAcordeon>
-    <ItemAcordeon id='author' title="AUTORES">
+    <ItemAcordeon id="author" title="AUTORES">
       <AuthorsModule />
     </ItemAcordeon>
-    <ItemAcordeon id='tags' title="ETIQUETAS">
+    <ItemAcordeon id="tags" title="ETIQUETAS">
       <TagsModule />
     </ItemAcordeon>
   </>

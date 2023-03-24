@@ -1,5 +1,5 @@
 const ProductPrice: React.FC = () => (
-  <div className="flex text-gray-400 w-full mb-1 py-3 pl-5 bg-[#f9f9f9] relative justify-center">
+  <div className="flex text-gray-400 w-full mb-1 py-3 pl-5 bg-lightgray relative justify-center">
     <div className="flex items-center gap-1 pt-1">
       <p className="text-gray-400 text-1xs tracking-widest font-light line-through decoration-1">
         1.790

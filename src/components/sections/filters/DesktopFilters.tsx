@@ -20,7 +20,7 @@ const DesktopFilters: React.FC<DesktopFiltersProps> = ({
   method,
   state,
 }) => (
-  <DivWrapper className="hidden lg:flex relative items-center justify-between bg-white">
+  <DivWrapper className="hidden lg:flex relative items-center justify-between bg-white mt-5">
     <div className="flex items-center">
       <p className="text-xs font-light text-gray-400 mr-5">Filtrar por</p>
       <TypeFilter openMethod={setOpenFilter} state={openFilter} />

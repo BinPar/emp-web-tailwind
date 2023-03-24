@@ -1,12 +1,15 @@
 import CartLight from '../../icons/CartLight';
 
-const ProductSelection: React.FC = () => (
-  <div className="flex text-gray-400 w-full border-b border-[#ebebeb] py-5 pl-5 bg-[#f9f9f9] relative">
-    <span className="w-0 h-0 border-t-[15px] border-r-[20px] border-b-[15px] border-t-transparent border-b-transparent border-r-[#f9f9f9] absolute -left-5"/>
+interface ProductSelectionProps {
+  title: string;
+}
+const ProductSelection: React.FC<ProductSelectionProps> = ({title}) => (
+  <div className="flex text-gray-400 w-full border-b border-[#ebebeb] py-5 pl-5 bg-lightgray relative">
+    <span className="w-0 h-0 border-t-[15px] border-r-[20px] border-b-[15px] border-t-transparent border-b-transparent border-r-lightgray absolute -left-5" />
     <div className="w-6">
       <CartLight />
     </div>
-    <p className="ml-3">Tu selección</p>
+    <p className="ml-3">{title}</p>
   </div>
 );
 export default ProductSelection;

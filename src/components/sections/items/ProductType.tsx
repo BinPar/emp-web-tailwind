@@ -1,7 +1,7 @@
 import Checked from '../../icons/Checked';
 
 const ProductType: React.FC = () => (
-  <div className="flex text-gray-400 w-full mb-1 py-5 pl-5 bg-[#f9f9f9] relative">
+  <div className="flex text-gray-400 w-full mb-1 py-5 pl-5 bg-lightgray relative">
     <form>
       <div className="flex">
         <Checked className="w-4" />
