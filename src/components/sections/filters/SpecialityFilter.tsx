@@ -3,6 +3,7 @@ import { allSpecialtyMap, keySpecialtyFilter } from '../../../utils/dataInfoTest
 
 import CloseCircled from '../../icons/CloseCircled';
 import SearchCircle from '../../icons/SearchCircle';
+import SearchMv from '../../icons/SearchMv';
 import FilterButton from './FilterButton';
 import FilterList from './FilterList';
 import FilterWrap from './FilterWrap';
@@ -37,13 +38,17 @@ const SpecialtyFilter: React.FC<SpecialtyFilterProps> = ({openMethod, state}) =>
             onClick={(): void => SetSowSearch(!sowSearch)}
           >
             {sowSearch ? (
-              <SearchCircle className="absolute -top-1 rotate-[89deg]" />
+              <>
+              <SearchCircle className="absolute -top-1 rotate-[89deg] hidden lg:block" />
+              <SearchMv className='absolute -top-1 lg:hidden'/>
+              </>
+              
             ) : (
               <CloseCircled className="absolute -top-1" />
             )}
           </button>
         </div>
-        <div className="flex gap-5">
+        <div className="flex-col lg:flex-row flex gap-5">
           <ListItemKey
             className="flex-col items-start gap-2 pl-6"
             activeKey={activeKey}
@@ -55,7 +60,7 @@ const SpecialtyFilter: React.FC<SpecialtyFilterProps> = ({openMethod, state}) =>
           <FilterList
             itemClassName="w-[300px]"
             data={specialty}
-            className="grid grid-cols-1 max-h-[calc(100vh_-_410px)] overflow-auto border-l border-gray-200 pl-5"
+            className="grid grid-cols-1 max-h-[calc(100vh_-_410px)] overflow-auto border-t pt-6 lg:pt-0 lg:border-t-0 lg:border-l border-gray-200 pl-5"
             dropRight
             specialty
           />

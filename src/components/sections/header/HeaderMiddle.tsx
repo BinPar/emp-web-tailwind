@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Search from '../../icons/Search';
 import Cart from '../../icons/Cart';
+import SearchCircle from '../../icons/SearchCircle';
 
 
 const HeaderMiddle: React.FC = () => (
@@ -32,7 +32,7 @@ const HeaderMiddle: React.FC = () => (
         autoComplete="off"
       />
       <button type="button" className="text-gray-400">
-        <Search className="w-8 min-w-8" />
+        <SearchCircle className="w-8 min-w-8 rotate-[89deg]" />
       </button>
       <button type="button" className="text-greencart ml-8 flex items-center">
         <Cart className="w-8 min-w-8 mr-2" />

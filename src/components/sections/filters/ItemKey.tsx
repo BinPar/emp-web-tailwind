@@ -14,7 +14,7 @@ interface ItemFilterProps {
 
 const ItemKey: React.FC<WithClassName<ItemFilterProps>> = ({
   className,
-
+  activeKey,
   value,
   dropRight,
   changeValue,
@@ -33,6 +33,7 @@ const ItemKey: React.FC<WithClassName<ItemFilterProps>> = ({
         onClick={(): void => {
           changeValue(value);
           setChecked(!checked);
+          console.log(value);
         }}
         className={twMerge(
           `flex text-1xs text-gray-400 font-thin tracking-[1px] relative hover:text-primary text-sm py-1 pl-1 w-full${
@@ -44,7 +45,15 @@ const ItemKey: React.FC<WithClassName<ItemFilterProps>> = ({
         {value}
       </button>
       {dropRight && (
-        <button type="button" className="w-5 text-primary">
+        <button
+          type="button"
+          className={`w-5 text-primary lg:rotate-0${
+            value === activeKey ? ' -rotate-90' : ' rotate-90'
+          }`}
+          onClick={(): void => {
+            changeValue(value !== activeKey ? value : '');
+          }}
+        >
           <ArrowRight />
         </button>
       )}

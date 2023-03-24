@@ -70,7 +70,7 @@ const MultiRangeSlider: React.FC<MultiRangeSliderProps> = ({
         onChangeVal={onChangeMaxVal}
         className="z-[4] right-0"
       />
-      <div className="relative min-w-[374px]">
+      <div className="relative lg:min-w-[374px]">
         <div className="absolute rounded-md h-[2.5px] bg-gray-200 z-[1] w-full" />
         <div ref={range} className="absolute rounded-md h-[2.5px] bg-primary z-[2]" />
       </div>

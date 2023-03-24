@@ -27,8 +27,7 @@ const ItemFilter: React.FC<WithClassName<ItemFilterProps>> = ({
     <label
       htmlFor={value}
       className={twMerge(
-        `flex text-1xs text-gray-400 font-thin tracking-[1px] relative mb-2 last:mb-0 justify-between hover:text-primary${tagType && checked ? ' bg-primary !border-primary text-white' : ''}`,
-        className,
+        `flex text-1xs text-gray-400 font-thin tracking-[1px] relative mb-2 last:mb-0 justify-between hover:text-primary${tagType && checked ? ' bg-primary !border-primary text-white' : ''} ${className || ''}`
       )}
     >
       <div className="flex w-full items-center">
@@ -52,7 +51,7 @@ const ItemFilter: React.FC<WithClassName<ItemFilterProps>> = ({
       </div>
 
       {dropRight && (
-        <button type="button" className="w-5 text-primary">
+        <button type="button" className="w-5 text-primary rotate-90 lg:rotate-0">
           <ArrowRight />
         </button>
       )}
