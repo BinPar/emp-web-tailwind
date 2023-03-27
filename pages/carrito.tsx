@@ -5,7 +5,7 @@ import Footer from '../src/components/sections/Footer';
 import Header from '../src/components/sections/header/Header';
 import { allCartMap } from '../src/utils/dataInfoTest/itemsCart';
 
-const Books: React.FC = () => (
+const Cart: React.FC = () => (
   <>
     <Head>
       <title>Ejemplo de página de EMP en TW</title>
@@ -24,4 +24,4 @@ const Books: React.FC = () => (
   </>
 );
 
-export default Books;
+export default Cart;
