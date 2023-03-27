@@ -2,7 +2,7 @@ interface PlusProps {
     className?: string;
   }
   
-  const Minus: React.FC<PlusProps> = ({ className }) => (
+  const Plus: React.FC<PlusProps> = ({ className }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={className}
@@ -18,5 +18,5 @@ interface PlusProps {
     </svg>
   );
   
-  export default Minus;
+  export default Plus;
   

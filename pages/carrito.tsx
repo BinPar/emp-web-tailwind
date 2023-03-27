@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import OrderResume from '../src/components/sections/checkOut/OrderResume';
+import CartList from '../src/components/sections/checkOut/CartList';
+import Order from '../src/components/sections/checkOut/Order';
 import Footer from '../src/components/sections/Footer';
 import Header from '../src/components/sections/header/Header';
-import ProductSelection from '../src/components/sections/items/ProductSelection';
-import ProductWarranty from '../src/components/sections/items/ProductWarranty';
+import { allCartMap } from '../src/utils/dataInfoTest/itemsCart';
 
 const Books: React.FC = () => (
   <>
@@ -14,13 +14,11 @@ const Books: React.FC = () => (
     </Head>
     <Header />
     <main>
-      <section>
-        <article className='mb-8 lg:mb-0 w-[calc(100%_+_50px)] -left-6 lg:left-auto mt-11 lg:mt-0 lg:max-w-[250px] xl:max-w-[310px] relative lg:absolute right-0 border-l-2 border-lightgray bg-white'>
-        <ProductSelection title='Tu pedido'/>
-        <OrderResume/> 
-        <ProductWarranty />
-        </article>
+      <section className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto lg:flex pt-0 lg:pt-12">
+        <CartList data={allCartMap.cart} />
+        <Order />
       </section>
+      {/* ADRIS AQUI METE MAÑANA EL MODALEPTYCART */}
     </main>
     <Footer />
   </>
