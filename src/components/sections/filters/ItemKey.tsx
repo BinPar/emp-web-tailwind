@@ -33,7 +33,7 @@ const ItemKey: React.FC<WithClassName<ItemFilterProps>> = ({
         onClick={(): void => {
           changeValue(value);
           setChecked(!checked);
-          console.log(value);
+          
         }}
         className={twMerge(
           `flex text-1xs text-gray-400 font-thin tracking-[1px] relative hover:text-primary text-sm py-1 pl-1 w-full${

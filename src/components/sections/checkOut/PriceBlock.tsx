@@ -13,7 +13,7 @@ const PriceBlock: React.FC<PriceBlockProps> = ({
   quantity,
   className,
 }) => (
-  <div className={`w-60 flex items-center ${className || ''}`}>
+  <div className={`w-full md:w-60 flex items-center ${className || ''}`}>
     <div className="w-full flex gap-3 md:block text-1xs tracking-[1px] text-gray-400 font-light">
       <p className="flex justify-center gap-1 line-through">
         {oldPrice}

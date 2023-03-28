@@ -3,15 +3,15 @@ import Minus from '../../icons/Minus';
 import Plus from '../../icons/Plus';
 
 interface QuantityBlockProps {
-  method: Dispatch<SetStateAction<number>>;
+methodQuantity: Dispatch<SetStateAction<number>>;
   quantity: number;
 }
-const QuantityBlock: React.FC<QuantityBlockProps> = ({ method, quantity }) => (
-  <div className="flex relative left-[93px] md:left-0 gap-2 md:items-center md:justify-around w-60 ">
+const QuantityBlock: React.FC<QuantityBlockProps> = ({ methodQuantity, quantity }) => (
+  <div className="flex relative left-[93px] md:left-0 gap-2 md:items-center md:justify-around w-full md:w-60 ">
     <button
       type="button"
       className="text-gray-300 w-7"
-      onClick={(): void => method(Math.max(quantity - 1, 1))}
+      onClick={(): void => methodQuantity(Math.max(quantity - 1, 1))}
     >
       <Minus />
     </button>
@@ -20,7 +20,7 @@ const QuantityBlock: React.FC<QuantityBlockProps> = ({ method, quantity }) => (
       type="button"
       className="text-gray-300 w-7"
       onClick={(): void => {
-        method(quantity + 1);
+        methodQuantity(quantity + 1);
       }}
     >
       <Plus />

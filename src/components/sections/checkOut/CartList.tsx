@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, Dispatch, SetStateAction } from 'react';
 
 import { twMerge } from 'tailwind-merge';
 import { WithClassName } from '../../../model/react';
@@ -10,9 +10,17 @@ import ItemCart from './ItemCart';
 interface CarteListProps {
   itemClassName?: string;
   data: CartRealData[];
+  method: Dispatch<SetStateAction<string>>;
+  value: string;
 }
 
-const CartList: React.FC<WithClassName<CarteListProps>> = ({ className, itemClassName, data }) => {
+const CartList: React.FC<WithClassName<CarteListProps>> = ({
+  className,
+  itemClassName,
+  data,
+  method,
+  value,
+}) => {
   const [itemCart, setItemCart] = useState<React.ReactNode>();
   useMemo(() => {
     setItemCart(
@@ -28,6 +36,8 @@ const CartList: React.FC<WithClassName<CarteListProps>> = ({ className, itemClas
           discount={discount}
           priceSuffix={priceSuffix}
           className={itemClassName}
+          method={method}
+          value={value}
         />
       )),
     );
@@ -37,7 +47,7 @@ const CartList: React.FC<WithClassName<CarteListProps>> = ({ className, itemClas
     <div className="lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:pr-12 mt-8">
       <CartListTitles />
       <ul className={twMerge('w-full', className)}>{itemCart}</ul>
-      <EmptyCartButton/>
+      <EmptyCartButton method={method} />
     </div>
   );
 };
