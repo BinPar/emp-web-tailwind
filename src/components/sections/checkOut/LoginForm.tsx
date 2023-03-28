@@ -8,13 +8,16 @@ const LoginForm: React.FC = () => (
     </p>
     <form className="max-w-[767px] w-full m-auto mt-16 ">
       <div className="md:flex gap-5">
-        <InputForms type="email" label="Email *" className="md:w-2/4" />
-        <InputForms type="password" label="Password *" className="md:w-2/4" />
+        <InputForms type="email" id="email" label="Email *" className="md:w-2/4" />
+        <InputForms type="password" id="password" label="Password *" className="md:w-2/4" />
       </div>
       <div className="flex justify-between mt-8 flex-col xs:flex-row">
-        <InputCheck />
+        <InputCheck id='remember' label="recuérdame" />
 
-        <a href="#" className="uppercase text-1xs text-primary tracking-[1.5px] font-semibold mt-3 xs:mt-0">
+        <a
+          href="#"
+          className="uppercase text-1xs text-primary tracking-[1.5px] font-semibold mt-3 xs:mt-0"
+        >
           olvidé mi contraseña
         </a>
       </div>
