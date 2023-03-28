@@ -24,15 +24,15 @@ const FilterList: React.FC<WithClassName<FilterListProps>> = ({
   data,
 }) => {
   const [itemFilter, setItemFilter] = useState<React.ReactNode>();
-  console.log(tagType);
+ console.log(tagType)
   useMemo(() => {
     setItemFilter(
-      data.map(({ data, value, drop }, i) => (
+      data.map(({ data: element, value, drop }, i) => (
         <ItemFilter
           // eslint-disable-next-line react/no-array-index-key
           key={`${i}`}
           value={value}
-          data={data}
+          data={element}
           className={itemClassName}
           dropRight={drop}
           tagType={tagType}

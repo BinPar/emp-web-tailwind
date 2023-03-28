@@ -101,6 +101,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
+    require('tailwindcss'),
+    require('autoprefixer'),
     plugin(function ({ addVariant }) {
       addVariant('current', "[aria-current='true']&");
     }),

@@ -23,7 +23,7 @@ const Books: React.FC = () => {
       </Head>
       <Header />
       <main>
-        <Filters method={setSwitchItems} state={switchItems} />      
+        <Filters method={setSwitchItems} state={switchItems} />
         <Section className="py-0">
           <SubHeader className="border-b-gray-200 text-base mt-5">LIBROS</SubHeader>
           {!switchItems ? (
