@@ -1,26 +1,34 @@
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { WithClassName } from '../../../model/react';
 import ArrowDown from '../../icons/ArrowDown';
 import SelectOption from './SelectOption';
 
-const Select: React.FC<WithClassName> = ({ className }) => {
-  const [checked, setChecked] = useState(false);
+interface SelectProps {
+  label?: string;
+}
+
+const Select: React.FC<WithClassName<SelectProps>> = ({ className, label }) => {
+  const [checked, SetChecked] = useState(false);
   const [value, SetValue] = useState('DNI');
   return (
-    <div className="w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)] relative">
-      <span className="bg-white px-1 text-xs text-gray-400 absolute -top-2 z-10 left-3">
-        Tipo de documento *
-      </span>
+    <div
+      className={twMerge(
+        'relative',
+        className,
+      )}
+    >
+      {label && (
+        <span className="bg-white px-1 text-xs text-gray-400 absolute -top-2 z-10 left-3">
+          Tipo de documento *
+        </span>
+      )}
       <button
         type="button"
-        className={twMerge(
-          'flex items-center justify-between h-10 px-3 border border-gray-300 font-light relative text-gray-400 last:mb-0 w-full peer group',
-          className,
-        )}
+        className="flex items-center justify-between h-10 px-3 border border-gray-300 font-light relative text-gray-400 last:mb-0 w-full peer group"
         aria-current={checked}
         onClick={(): void => {
-          setChecked(!checked);
+          SetChecked(!checked);
         }}
       >
         <span>{value}</span>

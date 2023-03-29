@@ -42,7 +42,7 @@ const PersonalData: React.FC = () => (
         label="Teléfono *"
         className="w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]"
       />
-      <Select/>
+      <Select label='Tipo de documento' className='w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]'/>
       <InputForms
         type="text"
         id="documentNumber"
