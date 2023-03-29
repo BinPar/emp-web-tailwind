@@ -100,6 +100,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss-aria-attributes'),
     require('@tailwindcss/line-clamp'),
     require('tailwindcss'),
     require('autoprefixer'),

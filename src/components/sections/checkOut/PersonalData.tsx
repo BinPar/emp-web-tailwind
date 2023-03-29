@@ -1,5 +1,6 @@
 import SubHeader from '../items/SubHeader';
 import InputForms from './InputForms';
+import Select from './Select';
 
 const PersonalData: React.FC = () => (
   <>
@@ -41,6 +42,7 @@ const PersonalData: React.FC = () => (
         label="Teléfono *"
         className="w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]"
       />
+      <Select/>
       <InputForms
         type="text"
         id="documentNumber"

@@ -14,7 +14,7 @@ const InputCheck: React.FC<WithClassName<InputCheckProps>> = ({ label, className
     </div>
     <label
       htmlFor={id}
-      className="font-light text-gray-400 uppercase text-xs tracking-[1px] peer-checked:text-primary pl-9 relative z-10"
+      className="font-light text-gray-400 uppercase text-xs tracking-[1px] peer-checked:text-primary pl-9 relative"
     >
       {label}
     </label>
