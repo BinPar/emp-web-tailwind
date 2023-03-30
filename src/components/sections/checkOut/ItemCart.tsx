@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from 'react';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 
 import Trash from '../../icons/Trash';
 import FinalPriceBlock from './FinalPriceBlock';

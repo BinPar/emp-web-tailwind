@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithChildren, WithClassName } from '../../../model/react';
+import type { WithChildren, WithClassName } from '../../../model/react';
 
 const SubHeader: React.FC<WithClassName<WithChildren>> = ({ className, children }) => (
   <h2

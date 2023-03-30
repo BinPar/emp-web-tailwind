@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 
 import FullStar from '../../icons/FullStar';
 import EmptyStar from '../../icons/StarEmpty';

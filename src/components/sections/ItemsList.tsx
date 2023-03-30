@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../model/react';
+import type { WithClassName } from '../../model/react';
 import { RealData } from '../../utils/dataInfoTest/modelTemp';
 
 import ItemGeneric from './items/ItemGeneric';

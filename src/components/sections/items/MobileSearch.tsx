@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 
 const MobileSearch: React.FC<WithClassName> = ({ className }) => (
   <div className={twMerge('bg-white p-2', className)}>

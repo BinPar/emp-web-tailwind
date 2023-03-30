@@ -6,7 +6,7 @@ const LoginForm: React.FC = () => (
     <p className="uppercase text-gray-500 text-sm tracking-[1px] font-light pb-2 border-b border-gray-300">
       ACCEDE A TU CUENTA
     </p>
-    <form className="max-w-[767px] w-full m-auto mt-16 ">
+    <form className="w-full m-auto mt-16 ">
       <div className="md:flex gap-5">
         <InputForms type="email" id="email" label="Email *" className="md:w-2/4" />
         <InputForms type="password" id="password" label="Password *" className="md:w-2/4" />

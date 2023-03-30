@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithChildren, WithClassName } from '../../../model/react';
+import type { WithChildren, WithClassName } from '../../../model/react';
 
 const ItemMainNav: React.FC<WithClassName<WithChildren>> = ({ className, children }) => (
   <li

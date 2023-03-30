@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 import ArrowRight from '../../icons/ArrowRight';
 import Check from '../../icons/Check';
 

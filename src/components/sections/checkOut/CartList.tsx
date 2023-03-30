@@ -1,7 +1,7 @@
 import React, { useState, useMemo, Dispatch, SetStateAction } from 'react';
 
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 import { CartRealData } from '../../../utils/dataInfoTest/modelItemCart';
 import CartListTitles from './CartListTitles';
 import EmptyCartButton from './EmptyCartButton';

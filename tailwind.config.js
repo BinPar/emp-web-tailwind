@@ -90,6 +90,12 @@ module.exports = {
             letterSpacing: '1.5px',
           },
         ],
+        '2lg': [
+          '17.6px',
+          {
+            lineHeight: 'normal',
+          },
+        ],
         '2.5xl': [
           '1.8rem',
           {

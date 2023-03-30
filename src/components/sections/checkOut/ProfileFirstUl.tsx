@@ -13,14 +13,14 @@ const ProfileFirstUl: React.FC<ProfileFirstUlProps> = ({ setValue, setSelection,
       selection={selection}
       setValue={setValue}
       option="Estudiante"
-      buttonTest
+      button
     />
     <ProfileOption
       setSelection={setSelection}
       selection={selection}
       setValue={setValue}
       option="Docente"
-      buttonTest
+      button
     />
     <ProfileOption
       setSelection={setSelection}

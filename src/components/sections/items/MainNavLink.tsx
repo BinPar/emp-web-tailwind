@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithChildren, WithClassName } from '../../../model/react';
+import type { WithChildren, WithClassName } from '../../../model/react';
 
 interface NavLinkProps {
   href: string;

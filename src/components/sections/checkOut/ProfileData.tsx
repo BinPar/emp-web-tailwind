@@ -3,7 +3,7 @@ import ProfileSelector from './ProfileSelector';
 
 const ProfileData: React.FC = () => (
   <>
-    <SubHeader className="mt-5">DATOS PROFESIONALES</SubHeader>
+    <SubHeader className="mt-10">DATOS PROFESIONALES</SubHeader>
     <ProfileSelector />
   </>
 );

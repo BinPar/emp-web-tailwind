@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 import ArrowDown from '../../icons/ArrowDown';
 import SelectOption from './SelectOption';
 
@@ -32,7 +32,7 @@ const Select: React.FC<WithClassName<SelectProps>> = ({ className, label }) => {
         }}
       >
         <span>{value}</span>
-        <ArrowDown className="group-aria-current:rotate-180 w-4" />
+        <ArrowDown className="group-aria-current:rotate-180 w-4 transition-all duration-150" />
       </button>
       <ul className="w-full  border border-y-0 border-gray-300 max-h-0 overflow-hidden py-0 peer-aria-current:border-b peer-aria-current:max-h-64 peer-aria-current:py-3 transition-all duration-300 absolute bg-white z-10">
         <SelectOption setValue={SetValue} option="DNI" />

@@ -12,9 +12,6 @@ const RegisterForm: React.FC = () => (
       <PersonalData />
       <ProfileData />
       <div className="flex justify-between">
-        <div className="max-w-[300px] max-h-[80px] bg-[#f9f9f9] border border-gray-300 rounded py-1 ">
-          <Image alt="recaptcha" width={592} height={146} src="/img/recaptcha.jpg" />
-        </div>
         <div className="max-w-[350px]">
           <InputCheck
             id="privacy"
@@ -26,6 +23,9 @@ const RegisterForm: React.FC = () => (
             className="items-start mb-4"
             label="Deseo recibir comunicaciones de parte de Editorial Médica Panamericana para estar informado de las novedades, ofertas, promociones y descuentos que puedan ser de mi interés."
           />
+        </div>
+        <div className="max-w-[300px] max-h-[80px] bg-lightgray border border-gray-300 rounded py-1 ">
+          <Image alt="recaptcha" width={592} height={146} src="/img/recaptcha.jpg" />
         </div>
       </div>
       <button

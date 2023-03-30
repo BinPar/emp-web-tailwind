@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithClassName, WithFullText, WithInitials } from '../../../model/react';
+import type { WithClassName, WithFullText, WithInitials } from '../../../model/react';
 
 const NewItemBadge: React.FC<WithClassName<WithInitials<WithFullText>>> = ({
   className,

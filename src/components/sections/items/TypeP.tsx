@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithChildren, WithClassName } from '../../../model/react';
+import type { WithChildren, WithClassName } from '../../../model/react';
 
 const TypeP: React.FC<WithChildren<WithClassName>> = ({ className, children }) => (
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument

@@ -7,14 +7,14 @@ interface ProfileOptionProps {
   setSelection: Dispatch<SetStateAction<boolean>>;
   option: string;
   selection: boolean;
-  buttonTest?: boolean;
+  button?: boolean;
 }
 const ProfileOption: React.FC<ProfileOptionProps> = ({
   setValue,
   option,
   setSelection,
   selection,
-  buttonTest,
+  button,
 }) => (
   <li className="group mb-4 last:mb-0 relative flex">
     <input
@@ -23,13 +23,14 @@ const ProfileOption: React.FC<ProfileOptionProps> = ({
       id={option}
       value={option}
       onClick={(): void => setValue(option)}
+      
       className="opacity-0 w-6 h-6 absolute peer"
     />
     <div className="w-6 border border-gray-300 text-white peer-checked:text-white peer-checked:bg-primary peer-checked:border-primary peer-hover:bg-gray-50 peer-hover:text-gray-50 peer-checked:peer-hover:bg-primary">
       <Check />
     </div>
 
-    {buttonTest ? (
+    {button ? (
       <button
         type="button"
         onClick={(): void => setSelection(!selection)}

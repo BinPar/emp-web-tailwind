@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { WithClassName } from '../../../model/react';
+import type { WithClassName } from '../../../model/react';
 import ImageGroup from './ImageGroup';
 import InfoGroup from './InfoGroup';
 
