@@ -1,7 +1,11 @@
+import { Dispatch, SetStateAction } from 'react';
 import InputCheck from './InputCheck';
 import InputForms from './InputForms';
-
-const LoginForm: React.FC = () => (
+interface LoginFormProps {
+ setLogin: Dispatch<SetStateAction<boolean>>; 
+ login: boolean;
+}
+const LoginForm: React.FC<LoginFormProps> = ({setLogin, login}) => (
   <>
     <p className="uppercase text-gray-500 text-sm tracking-[1px] font-light pb-2 border-b border-gray-300">
       ACCEDE A TU CUENTA
@@ -24,6 +28,7 @@ const LoginForm: React.FC = () => (
       <button
         type="submit"
         className="bg-primary text-white text-1xs uppercase tracking-[1px] h-10 w-24 block m-auto mt-14"
+        onClick={(): void => setLogin(!login) }
       >
         Entrar
       </button>

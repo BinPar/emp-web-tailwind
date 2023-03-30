@@ -5,13 +5,16 @@ import type { WithClassName } from '../../../model/react';
 import { CartRealData } from '../../../utils/dataInfoTest/modelItemCart';
 import CartListTitles from './CartListTitles';
 import EmptyCartButton from './EmptyCartButton';
+import InputForms from './InputForms';
 import ItemCart from './ItemCart';
+import PromotionCode from './PromotionCode';
 
 interface CarteListProps {
   itemClassName?: string;
   data: CartRealData[];
   method: Dispatch<SetStateAction<string>>;
   value: string;
+  login: boolean;
 }
 
 const CartList: React.FC<WithClassName<CarteListProps>> = ({
@@ -20,6 +23,7 @@ const CartList: React.FC<WithClassName<CarteListProps>> = ({
   data,
   method,
   value,
+  login,
 }) => {
   const [itemCart, setItemCart] = useState<React.ReactNode>();
   useMemo(() => {
@@ -47,7 +51,10 @@ const CartList: React.FC<WithClassName<CarteListProps>> = ({
     <div className="lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:pr-12 mt-8">
       <CartListTitles />
       <ul className={twMerge('w-full', className)}>{itemCart}</ul>
-      <EmptyCartButton method={method} />
+      <div className='lg:flex '>
+        <EmptyCartButton method={method} />
+        {login && <PromotionCode />}
+      </div>
     </div>
   );
 };

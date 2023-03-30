@@ -14,6 +14,7 @@ import { allCartMap } from '../src/utils/dataInfoTest/itemsCart';
 const Cart: React.FC = () => {
   const [closeModal, SetCloseModal] = useState('close');
   const [switchForm, SetSwitchForm] = useState(false);
+  const [login, SetLogin] = useState(false);
   return (
     <>
       <Head>
@@ -25,12 +26,13 @@ const Cart: React.FC = () => {
       <main>
         <section className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto pt-0 lg:pt-12">
           <article className="lg:flex">
-            <CartList data={allCartMap.cart} method={SetCloseModal} value={closeModal} />
+            <CartList login={login} data={allCartMap.cart} method={SetCloseModal} value={closeModal} />
             <Order />
           </article>
           <article className="lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:pr-12 pt-0 lg:pt-12 mb-20">
-           <SwitchForms setSwitchForm={SetSwitchForm} switchForm={switchForm}/>
-            {!switchForm ? <LoginForm /> : <RegisterForm />}
+            {!login && <SwitchForms setSwitchForm={SetSwitchForm} switchForm={switchForm} />}
+            {!login && (!switchForm ? <LoginForm setLogin={SetLogin} login={login} /> : <RegisterForm />)}
+            {login && <p>hola</p>}
           </article>
         </section>
 

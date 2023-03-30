@@ -12,13 +12,13 @@ const SwitchForms: React.FC<SwitchForms> = ({setSwitchForm, switchForm}) => (
       setSwitchForm={setSwitchForm}
       switchForm={switchForm}
       title="Iniciar Sesión"
-      className="text-primary border-secondary aria-current:text-gray-300 aria-current:hover:text-gray-400 aria-current:border-transparent"
+      className="text-primary pointer-events-none aria-current:pointer-events-auto border-secondary aria-current:text-gray-300 aria-current:hover:text-gray-400 aria-current:border-transparent"
     />
     <BtnSwitchForm
       setSwitchForm={setSwitchForm}
       switchForm={switchForm}
       title="Registrarse"
-      className="aria-current:text-primary aria-current:border-secondary border-transparent text-gray-300 hover:text-gray-400"
+      className="aria-current:text-primary pointer-events-auto aria-current:pointer-events-none aria-current:border-secondary border-transparent text-gray-300 hover:text-gray-400"
     />
   </div>
 );
