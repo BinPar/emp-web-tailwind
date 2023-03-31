@@ -1,39 +1,38 @@
-import { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+import type { WithClassName } from '../../../model/react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 interface SwitchProps {
   title: string;
+  method?: Dispatch<SetStateAction<boolean>>;
+  value?: boolean;
 }
-const SwitchButton: React.FC<SwitchProps> = ({ title }) => {
+const SwitchButton: React.FC<WithClassName<SwitchProps>> = ({ title, className, method, value }) => {
   const [active, SetActive] = useState(false);
   return (
-    <div>
-      <label
-        htmlFor="switch"
-        className={`flex items-center group gap-4${active ? ' text-primary' : ' text-gray-400'}`}
+    <div className="gap-2 items-center group">
+      <div
+        aria-current={active}
+        className="group-hover:brightness-[.7] flex items-center gap-4 relative peer"
       >
-        <div
-          className={`flex items-center transition-all duration-300 h-6 w-11 border-2 rounded-full p-1 group-hover:brightness-[.7]${
-            active ? ' border-primary' : ' border-gray-200'
-          }`}
+        <input
+          type="checkbox"
+          id="switch"
+          className="appearance-none peer absolute w-full h-full left-0"
+          onClick={(): void => {SetActive(!active);if(method) {method(!value)}}}
+        />
+        <span className="block w-4 h-4 transition-all absolute left-1 duration-300 rounded-full peer-checked:left-6 peer-checked:bg-primary bg-gray-400" />
+        <span className="flex items-center transition-all duration-300 h-6 w-11 border-2 rounded-full p-1 peer-checked:border-primary" />
+        <label
+          htmlFor="switch"
+          className={twMerge(
+            'peer-checked:text-primary cursor-pointer text-gray-400 text-left font-bold text-xs tracking-[1px]',
+            className,
+          )}
         >
-          <input
-            type="checkbox"
-            id="switch"
-            value={active ? 'true' : ''}
-            onClick={(): void => SetActive(!active)}
-            className="appearance-none"
-          />
-
-          <span
-            className={`block w-4 h-4 transition-all duration-300 rounded-full ${
-              active ? ' bg-primary translate-x-full' : ' bg-gray-300 left-[2px]'
-            }`}
-          />
-        </div>
-        <span className="group-hover:brightness-[.7] transition-all duration-300 uppercase text-xs font-bold tracking-[1px] max-w-[140px] text-left">
           {title}
-        </span>
-      </label>
+        </label>
+      </div>
     </div>
   );
 };

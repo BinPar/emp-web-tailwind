@@ -1,9 +1,10 @@
-import Image from 'next/image';
+import { twMerge } from 'tailwind-merge';
+import type { WithClassName } from '../../../model/react';
 import InputForms from './InputForms';
 import Select from './Select';
 
-const AddressForm: React.FC = () => (
-  <div className="flex flex-col md:flex-row gap-8">
+const AddressForm: React.FC<WithClassName> = ({className}) => (
+  <div className={twMerge('flex flex-col md:flex-row gap-8', className)}>
     <div className="w-full border border-gray-400 h-[250px] md:h-[432px] bg-[url(/img/map.jpg)] bg-cover bg-center">
     </div>
     <form className="w-full">

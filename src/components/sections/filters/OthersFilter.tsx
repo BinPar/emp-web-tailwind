@@ -27,7 +27,7 @@ const OthersFilter: React.FC<OthersFilterProps> = ({ openMethod, state }) => (
           <TagFilter data={allTagsMap.availability} title="disponibilidad" />
         </div>
 
-        <SwitchButton title="material complementario" />
+        <SwitchButton title="material complementario" className='uppercase max-w-[140px]'/>
       </div>
     </FilterButton>
   </FilterWrap>
