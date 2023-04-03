@@ -15,6 +15,7 @@ const HeaderMiddle: React.FC = () => (
         height={155}
         alt="logo Editorial Médica Panamericana"
         src="/assets/anniversary.svg"
+        priority
       />
     </a>
     <a

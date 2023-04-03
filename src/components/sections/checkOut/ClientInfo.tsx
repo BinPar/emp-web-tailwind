@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import DeliveryAddress from './DeliveryAddress';
 import MoreDetails from './MoreDetails';
 import PaymentMethods from './PaymentMethods';
 import PersonalData from './PersonalData';
+
+
 
 const ClientInfo: React.FC = () => {
   const [continueBtn, SetContinueBtn] = useState(false);

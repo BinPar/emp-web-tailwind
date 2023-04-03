@@ -15,6 +15,7 @@ interface ItemCartProp {
   oldPrice: number;
   discount: number;
   priceSuffix: string;
+  confirmOrder?: boolean;
   method: Dispatch<SetStateAction<string>>;
   value: string;
 }
@@ -27,36 +28,34 @@ const ItemCart: React.FC<WithClassName<ItemCartProp>> = ({
   discount,
   priceSuffix,
   method,
+  confirmOrder,
 }) => {
   const discountCalc = (oldPrice * discount) / 100;
   const currentPrice = oldPrice - discountCalc;
   const [quantity, SetQuantity] = useState(1);
   return (
-      <li className="flex pb-6 mb-6 border-b border-secondary pt-2 flex-col md:flex-row relative">
-        <ProductBlock
-          src={src}
-          title={title}
-          isbn={isbn}
-          type={type}
-          oldPrice={oldPrice}
-          priceSuffix={priceSuffix}
-          currentPrice={currentPrice}
-          quantity={quantity}
-          className="flex md:hidden"
-        />
-        <PriceBlock
-          oldPrice={oldPrice}
-          priceSuffix={priceSuffix}
-          currentPrice={currentPrice}
-          quantity={quantity}
-          className="hidden md:flex"
-        />
-        <QuantityBlock methodQuantity={SetQuantity} quantity={quantity} />
-        <FinalPriceBlock
-          currentPrice={currentPrice}
-          quantity={quantity}
-          priceSuffix={priceSuffix}
-        />
+    <li className="flex pb-6 mb-6 border-b border-secondary pt-2 flex-col md:flex-row relative">
+      <ProductBlock
+        src={src}
+        title={title}
+        isbn={isbn}
+        type={type}
+        oldPrice={oldPrice}
+        priceSuffix={priceSuffix}
+        currentPrice={currentPrice}
+        quantity={quantity}
+        className="flex md:hidden"
+      />
+      <PriceBlock
+        oldPrice={oldPrice}
+        priceSuffix={priceSuffix}
+        currentPrice={currentPrice}
+        quantity={quantity}
+        className="hidden md:flex"
+      />
+      <QuantityBlock methodQuantity={SetQuantity} quantity={quantity} />
+      <FinalPriceBlock currentPrice={currentPrice} quantity={quantity} priceSuffix={priceSuffix} />
+      {!confirmOrder && (
         <div className="items-center flex">
           <button
             type="button"
@@ -66,9 +65,8 @@ const ItemCart: React.FC<WithClassName<ItemCartProp>> = ({
             <Trash className="w-5" />
           </button>
         </div>
-      </li>
-    
-
+      )}
+    </li>
   );
 };
 export default ItemCart;

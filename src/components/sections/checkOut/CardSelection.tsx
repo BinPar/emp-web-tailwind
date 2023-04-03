@@ -11,7 +11,7 @@ const CardSelection: React.FC = () => {
       <p className="uppercase text-gray-500 text-sm tracking-[1px] font-light pb-2 border-b border-gray-300">
         MIS TARJETAS
       </p>
-      <form className="flex flex-wrap gap-5 mb-10 mt-5">
+      <form className="flex flex-wrap gap-5 mb-5 mt-5">
         <FormOptionsItem
           type="creditCard"
           option="creditCard"
