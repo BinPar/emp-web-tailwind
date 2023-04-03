@@ -1,7 +1,13 @@
+import { Dispatch, SetStateAction } from 'react';
 import SubHeader from '../items/SubHeader';
 import InputForms from './InputForms';
 
-const MoreDetails: React.FC = () => (
+interface MoreDetailsProps {
+  setContinue: Dispatch<SetStateAction<boolean>>;
+  value: boolean;
+}
+
+const MoreDetails: React.FC<MoreDetailsProps> = ({ setContinue, value }) => (
   <>
     <SubHeader className="mt-5 flex justify-between">MÁS DETALLES</SubHeader>
     <form>
@@ -10,8 +16,10 @@ const MoreDetails: React.FC = () => (
         <InputForms type="text" id="deliveryTime" label="Horario de entrega" className="md:w-2/4" />
       </div>
       <button
-        type="submit"
-        className="bg-greencart text-white text-1xs uppercase tracking-[1px] h-10 block m-auto mt-3 px-6"
+        type="button"
+        aria-current={value}
+        onClick={(): void => setContinue(!value)}
+        className="bg-greencart text-white text-1xs uppercase tracking-[1px] h-10 block m-auto mt-3 px-6 aria-current:hidden"
       >
         Continuar
       </button>
