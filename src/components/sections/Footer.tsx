@@ -16,6 +16,7 @@ const footer: React.FC = () => (
             height={180}
             alt="Claim Editorial Médica Panamericana"
             src="/assets/empWhite.svg"
+            priority
           />
         </div>
       </a>

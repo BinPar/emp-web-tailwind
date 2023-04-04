@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Head from 'next/head';
-import Footer from '../src/components/sections/Footer';
 import DivWrapper from '../src/components/sections/items/DivWrapper';
-import ProductMainContent from '../src/components/sections/items/ProductMainContent';
 import FloatingMenu from '../src/components/sections/items/FloatingMenu';
 import StickyBuy from '../src/components/sections/items/StickyBuy';
-import Header from '../src/components/sections/header/Header';
+import MainLayout from '../src/components/sections/MainLayout';
+import ModuleSelection from '../src/components/sections/ModuleSelection';
+import ProductInfo from '../src/components/sections/items/ProductInfo';
 
 const ProductPage: React.FC = () => (
   <>
@@ -15,17 +15,16 @@ const ProductPage: React.FC = () => (
       <meta name="description" content="Ejemplo de página de EMP en TW" />
       <meta property="og:image" content="/assets/rocketLaptop.png" />
     </Head>
-    <Header />
-    <main>
+    <MainLayout>
       <DivWrapper className="flex md:gap-10 flex-col md:flex-row gap-8 relative">
         <FloatingMenu />
-        <section className="mt-12 lg:mt-0 w-full lg:px-12 flex flex-col">
-          <ProductMainContent />
+        <section className="mt-12 lg:mt-0 w-full flex">
+          <ProductInfo />
+          <ModuleSelection className='hidden lg:block'/>
         </section>
       </DivWrapper>
       <StickyBuy type="Expertos" oldPrice="1.790" price="1.611,01" link="#" />
-    </main>
-    <Footer />
+    </MainLayout>
   </>
 );
 

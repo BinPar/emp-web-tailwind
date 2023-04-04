@@ -1,7 +1,7 @@
 import OrderData from './OrderData';
 
 const ConfirmOrder: React.FC = () => (
-  <article className='lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:pr-12 mt-8 mb-20'>
+  <article className="lg:pr-12 mt-8 lg:mb-20">
     <OrderData title="DIRECCIÓN DE FACTURACIÓN" data="c/falsa, 1, 1b, 28004, madrid, España" />
     <OrderData title="MÉTODO DE PAGO" data="Tarjeta de Crédito o Débito" />
     <OrderData title="MODO DE PAGO" data="Después 878,75€ (al contado)" />

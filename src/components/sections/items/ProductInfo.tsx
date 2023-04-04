@@ -4,10 +4,12 @@ import Image from 'next/image';
 import Ficha from './Ficha';
 import ProductAutor from './ProductAutor';
 import PillLink from './PillLink';
+import InfoAcordeon from './InfoAcordeon';
+import ModuleSelection from '../ModuleSelection';
 
 const ProductInfo: React.FC = () => (
 
-    <article>
+    <article className='lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:pr-12 lg:border-r-2 border-lightgray'>
       <div className="mt-12 lg:mt-0 w-full flex">
         <div className="hidden md:flex flex-col items-center min-w-[250px] xl2:min-w-[350px] mr-10">
           <div className="w-[200px] min-w-[200px] lg:w-[250px] lg:min-w-[250px] xl2:w-[350px] xl2:min-w-[350px]">
@@ -26,6 +28,8 @@ const ProductInfo: React.FC = () => (
           <Ficha />
         </div>
       </div>
+      <ModuleSelection className='lg:hidden block'/>
+      <InfoAcordeon/>
     </article>
   );
 

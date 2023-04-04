@@ -31,6 +31,7 @@ const HeaderMobile: React.FC = () => {
               height={158}
               alt="Claim Editorial Médica Panamericana"
               src="/assets/empWhite.svg"
+              priority
             />
           </div>
           <button

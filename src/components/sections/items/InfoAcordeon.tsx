@@ -1,25 +1,20 @@
-import React from 'react';
 import Image from 'next/image';
 
 import ObjetivesModule from './ ObjectivesModule';
 import AddressedModule from './AddressedModule';
-import DescriptionModule from './DescriptionModule';
-import ItemAcordeon from './ItemAcordeon';
-import ProductInfo from './ProductInfo';
-import IntroductionModule from './IntroductionModule';
-import ContentModule from './ContentModule';
-import SampleModule from './SampleModule';
-import TitleModule from './TitleModule';
-import PaymentModule from './PaymentModule';
-import MethodModule from './MethodModule';
 import AuthorsModule from './AuthorsModule';
+import ContentModule from './ContentModule';
+import DescriptionModule from './DescriptionModule';
+import IntroductionModule from './IntroductionModule';
+import ItemAcordeon from './ItemAcordeon';
+import MethodModule from './MethodModule';
+import PaymentModule from './PaymentModule';
+import SampleModule from './SampleModule';
 import TagsModule from './TagsModule';
-import ModuleSelection from '../ModuleSelection';
+import TitleModule from './TitleModule';
 
-const ProductMainContent: React.FC = () => (
+const InfoAcordeon: React.FC = () => (
   <>
-    <ProductInfo />
-    <ModuleSelection />
     <ItemAcordeon id="introduction" title="INTRODUCCION">
       <IntroductionModule />
     </ItemAcordeon>
@@ -60,5 +55,4 @@ const ProductMainContent: React.FC = () => (
     </ItemAcordeon>
   </>
 );
-
-export default ProductMainContent;
+export default InfoAcordeon;

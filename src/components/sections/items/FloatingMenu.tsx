@@ -29,7 +29,7 @@ const FloatingItem: React.FC<FloatingItemProps> = ({ href, title }) => (
   <li className="mt-2">
     <a
       href={`#${href}`}
-      className="block relative -left-[140px] hover:border-secondary p-2 pr-4 border-r-4 border-gray-200 text-3.5xs font-bold text-gray-400 hover:text-gray-500 uppercase tracking-[1px]"
+      className="block relative -left-24 xl3:-left-[140px] hover:border-secondary p-2 pr-4 border-r-4 border-gray-200 text-3.5xs font-bold text-gray-400 hover:text-gray-500 uppercase tracking-[1px]"
     >
       {title}
     </a>

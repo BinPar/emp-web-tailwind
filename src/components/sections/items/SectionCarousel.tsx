@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-import Section from '../Section';
 import Carousel from './Carousel';
 import CarouselItem from './CarouselItem';
+import DivWrapper from './DivWrapper';
 import ImageGroup from './ImageGroup';
 import InfoGroup from './InfoGroup';
 import SubHeader from './SubHeader';
@@ -55,8 +55,9 @@ const fullText5 = '';
 const oldPrice5 = '';
 const currentPrice5 = '1.490';
 
-const footer: React.FC = () => (
-  <Section className="bg-lightgray" secondClassName="flex md:gap-10 flex-col md:flex-row gap-8">
+const SectionCarousel: React.FC = () => (
+  <section className="py-10 bg-lightgray flex md:gap-10 flex-col md:flex-row gap-8">
+    <DivWrapper>
     <div className="w-full">
       <SubHeader>TUS CONSULTAS RECIENTES</SubHeader>
       <Carousel>
@@ -128,7 +129,8 @@ const footer: React.FC = () => (
         </CarouselItem>
       </Carousel>
     </div>
-  </Section>
+    </DivWrapper>
+  </section>
 );
 
-export default footer;
+export default SectionCarousel;
