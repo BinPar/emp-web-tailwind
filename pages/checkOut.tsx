@@ -3,13 +3,8 @@ import { useState } from 'react';
 import ArrowRight from '../src/components/icons/ArrowRight';
 
 import CartList from '../src/components/sections/checkOut/CartList';
-import ClientInfo from '../src/components/sections/checkOut/ClientInfo';
 import ConfirmOrder from '../src/components/sections/checkOut/ConfirmOrder';
-import LoginForm from '../src/components/sections/checkOut/LoginForm';
-import ModalEmptyCart from '../src/components/sections/checkOut/ModalEmptyCart';
 import Order from '../src/components/sections/checkOut/Order';
-import RegisterForm from '../src/components/sections/checkOut/RegisterForm';
-import SwitchForms from '../src/components/sections/checkOut/SwitchForms';
 import Footer from '../src/components/sections/Footer';
 import Header from '../src/components/sections/header/Header';
 import { allCartMap } from '../src/utils/dataInfoTest/itemsCart';
