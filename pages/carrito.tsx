@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 import CartList from '../src/components/sections/checkOut/CartList';
 import ClientInfo from '../src/components/sections/checkOut/ClientInfo';
-import ConfirmOrder from '../src/components/sections/checkOut/ConfirmOrder';
 import LoginForm from '../src/components/sections/checkOut/LoginForm';
 import ModalEmptyCart from '../src/components/sections/checkOut/ModalEmptyCart';
 import Order from '../src/components/sections/checkOut/Order';

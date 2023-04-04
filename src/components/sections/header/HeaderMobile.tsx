@@ -9,6 +9,7 @@ import Close from '../../icons/Close';
 import NavContent from '../items/NavContent';
 import CountrySelector from '../items/CountrySelector';
 import NavListLinks from '../items/NavListLinks';
+import CartLight from '../../icons/CartLight';
 
 const HeaderMobile: React.FC = () => {
   const [openSearch, setOpenSearch] = useState<boolean>(false);
@@ -50,7 +51,7 @@ const HeaderMobile: React.FC = () => {
       </div>
       <MobileSearch className={`${openSearch ? 'block' : 'hidden'}`} />
       <NavigationOpen className={`${openNav ? 'left-0' : '-left-[100%]'}`}>
-        <NavContent>
+        <NavContent className='relative'>
           <a
             className="bg-primary m-auto w-[70%] max-w-[300px] text-white flex items-end px-4 pb-3 justify-center h-20 uppercase text-1xs font-semibold transition-all duration-300 hover:bg-[#196692]"
             href="/es/preferencias"
@@ -59,6 +60,10 @@ const HeaderMobile: React.FC = () => {
           </a>
           <CountrySelector />
           <NavListLinks />
+          <a href='carrito/' className='absolute bottom-0 w-full px-4 py-4 uppercase hover:brightness-95 transition-all duration-150 bg-greencart text-white text-1xs tracking-[1px] flex items-center'>
+            <CartLight className='w-8 mr-3'/>
+            mi carrito
+          </a>
         </NavContent>
         <button
           type="button"

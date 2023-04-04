@@ -12,6 +12,16 @@ ol li:before {
 html {
   scroll-behavior: smooth;
 }
+/*scroll bars styling*/
+*::-webkit-scrollbar{
+  width: 5px;
+}
+*::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #0074a7;
+}
 /* clears the 'X' from Internet Explorer */
 input[type='search']::-ms-clear {
   display: none;
