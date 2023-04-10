@@ -2,9 +2,12 @@ import React from 'react';
 import ArrowDown from '../../icons/ArrowDown';
 import ItemMainNav from '../items/ItemMainNav';
 import MainNavLink from '../items/MainNavLink';
-
-const HeaderBottom: React.FC = () => (
-  <div className="mt-1 border-b border-gray-200">
+import classNames from 'classnames';
+interface HeaderBottomProps {
+  isShrunk: boolean;
+}
+const HeaderBottom: React.FC<HeaderBottomProps> = ({ isShrunk }) => (
+  <div className={classNames('mt-1 transition-all duration-300 delay-150 overflow-hidden h-[68px]', { '!h-0': isShrunk })}>
     <ul className="uppercase text-1xs text-gray-500 tracking-widest flex justify-center">
       <ItemMainNav className="relative">
         <MainNavLink href="#">

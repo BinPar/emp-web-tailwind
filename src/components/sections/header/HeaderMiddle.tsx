@@ -4,11 +4,17 @@ import Cart from '../../icons/Cart';
 import SearchCircle from '../../icons/SearchCircle';
 import CartMenu from './CartMenu';
 import allCartMap from '../../../utils/dataInfoTest/itemsCart';
-
-const HeaderMiddle: React.FC = () => {
+import classNames from 'classnames';
+interface HeaderMiddleProps {
+  isShrunk: boolean;
+}
+const HeaderMiddle: React.FC<HeaderMiddleProps> = ({isShrunk}) => {
   const [openMenu, SetOpenMenu] = useState(false);
   return (
-    <div className="flex items-end tracking-widest w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto">
+    <div className={classNames(
+      'h-28 transition-all duration-300 flex items-end tracking-widest w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto',
+      { '!h-[90px]': isShrunk },
+    )}>
       <a
         href="https://www.medicapanamericana.com/es"
         className="text-primary flex flex-col items-center w-56 min-w-[221px] lg2:min-w-[280px] mr-4 lg2:mr-8"
@@ -23,7 +29,7 @@ const HeaderMiddle: React.FC = () => {
       </a>
       <a
         href="https://www.medicapanamericana.com/es/preferencias"
-        className="flex flex-col relative justify-end uppercase text-gray-700 font-semibold w-[150px] min-w-[150px] h-28 px-4 pb-3 bg-lightmidlegray text-xs mr-8"
+        className="flex flex-col relative justify-end uppercase text-gray-700 font-semibold w-[150px] min-w-[150px] h-full px-4 pb-3 bg-lightmidlegray text-xs mr-8"
       >
         <span className="text-center">selecciona tu perfil</span>
       </a>

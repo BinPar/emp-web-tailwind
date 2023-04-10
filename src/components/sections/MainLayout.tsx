@@ -1,11 +1,11 @@
 import type { WithChildren } from '../../model/react';
-import { Head } from 'next/document';
 import Footer from './Footer';
 import Header from './header/Header';
+import TestHeader from './header/TestHeader';
 
 const MainLayout: React.FC<WithChildren> = ({ children }) => (
   <>
-    <Header />
+    <TestHeader />
     <main>
       {children}
     </main>
