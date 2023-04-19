@@ -22,15 +22,15 @@ const CheckOutPage: React.FC = () => {
       <MainLayout>
         <section className="pt-0 lg:pt-12">
           <DivWrapper>
-            <a
-              href="/carrito"
-              className="max-w-[100px] text-gray-400 hover:text-primary flex items-center relative -left-3 text-sm font-light tracking-[1px] mb-8"
-            >
-              <ArrowRight className="rotate-180 w-7" />
-              Regresar
-            </a>
             <article className="lg:flex">
               <div className="lg:w-[calc(100%_-_250px)] xl:w-[calc(100%_-_310px)] lg:border-r-2 border-lightgray">
+                <a
+                  href="/carrito"
+                  className="max-w-[100px] text-gray-400 hover:text-primary flex items-center relative -left-3 text-sm font-light tracking-[1px] mb-8"
+                >
+                  <ArrowRight className="rotate-180 w-7" />
+                  Regresar
+                </a>
                 <p className="text-lg font-normal text-gray-300 tracking-[1px]">CONFIRMAR PEDIDO</p>
                 <CartList
                   confirmOrder

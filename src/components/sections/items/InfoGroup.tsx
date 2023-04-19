@@ -32,7 +32,9 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
   fullText,
   oldPrice,
   currentPrice,
-}) => (
+}) => {
+  console.log({type2})
+  return(
   <div
     className={twMerge('pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0', className)}
   >
@@ -94,5 +96,6 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
     </div>
   </div>
 );
+}
 
 export default InfoGroup;

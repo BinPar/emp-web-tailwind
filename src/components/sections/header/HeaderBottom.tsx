@@ -7,7 +7,7 @@ interface HeaderBottomProps {
   isShrunk: boolean;
 }
 const HeaderBottom: React.FC<HeaderBottomProps> = ({ isShrunk }) => (
-  <div className={classNames('mt-1 transition-all duration-300 delay-150 overflow-hidden h-[68px]', { '!h-0': isShrunk })}>
+  <div className={classNames('mt-1 transition-all duration-150 delay-75 h-[68px]', { '-translate-y-full !h-0 opacity-0 pointer-events-none': isShrunk })}>
     <ul className="uppercase text-1xs text-gray-500 tracking-widest flex justify-center">
       <ItemMainNav className="relative">
         <MainNavLink href="#">

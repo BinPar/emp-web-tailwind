@@ -1,12 +1,11 @@
 import type { WithChildren } from '../../model/react';
 import Footer from './Footer';
 import Header from './header/Header';
-import TestHeader from './header/TestHeader';
 
 const MainLayout: React.FC<WithChildren> = ({ children }) => (
   <>
-    <TestHeader />
-    <main>
+    <Header />
+    <main className='mt-64'>
       {children}
     </main>
     <Footer />

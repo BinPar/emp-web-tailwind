@@ -10,7 +10,7 @@ interface HeaderTopProps {
 }
 const HeaderTop: React.FC<HeaderTopProps> = ({isShrunk}) => (
   <div className={classNames(
-    'bg-lightgray absolute h-[35px] w-full transition-all duration-300 overflow-hidden',
+    'bg-lightgray absolute h-[35px] w-full transition-all duration-150 delay-75 overflow-hidden',
     { '!h-0': isShrunk },
   )}>
     <div className="flex flex-row items-center justify-end text-secondarygray text-2xs uppercase h-[35px] tracking-widest w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto">
