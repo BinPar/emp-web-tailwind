@@ -5,7 +5,7 @@ import Header from './header/Header';
 const MainLayout: React.FC<WithChildren> = ({ children }) => (
   <>
     <Header />
-    <main className='mt-64'>
+    <main className='mt-32 lg:mt-64'>
       {children}
     </main>
     <Footer />

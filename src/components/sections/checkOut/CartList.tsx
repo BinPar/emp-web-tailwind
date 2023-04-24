@@ -52,7 +52,7 @@ const CartList: React.FC<WithClassName<CarteListProps>> = ({
   }, [data]);
 
   return (
-    <div className={`mt-8 ${wrapClassName && wrapClassName}`}>
+    <div className={`mt-8 ${wrapClassName ? wrapClassName : ''}`}>
       <CartListTitles />
       <ul className={twMerge('w-full', className)}>{itemCart}</ul>
       <div className="lg:flex ">

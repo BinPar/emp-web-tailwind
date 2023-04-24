@@ -50,11 +50,7 @@ const InfoGroupList: React.FC<InfoGroupListProps> = ({
         {info}
       </p>
       <div className="flex gap-2 lg:my-3 relative max-w-[110px]">
-        {type2 === '' || undefined ? (
-          <TypeLink href="#" className="my-0 text-center leading-[8.8px] hidden lg:inline">
-            {type}
-          </TypeLink>
-        ) : (
+        {type2 ? (
           <>
             <TypeLink href="#" className="my-0 text-center leading-[8.8px] hidden lg:inline">
               {type}
@@ -63,6 +59,10 @@ const InfoGroupList: React.FC<InfoGroupListProps> = ({
               {type2}
             </TypeLink>
           </>
+        ) : (
+          <TypeLink href="#" className="my-0 text-center leading-[8.8px] hidden lg:inline">
+            {type}
+          </TypeLink>
         )}
         {initial === '' ? null : (
           <NewItemBadge
@@ -82,7 +82,7 @@ const InfoGroupList: React.FC<InfoGroupListProps> = ({
           )}
           {initial === '' ? null : (
             <NewItemBadge
-              className="block lg:hidden absolute left-36"
+              className="block lg:hidden lg:absolute lg:left-36"
               initials={initial}
               fullText={fullText}
             />

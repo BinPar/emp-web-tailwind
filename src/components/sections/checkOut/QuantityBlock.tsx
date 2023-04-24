@@ -7,7 +7,7 @@ methodQuantity: Dispatch<SetStateAction<number>>;
   quantity: number;
 }
 const QuantityBlock: React.FC<QuantityBlockProps> = ({ methodQuantity, quantity }) => (
-  <div className="flex relative left-[93px] md:left-0 gap-2 md:items-center md:justify-around w-full md:w-60 ">
+  <div className="flex relative left-[93px] md:left-0 gap-2 md:items-center md:justify-around w-48 ">
     <button
       type="button"
       className="text-gray-300 w-7"

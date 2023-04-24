@@ -32,18 +32,15 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
   fullText,
   oldPrice,
   currentPrice,
-}) => {
-  console.log({type2})
-  return(
+}) => (
   <div
-    className={twMerge('pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0', className)}
+    className={twMerge(
+      'pt-1 w-full flex flex-col h-full lg:items-center ml-4 lg:ml-0',
+      className
+    )}
   >
     <div className="flex items-center gap-2 justify-center lg:my-3 relative">
-      {type2 === '' || undefined ? (
-        <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
-          {type}
-        </TypeLink>
-      ) : (
+      {type2 ? (
         <>
           <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
             {type}
@@ -52,13 +49,16 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
             {type2}
           </TypeLink>
         </>
+      ) : (
+        <TypeLink href="#" className="m-auto my-0 text-center leading-[8.8px] hidden lg:inline">
+          {type}
+        </TypeLink>
       )}
       {initial === '' ? null : (
         <NewItemBadge
           className="hidden lg:block absolute left-[calc(100%_+_5px);]"
           initials={initial}
-          fullText={fullText}
-        />
+          fullText={fullText} />
       )}
     </div>
     <NormalLink
@@ -78,6 +78,7 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
 
       <InfoWrap>
         <Price className="mt-0 relative lg:justify-center">
+
           {oldPrice === '' ? null : <OldPrice>{oldPrice}</OldPrice>}
           {currentPrice !== 'prox' ? (
             <CurrentPrice>{currentPrice}</CurrentPrice>
@@ -86,16 +87,14 @@ const InfoGroup: React.FC<WithClassName<InfoGroupProps>> = ({
           )}
           {initial === '' ? null : (
             <NewItemBadge
-              className="block lg:hidden absolute left-44"
+              className="block lg:hidden lg:absolute lg:left-44"
               initials={initial}
-              fullText={fullText}
-            />
+              fullText={fullText} />
           )}
         </Price>
       </InfoWrap>
     </div>
   </div>
 );
-}
 
 export default InfoGroup;

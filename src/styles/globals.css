@@ -15,12 +15,19 @@ html {
 /*scroll bars styling*/
 *::-webkit-scrollbar{
   width: 5px;
+  height: 5px;
 }
 *::-webkit-scrollbar-track{
   background-color: transparent;
 }
 *::-webkit-scrollbar-thumb{
   background-color: #0074a7;
+}
+.scrollClass::-webkit-scrollbar-thumb{
+  background-color: #00000033;
+}
+.hideScrollbar::-webkit-scrollbar-thumb{
+  background-color: transparent;
 }
 /* clears the 'X' from Internet Explorer */
 input[type='search']::-ms-clear {

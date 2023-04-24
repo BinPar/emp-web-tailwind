@@ -30,7 +30,7 @@ const Order = ({className}:WithClassName) => {
   return (
     <div className={classNames(
       'lg:flex lg:fixed lg:justify-end lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] transition-all delay-75',
-      { '-translate-y-28': isShrunk },
+      { 'lg:-translate-y-28': isShrunk },
     )}>
       <div
         className={twMerge(

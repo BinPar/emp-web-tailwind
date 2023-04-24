@@ -88,13 +88,13 @@ const Carousel: React.FC<WithChildren> = ({ children }) => {
       <button
         type="button"
         onClick={goLeft}
-        className="absolute z-20 left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center select-none cursor-pointer screen-touch:hidden"
+        className="absolute z-20 -left-8 md:left-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center select-none cursor-pointer screen-touch:hidden"
       >
         <ArrowRight className="fill-primary w-10 rotate-180" />
       </button>
       <div
         ref={wrapper}
-        className="w-5/6 m-auto overflow-hidden snap-x snap-mandatory overflow-x-visible overflow-y-hidden touch-pan-x hide-scrollbar"
+        className="md:w-5/6 m-auto overflow-hidden snap-x snap-mandatory overflow-x-visible overflow-y-hidden touch-pan-x hideScrollbar"
       >
         <div ref={container} className="flex flex-row flex-nowrap translate-x-[var(--x)]">
           {items}
@@ -103,7 +103,7 @@ const Carousel: React.FC<WithChildren> = ({ children }) => {
       <button
         type="button"
         onClick={goRight}
-        className="absolute z-20 right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full  flex items-center justify-center select-none cursor-pointer  screen-touch:hidden"
+        className="absolute z-20 -right-8 md:right-0 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full  flex items-center justify-center select-none cursor-pointer  screen-touch:hidden"
       >
         <ArrowRight className="fill-primary w-10" />
       </button>

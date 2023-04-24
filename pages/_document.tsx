@@ -6,7 +6,7 @@ const MyDocument = (): JSX.Element => (
     <Head>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
-    <body>
+    <body className='overflow-x-hidden'>
       <Main />
       <NextScript />
     </body>

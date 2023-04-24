@@ -68,6 +68,7 @@ const tempData: TempData = {
   srcList: srcHomeBooks,
   titleList: titleHomeBooks,
   typeList: typeHomeBooks,
+  type2List: type2HomeBooks,
 };
 Object.keys(tempData).forEach((k) => {
   const array = tempData[k as keyof typeof tempData];
@@ -83,6 +84,7 @@ Object.keys(tempData).forEach((k) => {
           src: '',
           title: '',
           type: '',
+          type2: '',
         };
       }
       data[i][k.replace('List', '') as keyof RealData] = str;
