@@ -6,8 +6,9 @@ interface InputFormsProps {
   id: string;
   label?: string;
   placeHolder?: string;
+  labelClass?: string;
 }
-const InputForms: React.FC<WithClassName<InputFormsProps>> = ({ className, type, label, id, placeHolder }) => (
+const InputForms: React.FC<WithClassName<InputFormsProps>> = ({ className, type, label, id, placeHolder, labelClass }) => (
   <div className={twMerge('relative text-gray-400 mb-4 last:mb-0', className)}>
     <input
       type={type}
@@ -17,7 +18,7 @@ const InputForms: React.FC<WithClassName<InputFormsProps>> = ({ className, type,
     />
     <label
       htmlFor={id}
-      className="left-3 leading-normal tracking-[1px] px-1 bg-white absolute text-gray-400 duration-300 transform text-xs -translate-y-5 top-3 origin-[0] peer-placeholder-shown:text-base peer-focus:text-xs peer-placeholder-shown:-translate-y-1 peer-autofill:-translate-y-5 peer-focus:-translate-y-5"
+      className={`left-3 leading-normal tracking-[1px] px-1 bg-white absolute text-gray-400 duration-300 transform text-xs -translate-y-5 top-3 origin-[0] peer-placeholder-shown:text-base peer-focus:text-xs peer-placeholder-shown:-translate-y-1 peer-autofill:-translate-y-5 peer-focus:-translate-y-5 ${labelClass ? labelClass : ''}`}
     >
       {label}
     </label>

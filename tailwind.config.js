@@ -31,6 +31,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'up': '0 -1px 2px rgba(0,0,0,.1), 0 -2px 4px rgba(0,0,0,.1)',
+        'profile': '1px 2px 3px rgba(0,0,0,0.1), 2px 2px 6px rgba(0,0,0,0.1)',
       },
       colors: {
         primary: '#0074a7',

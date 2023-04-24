@@ -27,10 +27,10 @@ const HeaderTop: React.FC<HeaderTopProps> = ({isShrunk}) => (
         </a>
       </div>
       <div className="text-primary uppercase tracking-widest ml-8 flex items-center">
-        <button type="button" className="uppercase tracking-widest flex items-center">
+        <a href='/profile' className="uppercase tracking-widest flex items-center">
           <User className="mr-2.5 w-4 h-4" />
           Iniciar sesión
-        </button>
+        </a>
         <a
           className="h-4 ml-2.5 pl-2.5 border-l-2 border-primary"
           rel="nofollow"
