@@ -32,7 +32,7 @@ const InternalNavBar: React.FC<InternalNavBarProps> = ({ method, value }) => {
   return (
   <div className={classNames(
     'bg-primarylight w-full',
-    { 'fixed top-[164px]': isShrunk },
+    { 'fixed top-[164px] z-20': isShrunk },
   )}>
     <DivWrapper>
       <ul className="w-full flex justify-around items-center h-16">
@@ -41,25 +41,25 @@ const InternalNavBar: React.FC<InternalNavBarProps> = ({ method, value }) => {
           >home</button>
         </li>
         <li>
-          <button onClick={(): void => method('hola')} className='uppercase text-primary text-2sm tracking-[1px]'>mi perfil</button>
+          <button onClick={(): void => method('profile')} className='uppercase text-primary text-2sm tracking-[1px]'>mi perfil</button>
         </li>
         <li>
-          <a className='uppercase text-primary text-2sm tracking-[1px]'>mis datos</a>
+        <button onClick={(): void => method('data')}  className='uppercase text-primary text-2sm tracking-[1px]'>mis datos</button>
         </li>
         <li>
-          <a className='uppercase text-primary text-2sm tracking-[1px]'>mis compras</a>
+        <button onClick={(): void => method('profile')}  className='uppercase text-primary text-2sm tracking-[1px]'>mis compras</button>
         </li>
         <li>
-          <a className='uppercase text-primary text-2sm tracking-[1px]'>mi formación</a>
+        <button onClick={(): void => method('profile')}  className='uppercase text-primary text-2sm tracking-[1px]'>mi formación</button>
         </li>
         <li>
-          <a className='uppercase text-primary text-2sm tracking-[1px]'>mis suscripciones</a>
+        <button onClick={(): void => method('profile')}  className='uppercase text-primary text-2sm tracking-[1px]'>mis suscripciones</button>
         </li>
         <li>
-          <a className='uppercase text-primary text-2sm tracking-[1px]'>mis códigos</a>
+        <button onClick={(): void => method('profile')}  className='uppercase text-primary text-2sm tracking-[1px]'>mis códigos</button>
         </li>
         <li>
-          <a className='uppercase text-primary text-2sm tracking-[1px]'>mis contenidos</a>
+        <button onClick={(): void => method('profile')}  className='uppercase text-primary text-2sm tracking-[1px]'>mis contenidos</button>
         </li>
       </ul>
     </DivWrapper>

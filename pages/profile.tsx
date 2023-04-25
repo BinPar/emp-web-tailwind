@@ -21,7 +21,7 @@ const Profile: React.FC = () => {
       <MainLayout>
         <InternalNavBar method={SetCurrentNav} value={currentNav} />
         {(currentNav === '' || currentNav === 'home') && <SectionHome />}
-        {currentNav === 'hola' && <SectionMyProfile />}
+        {currentNav === 'profile' && <SectionMyProfile />}
       </MainLayout>
     </>
   );

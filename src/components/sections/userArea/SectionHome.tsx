@@ -31,7 +31,7 @@ const SectionHome: React.FC = () => (
     <section className="w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto mb-5 p-10 bg-lightgray rounded-md shadow-profile">
       <SubHeader>MIS CÓDIGOS</SubHeader>
       <div className="flex flex-col items-center mt-10">
-        <p className="uppercase text-primary font-medium tracking-[.8px] mb-7">canjea tu código</p>
+        <p className="uppercase text-primary font-semibold tracking-[.8px] mb-7">canjea tu código</p>
         <form className="flex gap-5 justify-center w-full">
           <InputForms
             type="text"
@@ -44,7 +44,7 @@ const SectionHome: React.FC = () => (
             type="submit"
             className="bg-primary text-white text-1xs uppercase tracking-[1px] h-10 w-24 block"
           >
-            Entrar
+            Canjear
           </button>
         </form>
         <div className="w-[556px]">
