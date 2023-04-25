@@ -37,7 +37,7 @@ const ItemKey: React.FC<WithClassName<ItemFilterProps>> = ({
         }}
         className={twMerge(
           `flex text-1xs text-gray-400 font-thin tracking-[1px] relative hover:text-primary text-sm py-1 pl-1 w-full${
-            dropRight && checked ? ' bg-primarilight !text-primary' : ' bg-transparent'
+            dropRight && checked ? ' bg-primarylight !text-primary' : ' bg-transparent'
           }`,
           className,
         )}

@@ -43,7 +43,7 @@ const ItemFilter: React.FC<WithClassName<ItemFilterProps>> = ({
         />
         <span
           className={`w-full block p-1 pl-1 text-left ${
-            specialty && checked ? 'bg-primarilight text-primary' : 'bg-transparent'
+            specialty && checked ? 'bg-primarylight text-primary' : 'bg-transparent'
           }`}
         >
           {data}
