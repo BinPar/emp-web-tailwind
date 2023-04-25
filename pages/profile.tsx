@@ -1,13 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
 
 import MainLayout from '../src/components/sections/MainLayout';
-import SubHeader from '../src/components/sections/items/SubHeader';
-import ItemProfile from '../src/components/sections/userArea/ItemProfile';
 import SectionHome from '../src/components/sections/userArea/SectionHome';
 import InternalNavBar from '../src/components/sections/header/InternalNavBar';
 import { SetStateAction, useState } from 'react';
 import SectionMyProfile from '../src/components/sections/userArea/SectionMyProfile';
+import SectionMyData from '../src/components/sections/userArea/SectionMyData';
 
 const Profile: React.FC = () => {
   const [currentNav, SetCurrentNav] = useState('');
@@ -21,7 +19,8 @@ const Profile: React.FC = () => {
       <MainLayout>
         <InternalNavBar method={SetCurrentNav} value={currentNav} />
         {(currentNav === '' || currentNav === 'home') && <SectionHome />}
-        {currentNav === 'profile' && <SectionMyProfile />}
+        {currentNav === 'MyProfile' && <SectionMyProfile />}
+        {currentNav === 'MyData' && <SectionMyData />}
       </MainLayout>
     </>
   );
