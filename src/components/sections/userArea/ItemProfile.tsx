@@ -12,8 +12,8 @@ const ItemProfile: React.FC<ItemProfileProps> = ({ header, src, title, text, tex
   <article className="bg-lightgray p-10 rounded-md shadow-profile text-center mb-5 lg:mb-0 last:mb-0">
     <SubHeader className="text-left hidden lg:block uppercase">{header}</SubHeader>
     <div className="flex flex-col justify-between items-center lg:min-h-[442px]">
-      <div className="max-w-[265px] m-auto">
-        <Image alt="miEureca" width={200} height={200} src={src} className="m-auto lg:mt-10" />
+      <div className="max-w-[265px] m-auto mt-0">
+        <Image alt="miEureca" width={170} height={170} src={src} className="m-auto lg:mt-10" />
         <div className="mt-5 flex flex-col justify-center">
           {title && (
             <h5 className="uppercase text-primary font-medium tracking-[.8px]">

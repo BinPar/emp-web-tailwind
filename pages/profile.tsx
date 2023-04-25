@@ -5,6 +5,7 @@ import MainLayout from '../src/components/sections/MainLayout';
 import SubHeader from '../src/components/sections/items/SubHeader';
 import ItemProfile from '../src/components/sections/userArea/ItemProfile';
 import SectionHome from '../src/components/sections/userArea/SectionHome';
+import InternalNavBar from '../src/components/sections/header/InternalNavBar';
 
 const Profile: React.FC = () => (
   <>
@@ -14,6 +15,7 @@ const Profile: React.FC = () => (
       <meta property="og:image" content="/assets/rocketLaptop.png" />
     </Head>
     <MainLayout>
+      <InternalNavBar/>
       <SectionHome/>
     </MainLayout>
   </>

@@ -38,7 +38,7 @@ const MvFilters: React.FC<MvFiltersProps> = ({
         mvState ? ' block' : ' hidden'
       }`}
     >
-      <div className="bg-primarilight text-primary h-16 flex px-5 justify-between items-center">
+      <div className="bg-primarylight text-primary h-16 flex px-5 justify-between items-center">
         <p className="tracking-[.8px] font-semibold">SELECIONA TUS FILTROS</p>
         <button type="button" onClick={(): void => openMvMethod(!mvState)}>
           <Close className="w-8" />
