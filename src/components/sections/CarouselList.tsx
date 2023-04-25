@@ -1,7 +1,6 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable @typescript-eslint/no-shadow */
 import React, { useState, useEffect } from 'react';
-import type { WithClassName } from '../../model/react';
 import { RealData } from '../../utils/dataInfoTest/modelTemp';
 
 import Carousel from './items/Carousel';
