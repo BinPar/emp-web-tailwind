@@ -42,12 +42,12 @@ const SectionHome: React.FC = () => (
           />
           <button
             type="submit"
-            className="bg-primary text-white text-1xs uppercase tracking-[1px] h-10 w-24 block"
+            className="bg-primary text-white text-1xs uppercase tracking-[1px] h-10 px-4 block"
           >
             Canjear
           </button>
         </form>
-        <div className="w-[556px]">
+        <div className="max-w-[556px] min-w-[253px]">
           <Image src="/img/groupPills.jpg" alt="group pills" width={2042} height={226} />
         </div>
       </div>

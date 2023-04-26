@@ -59,7 +59,7 @@ const InternalNavBar: React.FC<InternalNavBarProps> = ({ method, value }) => {
         <button onClick={(): void => method('MyCodes')}  className={`uppercase text-primary text-2sm tracking-[1px] ${value === 'MyCodes' && 'font-bold'}`}>mis códigos</button>
         </li>
         <li>
-        <button onClick={(): void => method('profile')}  className={`uppercase text-primary text-2sm tracking-[1px] ${value === 'profile' && 'font-bold'}`}>mis contenidos</button>
+        <button onClick={(): void => method('MyContent')}  className={`uppercase text-primary text-2sm tracking-[1px] ${value === 'MyContent' && 'font-bold'}`}>mis contenidos</button>
         </li>
       </ul>
     </DivWrapper>

@@ -10,6 +10,7 @@ import SectionMyPurchase from '../src/components/sections/userArea/SectionMyPurc
 import SectionMySubscription from '../src/components/sections/userArea/SectionMySubscription';
 import SectionMyCourse from '../src/components/sections/userArea/SectionMyCourse';
 import SectionMyCodes from '../src/components/sections/userArea/SectionMyCodes';
+import SectionMyContent from '../src/components/sections/userArea/SectionMyContent';
 
 const Profile: React.FC = () => {
   const [currentNav, SetCurrentNav] = useState('');
@@ -29,6 +30,7 @@ const Profile: React.FC = () => {
         {currentNav === 'MyCourse' && <SectionMyCourse />}
         {currentNav === 'MySubscription' && <SectionMySubscription />}
         {currentNav === 'MyCodes' && <SectionMyCodes />}
+        {currentNav === 'MyContent' && <SectionMyContent />}
       </MainLayout>
     </>
   );
