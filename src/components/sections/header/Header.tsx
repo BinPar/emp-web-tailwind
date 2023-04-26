@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        'fixed w-full top-0 z-10 bg-white transition-all duration-300 border-b border-gray-200',
+        'fixed w-full top-0 z-10 bg-white transition-all duration-150 border-b border-gray-200',
         { 'shadow-sm': isShrunk },
       )}
     >

@@ -12,7 +12,7 @@ const HeaderMiddle: React.FC<HeaderMiddleProps> = ({isShrunk}) => {
   const [openMenu, SetOpenMenu] = useState(false);
   return (
     <div className={classNames(
-      'h-28 transition-all duration-300 flex items-end tracking-widest w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto',
+      'h-28 transition-all duration-150 flex items-end tracking-widest w-[calc(100%_-_50px)] lg:w-[calc(100%_-_100px)] xl:w-[calc(100%_-_160px)] xl3:max-w-[1440px] m-auto',
       { '!h-[90px]': isShrunk },
     )}>
       <a
