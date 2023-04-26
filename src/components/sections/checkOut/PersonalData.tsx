@@ -1,4 +1,5 @@
 import SubHeader from '../items/SubHeader';
+import ActionButton from '../userArea/ActionButton';
 import InputForms from './InputForms';
 import Select from './Select';
 
@@ -10,12 +11,7 @@ const PersonalData: React.FC<PersonalDataProps> = ({ passBtn }) => (
     <SubHeader className={`mt-5 ${passBtn ? 'flex justify-between items-center' : ''}`}>
       DATOS PERSONALES
       {passBtn && (
-        <button
-          type="button"
-          className="text-secondarygray tracking-[1px] uppercase text-xs hover:brightness-75"
-        >
-          cambiar contraseña
-        </button>
+        <ActionButton text='cambiar contraseña'/>
       )}
     </SubHeader>
     <div className="flex flex-wrap gap-x-5 gap-y-0">

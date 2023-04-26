@@ -10,6 +10,9 @@ import Calendar from '../../icons/Calendar';
 import Docs from '../../icons/Docs';
 import Mail from '../../icons/Mail';
 import ActionButton from './ActionButton';
+import Box from '../../icons/Box';
+import ItemPurchase from './ItemPurchase';
+import ItemSubscription from './ItemSubscription';
 
 const SectionMyProfile: React.FC = () => (
   <>
@@ -34,6 +37,31 @@ const SectionMyProfile: React.FC = () => (
               MIS COMPRAS
               <ActionButton text="ver todas" />
             </SubHeader>
+            <div className="flex">
+              <ItemPurchase
+                id="ES23036420"
+                state="ACEPTADO"
+                date="11/11/2022"
+                amount="1 producto"
+                total="30 días gratuitos (después 24,90 €)"
+              />
+              <ItemPurchase
+                id="ES23085322"
+                state="ACEPTADO"
+                date="20/02/2023"
+                amount="1 producto"
+                total="30 días gratuitos (después 24,90 €)"
+              />
+            </div>
+            <SubHeader className="flex justify-between items-center mt-8">
+              MIS SUSCRIPCIONES
+              <ActionButton text="ver todas" />
+            </SubHeader>
+            <ItemSubscription src='/img/subscription1.jpg' title='Mi Eureka - Biblioteca de Terapia Ocupacional para estudiantes' plan='Mensual'/>
+            <ItemSubscription src='/img/subscription2.jpg' title='Mi Eureka - Biblioteca de Medicina Familiar y Comunitaria' plan='Mensual'/>
+            <ItemSubscription src='/img/subscription1.jpg' title='Mi Eureka - Biblioteca de Terapia Ocupacional para estudiantes' plan='Mensual'/>
+            <ItemSubscription src='/img/subscription2.jpg' title='Mi Eureka - Biblioteca de Medicina Familiar y Comunitaria' plan='Mensual'/>
+            <ItemSubscription src='/img/subscription1.jpg' title='Mi Eureka - Biblioteca de Terapia Ocupacional para estudiantes' plan='Mensual'/>
           </article>
         </div>
         <article>
@@ -83,7 +111,7 @@ const SectionMyProfile: React.FC = () => (
       <DivWrapper>
         <SubHeader className="flex justify-between items-center">
           MIS CÓDIGOS
-          <ActionButton text='ver todos'/>
+          <ActionButton text="ver todos" />
         </SubHeader>
         <p className="uppercase text-center text-primary font-semibold tracking-[.8px] mb-7">
           canjea tu código

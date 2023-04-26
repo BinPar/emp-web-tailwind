@@ -6,6 +6,8 @@ import InternalNavBar from '../src/components/sections/header/InternalNavBar';
 import { SetStateAction, useState } from 'react';
 import SectionMyProfile from '../src/components/sections/userArea/SectionMyProfile';
 import SectionMyData from '../src/components/sections/userArea/SectionMyData';
+import SectionMyPurchase from '../src/components/sections/userArea/SectionMyPurchase';
+import SectionMySubscription from '../src/components/sections/userArea/SectionMySubscription';
 
 const Profile: React.FC = () => {
   const [currentNav, SetCurrentNav] = useState('');
@@ -21,6 +23,8 @@ const Profile: React.FC = () => {
         {(currentNav === '' || currentNav === 'home') && <SectionHome />}
         {currentNav === 'MyProfile' && <SectionMyProfile />}
         {currentNav === 'MyData' && <SectionMyData />}
+        {currentNav === 'MyPurchase' && <SectionMyPurchase />}
+        {currentNav === 'MySubscription' && <SectionMySubscription />}
       </MainLayout>
     </>
   );
