@@ -2,9 +2,22 @@ import SubHeader from '../items/SubHeader';
 import InputForms from './InputForms';
 import Select from './Select';
 
-const PersonalData: React.FC = () => (
+interface PersonalDataProps {
+  passBtn?: boolean;
+}
+const PersonalData: React.FC<PersonalDataProps> = ({ passBtn }) => (
   <>
-    <SubHeader className="mt-5">DATOS PERSONALES</SubHeader>
+    <SubHeader className={`mt-5 ${passBtn ? 'flex justify-between items-center' : ''}`}>
+      DATOS PERSONALES
+      {passBtn && (
+        <button
+          type="button"
+          className="text-secondarygray tracking-[1px] uppercase text-xs hover:brightness-75"
+        >
+          cambiar contraseña
+        </button>
+      )}
+    </SubHeader>
     <div className="flex flex-wrap gap-x-5 gap-y-0">
       <InputForms
         id="email"
@@ -42,7 +55,10 @@ const PersonalData: React.FC = () => (
         label="Teléfono *"
         className="w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]"
       />
-      <Select label='Tipo de documento' className='mb-4 w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]'/>
+      <Select
+        label="Tipo de documento"
+        className="mb-4 w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]"
+      />
       <InputForms
         type="text"
         id="documentNumber"
