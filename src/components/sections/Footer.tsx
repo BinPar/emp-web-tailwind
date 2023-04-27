@@ -7,7 +7,7 @@ import MediaIconList from './items/MediaIconList';
 import SecurityIconList from './items/SecurityIconList';
 
 const footer: React.FC = () => (
-  <footer className="bg-primary py-5 text-white absolute bottom-0 w-full">
+  <footer className="bg-primary py-5 text-white">
     <DivWrapper className="flex justify-between mb-5 items-center flex-col lg:flex-row lg:border-b-0 pb-4 lg:pb-0">
       <a href="#">
         <div className="max-w-[280px]">

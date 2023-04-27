@@ -44,6 +44,8 @@ module.exports = {
         lightmidlegray: '#d2d2d2',
         darkgray: '#828282',
         secondarygray: '#7a94a4',
+        promirLight: '#5b9dc6',
+        promirDark: '#196692'
       },
       backgroundImage: {
         slide: "url('/img/home.jpeg')",
