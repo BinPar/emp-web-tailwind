@@ -9,7 +9,7 @@ interface ItemProfileProps {
   textLink: string;
 }
 const ItemProfile: React.FC<ItemProfileProps> = ({ header, src, title, text, textLink }) => (
-  <article className="bg-lightgray p-10 rounded-md shadow-profile text-center mb-5 lg:mb-0 last:mb-0">
+  <article className="bg-lightgray p-10 rounded-md shadow-profile text-center mb-5 lg:mb-0 lg:first:mt-0 first:mt-6 last:mb-0">
     <SubHeader className="text-left hidden lg:block uppercase">{header}</SubHeader>
     <div className="flex flex-col justify-between items-center lg:min-h-[442px]">
       <div className="max-w-[265px] m-auto mt-0">

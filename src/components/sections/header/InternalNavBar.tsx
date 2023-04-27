@@ -31,7 +31,7 @@ const InternalNavBar: React.FC<InternalNavBarProps> = ({ method, value }) => {
 
   return (
   <div className={classNames(
-    'bg-primarylight w-full transition-all duration-150 delay-75',
+    'bg-primarylight w-full transition-all duration-[.225s]',
     { 'fixed -translate-y-[92px] z-20': isShrunk },
   )}>
     <DivWrapper>

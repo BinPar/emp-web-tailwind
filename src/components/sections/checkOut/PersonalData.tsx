@@ -8,7 +8,7 @@ interface PersonalDataProps {
 }
 const PersonalData: React.FC<PersonalDataProps> = ({ passBtn }) => (
   <>
-    <SubHeader className={`mt-5 ${passBtn ? 'flex justify-between items-center' : ''}`}>
+    <SubHeader className={`mt-5 ${passBtn ? 'hidden lg:flex justify-between items-center' : ''}`}>
       DATOS PERSONALES
       {passBtn && (
         <ActionButton text='cambiar contraseña'/>

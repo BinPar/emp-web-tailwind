@@ -8,7 +8,7 @@ const SectionMyCourse: React.FC = () => {
   return (
     <section className="my-10">
       <DivWrapper>
-        <SubHeader>MI FORMACIÓN</SubHeader>
+        <SubHeader className='hidden lg:block'>MI FORMACIÓN</SubHeader>
         <div className="grid grid-cols-1 gap-3 md:gap-5 lg:gap-10 md:grid-cols-2">
           {!cursos ? (
             <ItemNotCourse />

@@ -1,10 +1,12 @@
+import { twMerge } from 'tailwind-merge';
+import type { WithClassName } from '../../../model/react';
 interface ActionButtonProps {
   text: string;
 }
-const ActionButton: React.FC<ActionButtonProps> = ({ text }) => (
+const ActionButton: React.FC<WithClassName<ActionButtonProps>> = ({ text, className }) => (
   <button
     type="button"
-    className="text-secondarygray tracking-[1px] uppercase text-xs hover:brightness-75"
+    className={twMerge('text-secondarygray tracking-[1px] uppercase text-xs hover:brightness-75', className)}
   >
     {text}
   </button>

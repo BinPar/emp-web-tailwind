@@ -142,7 +142,7 @@ const SectionMyProfile: React.FC = () => {
           <form className="flex gap-5 justify-center w-full">
             <InputForms
               type="text"
-              id="code"
+              id="code3"
               label="Código *"
               className="w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]"
             />

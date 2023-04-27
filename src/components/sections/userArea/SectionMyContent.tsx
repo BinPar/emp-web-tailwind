@@ -5,7 +5,7 @@ import SubHeader from '../items/SubHeader';
 const SectionMyContent: React.FC = () => (
   <section className="my-10">
     <DivWrapper>
-      <SubHeader>MI BIBLIOTECA DIGITAL - MI EUREKA</SubHeader>
+      <SubHeader className='hidden lg:block'>MI BIBLIOTECA DIGITAL - MI EUREKA</SubHeader>
       <div className="flex flex-wrap justify-center items-center gap-14">
         <Image alt="miEureca" width={210} height={210} src="/img/mie.png" className="mt-0" />
         <div className="text-center">

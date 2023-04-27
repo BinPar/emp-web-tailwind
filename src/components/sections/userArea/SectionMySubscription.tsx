@@ -5,7 +5,7 @@ import ItemSubscriptionLong from './ItemSubscriptionLong';
 const SectionMySubscription: React.FC = () => (
   <section className="my-10">
     <DivWrapper>
-      <SubHeader>MIS SUSCRIPCIONES</SubHeader>
+      <SubHeader className='hidden lg:block'>MIS SUSCRIPCIONES</SubHeader>
       <ItemSubscriptionLong
         title="Biblioteca de Mi Eureka - Biblioteca de Terapia Ocupacional para estudiantes"
         state="Inactivo"

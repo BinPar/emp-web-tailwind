@@ -10,7 +10,7 @@ import MyProfileLi from './MyProfileLi';
 const SectionMyPurchase: React.FC = () => (
   <section className="my-10">
     <DivWrapper>
-      <SubHeader>MIS COMPRAS</SubHeader>
+      <SubHeader className='hidden lg:block'>MIS COMPRAS</SubHeader>
       <ItemPurchaseLong
         id="ES576565454"
         state="Aceptado"

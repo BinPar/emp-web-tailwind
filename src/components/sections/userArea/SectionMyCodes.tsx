@@ -5,14 +5,14 @@ import SubHeader from '../items/SubHeader';
 const SectionMyCodes: React.FC = () => (
   <section className="my-10">
     <DivWrapper>
-      <SubHeader>MIS CÓDIGOS</SubHeader>
+      <SubHeader className='hidden lg:block'>MIS CÓDIGOS</SubHeader>
       <p className="uppercase text-center text-primary font-semibold tracking-[.8px] mb-7">
         canjea tu código
       </p>
       <form className="flex gap-5 justify-center w-full">
         <InputForms
           type="text"
-          id="code"
+          id="code2"
           label="Código *"
           className="w-full md:w-[calc(50%_-_10px)] lg:w-[calc((100%_/_3)_-_15px)]"
         />

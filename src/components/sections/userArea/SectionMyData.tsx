@@ -4,16 +4,18 @@ import Visa from '../../icons/Visa';
 import AddressForm from '../checkOut/AddressForm';
 import InputCheck from '../checkOut/InputCheck';
 import PersonalData from '../checkOut/PersonalData';
-import ProfileData from '../checkOut/ProfileData';
+import ProfileSelector from '../checkOut/ProfileSelector';
 import Select from '../checkOut/Select';
 import DivWrapper from '../items/DivWrapper';
+import SubHeader from '../items/SubHeader';
 import ActionButton from './ActionButton';
 
 const SectionMyData: React.FC = () => (
   <section className="my-10">
     <DivWrapper>
+      <ActionButton text='cambiar contraseña' className='block lg:hidden border-b w-full text-right border-gray-300 pb-2 mb-5 lg:border-b-0 lg:pb-0 lg:mb-5'/>
       <PersonalData passBtn />
-      <p className="uppercase text-gray-500 text-sm tracking-[1px] font-light pb-2 border-b border-gray-300 mb-5 mt-2">
+      <p className="uppercase text-gray-500 text-sm tracking-[1px] font-light pb-2 border-b border-gray-300 mb-5 mt-5 lg:mt-2">
         MIS TARJETAS
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -37,12 +39,7 @@ const SectionMyData: React.FC = () => (
       </div>
       <div className="pb-2 border-b border-gray-300 mb-5 mt-5 flex justify-between items-center">
         <p className="uppercase text-gray-500 text-sm tracking-[1px] font-light ">DIRECCIONES</p>
-        <button
-          type="button"
-          className="text-secondarygray tracking-[1px] uppercase text-xs hover:brightness-75"
-        >
-          agregar
-        </button>
+        <ActionButton text="agregar" />
       </div>
       <div className="border-b border-gray-300 pb-2 mb-5 mt-5 flex justify-between items-center">
         <p className="text-gray-500 text-1xs tracking-[1px] font-light">miCasa</p>
@@ -58,7 +55,10 @@ const SectionMyData: React.FC = () => (
           <Select className="w-1/2" />
         </div>
       </div>
-      <ProfileData />
+      <div className='mt-10'>  
+      <SubHeader className="hidden lg:block">DATOS PROFESIONALES</SubHeader>
+      <ProfileSelector />
+      </div>
       <div className="w-1/2">
         <InputCheck
           id="newsletter"
