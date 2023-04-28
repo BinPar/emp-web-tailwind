@@ -1,0 +1,35 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 419.53 419.53">
+<defs>
+    <style>
+    .cls-2{fill:#99d0dd;}
+
+    </style>
+</defs>
+<title>calendar</title>
+<g class="cls-1">
+    <path class="cls-2" d="M360.17,160H65.36V91.72a9.35,9.35,0,0,1,9.2-9.48H94a2.28,2.28,0,1,1,0,4.55H74.56a4.8,4.8,0,0,0-4.65,4.93v63.7h285.7V91.72A4.8,4.8,0,0,0,351,86.79H316.34a2.28,2.28,0,1,1,0-4.55H351a9.36,9.36,0,0,1,9.2,9.48Z"/>
+    <path class="cls-2" d="M263.8,86.79H148.26a2.28,2.28,0,0,1,0-4.55H263.8a2.28,2.28,0,1,1,0,4.55Z"/>
+</g>
+<g class="cls-1">
+    <path class="cls-2" d="M357.89,364.56H67.64a2.28,2.28,0,0,1-2.28-2.28V159.69h4.55V360h285.7V159.67h4.55V362.28A2.28,2.28,0,0,1,357.89,364.56Z"/>
+</g>
+<g class="cls-1">
+    <rect class="cls-2" x="300.68" y="182.79" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="248.85" y="182.79" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="196.21" y="182.79" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="300.68" y="241.91" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="248.85" y="241.91" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="196.21" y="241.91" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="143.57" y="241.91" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="90.93" y="241.91" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="195.26" y="301.84" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="143.57" y="301.84" width="35.82" height="35.82"/>
+    <rect class="cls-2" x="90.93" y="301.84" width="35.82" height="35.82"/>
+ </g>
+ <g class="cls-1">
+    <path class="cls-2" d="M329.75,112.69H273.32V56.26a1.29,1.29,0,0,1,2.2-.91l55.13,55.13A1.29,1.29,0,0,1,329.75,112.69Z"/>
+ </g>
+ <g class="cls-1">
+    <path class="cls-2" d="M160.39,112.69H104V56.26a1.29,1.29,0,0,1,2.2-.91l55.13,55.13A1.29,1.29,0,0,1,160.39,112.69Z"/>
+ </g>
+</svg>
