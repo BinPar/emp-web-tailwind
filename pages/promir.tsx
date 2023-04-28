@@ -24,8 +24,8 @@ const Promir: React.FC = () => (
         <DivWrapper>
           <PhaseItem title="CALENTAMIENTO" phaseActive="warm" />
           <PhaseItem title="CONSTRUCCIÓN" phaseActive="construction" />
-          <PhaseItem title="CONSOLIDACIÓN" phaseActive="warm" />
-          <PhaseItem title="COMPETICIÓN" phaseActive="warm" />
+          <PhaseItem title="CONSOLIDACIÓN" phaseActive="consolidation" />
+          <PhaseItem title="COMPETICIÓN" phaseActive="competition" />
         </DivWrapper>
       </section>
     </MainLayout>
