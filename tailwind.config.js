@@ -30,17 +30,17 @@ module.exports = {
     },
     extend: {
       width: {
-        '10px': '10px'
+        '10px': '10px',
       },
       height: {
-        '10px': '10px'
+        '10px': '10px',
       },
-      margin:{
-        '5px': '5.5px'
+      margin: {
+        '5px': '5.5px',
       },
       boxShadow: {
-        'up': '0 -1px 2px rgba(0,0,0,.1), 0 -2px 4px rgba(0,0,0,.1)',
-        'profile': '1px 2px 3px rgba(0,0,0,0.1), 2px 2px 6px rgba(0,0,0,0.1)',
+        up: '0 -1px 2px rgba(0,0,0,.1), 0 -2px 4px rgba(0,0,0,.1)',
+        profile: '1px 2px 3px rgba(0,0,0,0.1), 2px 2px 6px rgba(0,0,0,0.1)',
       },
       colors: {
         primary: '#0074a7',
@@ -48,6 +48,7 @@ module.exports = {
         primaryvariant: '#196696',
         secondary: '#eedb4c',
         greencart: '#b1d141',
+        darkGreenCart: '#a1bf3b',
         yellowmenu: '#eedb4c',
         lightgray: '#f9f9f9',
         lightmidlegray: '#d2d2d2',

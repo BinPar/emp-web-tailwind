@@ -4,10 +4,8 @@ import Head from 'next/head';
 import MainLayout from '../src/components/sections/MainLayout';
 import PerkSection from '../src/components/sections/promir/PerkSection';
 import MethodologySection from '../src/components/sections/promir/MethodologySection';
-import DivWrapper from '../src/components/sections/items/DivWrapper';
-import HeaderPromir from '../src/components/sections/promir/HeaderPromir';
 import PhasesSection from '../src/components/sections/promir/PhasesSection';
-import CourseSelection from '../src/components/sections/promir/CourseSelection';
+import CoursesSection from '../src/components/sections/promir/CoursesSection';
 
 const Promir: React.FC = () => (
   <>
@@ -21,8 +19,7 @@ const Promir: React.FC = () => (
       <PerkSection />
       <MethodologySection />
       <PhasesSection />
-      <CourseSelection/>  
-       
+      <CoursesSection />
     </MainLayout>
   </>
 );
