@@ -21,7 +21,8 @@ const Promir: React.FC = () => (
       <PerkSection />
       <MethodologySection />
       <PhasesSection />
-      <CourseSelection/>   
+      <CourseSelection/>  
+       
     </MainLayout>
   </>
 );
