@@ -5,7 +5,7 @@ import Methodology from './Methodology';
 import PromirP from './PromirP';
 
 const MethodologySection: React.FC = () => (
-  <section className="mt-20">
+  <section className="mt-20 pb-10">
     <DivWrapper>
       <HeaderPromir>metodología de estudio</HeaderPromir>
       <PromirP className="text-left">
@@ -48,7 +48,7 @@ const MethodologySection: React.FC = () => (
 "
         />
       </ul>
-      <ButtonPromir className='m-auto block'>saber más</ButtonPromir>
+      <ButtonPromir className="m-auto block">saber más</ButtonPromir>
     </DivWrapper>
   </section>
 );

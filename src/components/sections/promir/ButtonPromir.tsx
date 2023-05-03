@@ -16,7 +16,7 @@ const ButtonPromir: React.FC<WithClassName<WithChildren<ButtonPromirProps>>> = (
     <a
       href={href}
       className={twMerge(
-        'min-h-[40px] border-2 border-primary px-4 hover:bg-primary text-primary uppercase font-medium text-1xs tracking-[1px]',
+        'min-h-[40px] inline-flex items-center border-2 border-primary px-4 hover:bg-primary hover:text-white text-primary uppercase font-medium text-1xs tracking-[1px]',
         className,
       )}
     >

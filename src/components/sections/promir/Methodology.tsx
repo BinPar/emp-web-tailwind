@@ -12,7 +12,7 @@ const Methodology: React.FC<MethodologyProps> = ({ title, src, text }) => (
       {title}
     </h3>
     <Image width={150} height={150} alt="test" src={src} className="m-auto" />
-    <PromirP>{text}</PromirP>
+    <PromirP className='text-center'>{text}</PromirP>
   </li>
 );
 export default Methodology;
