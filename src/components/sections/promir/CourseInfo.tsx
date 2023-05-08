@@ -4,7 +4,7 @@ import PromirP from './PromirP';
 import CourseDetail from './CourseDetail';
 import ButtonPromir from './ButtonPromir';
 const CourseInfo: React.FC<WithClassName> = ({ className }) => (
-  <div className='w-2/4 pr-8'>
+  <div className='w-full lg:w-2/4 pr-8'>
     <PromirP className="text-white pb-5 mb-5 border-b border-white">
       Dirigido a estudiantes de 6º de Medicina.
       <br />

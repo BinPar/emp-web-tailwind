@@ -6,6 +6,7 @@ import PerkSection from '../src/components/sections/promir/PerkSection';
 import MethodologySection from '../src/components/sections/promir/MethodologySection';
 import PhasesSection from '../src/components/sections/promir/PhasesSection';
 import CoursesSection from '../src/components/sections/promir/CoursesSection';
+import TeamSection from '../src/components/sections/promir/TeamSection';
 
 const Promir: React.FC = () => (
   <>
@@ -20,6 +21,7 @@ const Promir: React.FC = () => (
       <MethodologySection />
       <PhasesSection />
       <CoursesSection />
+      <TeamSection/>
     </MainLayout>
   </>
 );

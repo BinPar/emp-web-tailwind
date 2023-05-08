@@ -8,7 +8,7 @@ interface courseProps {
 }
 
 const Course: React.FC<courseProps> = ({ background, secondaryBg }) => (
-  <div className={`p-8 flex mt-12 bg-[${background}]`}>
+  <div className={`p-8 flex flex-col lg:flex-row mt-12 bg-[${background}]`}>
     <CourseInfo />
     <CourseAdvantages secondaryBg={secondaryBg} color={background} />
   </div>

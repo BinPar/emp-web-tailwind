@@ -7,7 +7,7 @@ interface CourseAdvantagesProps {
   secondaryBg: string;
 }
 const CourseAdvantages: React.FC<CourseAdvantagesProps> = ({ color, secondaryBg }) => (
-  <div className={`w-2/4 p-8 bg-[${secondaryBg}] text-[${color}]`}>
+  <div className={`w-full lg:w-2/4 p-8 bg-[${secondaryBg}] text-[${color}]`}>
     <p className="text-2sm font-light brightness-75">Principales ventajas de este curso:</p>
     <ul className="mt-5">
       <AdvantagesLi color={color}>
