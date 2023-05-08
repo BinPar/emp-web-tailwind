@@ -7,7 +7,7 @@ interface ButtonListProps {
 }
 
 const ButtonsList: React.FC<ButtonListProps> = ({ selected, value }) => (
-  <ul className="flex items-center min-h-[84px] gap-3 mb-7">
+  <ul className="flex items-center justify-center min-h-[84px] gap-3 mb-7">
     <ButtonProduct
       selected={selected}
       value={value}

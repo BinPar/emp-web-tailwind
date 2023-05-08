@@ -4,12 +4,10 @@ import ButtonPromir from './ButtonPromir';
 import ButtonsList from './ButtonsList';
 import CourseSelection from './CourseSelection';
 import PriceBox from './PriceBox';
-import MonthsTagList from './MonthsTagList';
-import TimeLinePhases from './TimeLinePhases';
-import TimeLineLegend from './TimeLineLegend';
-import YearLine from './YearLine';
 import DesktopTimeLine from './DesktopTimeLine';
 import MobileTimeLine from './MobileTimeLine';
+import PromirP from './PromirP';
+import Course from './Course';
 
 const CoursesSection: React.FC = () => {
   const [selected, SetSelected] = useState('');
@@ -37,6 +35,7 @@ const CoursesSection: React.FC = () => {
         </div>
         <DesktopTimeLine />
         <MobileTimeLine />
+        <Course background='#a1c25e' secondaryBg='#f6f8f0'/>
       </DivWrapper>
     </section>
   );
