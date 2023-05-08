@@ -1,10 +1,15 @@
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import DivWrapper from '../items/DivWrapper';
-import ButtonProduct from './ButtonProduct';
 import ButtonPromir from './ButtonPromir';
 import ButtonsList from './ButtonsList';
 import CourseSelection from './CourseSelection';
 import PriceBox from './PriceBox';
+import MonthsTagList from './MonthsTagList';
+import TimeLinePhases from './TimeLinePhases';
+import TimeLineLegend from './TimeLineLegend';
+import YearLine from './YearLine';
+import DesktopTimeLine from './DesktopTimeLine';
+import MobileTimeLine from './MobileTimeLine';
 
 const CoursesSection: React.FC = () => {
   const [selected, SetSelected] = useState('');
@@ -14,15 +19,15 @@ const CoursesSection: React.FC = () => {
         <CourseSelection />
         <ButtonsList selected={SetSelected} value={selected} />
 
-        <div className="flex gap-5 items-end mb-5">
-          <h3 className="w-full max-h-6 uppercase text-gray-500 font-light text-2sm pb-3 border-b border-gray-300 tracking-[1px]">
+        <div className="flex gap-5 justify-between items-end mb-14 md:mb-5">
+          <h3 className="hidden lg:block w-full max-h-6 uppercase text-gray-500 font-light text-2sm pb-3 border-b border-gray-300 tracking-[1px]">
             {selected}
           </h3>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center flex-col md:flex-row gap-5 w-full lg:w-auto justify-between">
             <PriceBox price="1.500" />
             <ButtonPromir
-              className="border-greencart hover:bg-greencart text-greencart min-h-[78.5px]"
+              className="border-greencart hover:bg-greencart text-greencart min-h-[40px] md:min-h-[78.5px]"
               link
               href="#"
             >
@@ -30,6 +35,8 @@ const CoursesSection: React.FC = () => {
             </ButtonPromir>
           </div>
         </div>
+        <DesktopTimeLine />
+        <MobileTimeLine />
       </DivWrapper>
     </section>
   );

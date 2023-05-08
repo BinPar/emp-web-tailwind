@@ -99,7 +99,7 @@ const HeaderBottom: React.FC<HeaderBottomProps> = ({ isShrunk }) => (
         </ul>
       </ItemMainNav>
       <ItemMainNav className="ml-14">
-        <MainNavLink href="#">promir</MainNavLink>
+        <MainNavLink href="/promir">promir</MainNavLink>
       </ItemMainNav>
       <ItemMainNav className="ml-14">
         <MainNavLink href="#">eureka</MainNavLink>

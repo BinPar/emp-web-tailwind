@@ -29,6 +29,9 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
     extend: {
+      gap: {
+        '10px': '10px'
+      },
       width: {
         '10px': '10px',
       },
@@ -37,6 +40,7 @@ module.exports = {
       },
       margin: {
         '5px': '5.5px',
+        '10px': '10px'
       },
       boxShadow: {
         up: '0 -1px 2px rgba(0,0,0,.1), 0 -2px 4px rgba(0,0,0,.1)',

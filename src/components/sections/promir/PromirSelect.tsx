@@ -53,7 +53,7 @@ const PromirSelect: React.FC<WithClassName<PromirSelectProps>> = ({
           className="group-aria-current:rotate-180 w-4 transition-all duration-150 text-secondarygray"
         />
       </button>
-      <ul className="w-full mt-2 peer-aria-current:border-2 border-secondarygray max-h-0 overflow-hidden py-0 peer-aria-current:border-b peer-aria-current:max-h-64 peer-aria-current:py-3 transition-all duration-300 absolute bg-white z-10">
+      <ul className="w-full mt-2 peer-aria-current:border-2 border-secondarygray max-h-0 overflow-hidden py-0 peer-aria-current:max-h-64 peer-aria-current:py-3 transition-all duration-300 absolute bg-white z-10">
         {option1 && <PromirOption setValue={SetValue} setChecked={SetChecked} checked={checked} option={option1} />}
         {option2 && <PromirOption setValue={SetValue} setChecked={SetChecked} checked={checked} option={option2} />}
         {option3 && <PromirOption setValue={SetValue} setChecked={SetChecked} checked={checked} option={option3} />}
