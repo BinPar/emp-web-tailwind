@@ -7,6 +7,9 @@ import MethodologySection from '../src/components/sections/promir/MethodologySec
 import PhasesSection from '../src/components/sections/promir/PhasesSection';
 import CoursesSection from '../src/components/sections/promir/CoursesSection';
 import TeamSection from '../src/components/sections/promir/TeamSection';
+import InputForms from '../src/components/sections/checkOut/InputForms';
+import InputPromir from '../src/components/sections/promir/InputPromir';
+import PromirDemoForm from '../src/components/sections/promir/PromirDemoForm';
 
 const Promir: React.FC = () => (
   <>
@@ -17,11 +20,14 @@ const Promir: React.FC = () => (
     </Head>
 
     <MainLayout>
+      <section>
+        <PromirDemoForm/>
+      </section>
       <PerkSection />
       <MethodologySection />
       <PhasesSection />
       <CoursesSection />
-      <TeamSection/>
+      <TeamSection />
     </MainLayout>
   </>
 );
