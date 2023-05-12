@@ -4,6 +4,7 @@ import type { WithClassName, WithChildren } from '../../../model/react';
 interface ButtonPromirProps {
   link?: boolean;
   href?: string;
+  typeButton?: string;
 }
 
 const ButtonPromir: React.FC<WithClassName<WithChildren<ButtonPromirProps>>> = ({
@@ -11,6 +12,7 @@ const ButtonPromir: React.FC<WithClassName<WithChildren<ButtonPromirProps>>> = (
   className,
   link,
   href,
+  typeButton,
 }) =>
   link ? (
     <a
@@ -24,7 +26,7 @@ const ButtonPromir: React.FC<WithClassName<WithChildren<ButtonPromirProps>>> = (
     </a>
   ) : (
     <button
-      type="button"
+      type={typeButton !== undefined && typeButton !== 'button' ? 'submit' : 'button'}
       className={twMerge(
         'min-h-[40px] border-2 border-primary px-4 hover:bg-primary hover:text-white text-primary uppercase font-medium text-1xs tracking-[1px]',
         className,

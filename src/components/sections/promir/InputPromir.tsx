@@ -25,7 +25,7 @@ const InputPromir: React.FC<WithClassName<InputPromirProps>> = ({
     />
     <label
       htmlFor={id}
-      className={`left-3 leading-normal tracking-[1px] px-1 bg-white absolute text-primary duration-300 transform text-xs -translate-y-5 top-3 origin-[0] peer-focus:text-xs peer-focus:text-white peer-focus:bg-transparent peer-placeholder-shown:-translate-y-1 peer-autofill:-translate-y-5 peer-focus:-translate-y-7 ${
+      className={`left-1 leading-normal tracking-[1px] px-1 bg-white absolute text-primary duration-300 transform text-xs -translate-y-5 top-3 origin-[0] peer-focus:text-xs peer-focus:text-white peer-focus:bg-transparent peer-placeholder-shown:-translate-y-1 peer-autofill:-translate-y-5 peer-focus:-translate-y-7 ${
         labelClass ? labelClass : ''
       }`}
     >

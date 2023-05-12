@@ -35,7 +35,7 @@ const CoursesSection: React.FC = () => {
         </div>
         <DesktopTimeLine />
         <MobileTimeLine />
-        <Course background='#a1c25e' secondaryBg='#f6f8f0'/>
+        <Course background="bg-[#a1c25e]" color="#a1c25e" secondaryBg="bg-[#f6f8f0]" />
       </DivWrapper>
     </section>
   );
