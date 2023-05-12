@@ -8,6 +8,10 @@ import PhasesSection from '../src/components/sections/promir/PhasesSection';
 import CoursesSection from '../src/components/sections/promir/CoursesSection';
 import TeamSection from '../src/components/sections/promir/TeamSection';
 import SliderDemoSection from '../src/components/sections/promir/SliderDemoSection';
+import ContactBlock from '../src/components/sections/promir/ContactBlock';
+import ContactFormPromir from '../src/components/sections/promir/ContactFormPromir';
+import DivWrapper from '../src/components/sections/items/DivWrapper';
+import ContactSection from '../src/components/sections/promir/ContactSection';
 
 const Promir: React.FC = () => (
   <>
@@ -23,6 +27,7 @@ const Promir: React.FC = () => (
       <MethodologySection />
       <PhasesSection />
       <CoursesSection />
+      <ContactSection />
       <TeamSection />
     </MainLayout>
   </>
