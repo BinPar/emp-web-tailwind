@@ -1,8 +1,10 @@
+import type { WithClassName } from '../../../model/react';
+import { twMerge } from 'tailwind-merge';
 interface PhasesProps {
   phaseActive: string;
 }
-const Phases: React.FC<PhasesProps> = ({ phaseActive }) => (
-  <div className="flex mt-1">
+const Phases: React.FC<WithClassName<PhasesProps>> = ({ phaseActive, className }) => (
+  <div className={twMerge('flex mt-1', className)}>
     <span
       className={`block h-2 xs:h-10px md:h-2 lg:h-10px w-[114px] xs:w-[179px] md:w-[137px] lg:w-[179px] mr-1 xs:mr-5px md:mr-1 lg:mr-5px rounded-full bg-gray-200 ${
         phaseActive === 'warm' && ' bg-[#f8d473]'

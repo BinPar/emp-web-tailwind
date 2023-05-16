@@ -1,36 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Head from 'next/head';
 import MainLayout from '../src/components/sections/MainLayout';
-import PerkSection from '../src/components/sections/promir/PerkSection';
-import MethodologySection from '../src/components/sections/promir/MethodologySection';
-import PhasesSection from '../src/components/sections/promir/PhasesSection';
-import CoursesSection from '../src/components/sections/promir/CoursesSection';
-import TeamSection from '../src/components/sections/promir/TeamSection';
-import SliderDemoSection from '../src/components/sections/promir/SliderDemoSection';
-import ContactBlock from '../src/components/sections/promir/ContactBlock';
-import ContactFormPromir from '../src/components/sections/promir/ContactFormPromir';
-import DivWrapper from '../src/components/sections/items/DivWrapper';
-import ContactSection from '../src/components/sections/promir/ContactSection';
 
-const Promir: React.FC = () => (
-  <>
-    <Head>
-      <title>Ejemplo de página de EMP en TW</title>
-      <meta name="description" content="Ejemplo de página de EMP en TW" />
-      <meta property="og:image" content="/assets/rocketLaptop.png" />
-    </Head>
+import PromirIndex from '../src/components/sections/promir/MainSections/PromirIndex';
+import PromirInternalNav from '../src/components/sections/promir/PromirInternalNav';
+import PromirWhatIs from '../src/components/sections/promir/MainSections/PromirWhatIs';
+import PromirMethodology from '../src/components/sections/promir/MainSections/PromirMethodology';
 
-    <MainLayout>
-      <SliderDemoSection />
-      <PerkSection />
-      <MethodologySection />
-      <PhasesSection />
-      <CoursesSection />
-      <ContactSection />
-      <TeamSection />
-    </MainLayout>
-  </>
-);
+const Promir: React.FC = () => {
+  const [currentNav, SetCurrentNav] = useState('');
+  return (
+    <>
+      <Head>
+        <title>Ejemplo de página de EMP en TW</title>
+        <meta name="description" content="Ejemplo de página de EMP en TW" />
+        <meta property="og:image" content="/assets/rocketLaptop.png" />
+      </Head>
+
+      <MainLayout>
+        <PromirInternalNav method={SetCurrentNav} value={currentNav} />
+        {(currentNav === '' || currentNav === 'home') && <PromirIndex />}
+        {(currentNav === 'whatIs') && <PromirWhatIs />}
+        {(currentNav === 'methodology') && <PromirMethodology />}
+        {(currentNav === 'methodology') && <PromirMethodology />}
+      </MainLayout>
+    </>
+  );
+};
 
 export default Promir;

@@ -1,6 +1,8 @@
-const Months: React.FC = () => {
+import type { WithClassName } from '../../../model/react';
+import { twMerge } from 'tailwind-merge';
+const Months: React.FC<WithClassName> = ({className}) => {
   return (
-    <div className="flex items-center">
+    <div className={twMerge('flex items-center', className)}>
       {[...Array(17)].map((_, index) => (
         <span key={index} className="block flex-shrink-0 w-2 h-2 xs:w-10px xs:h-10px md:w-2 md:h-2 lg:h-10px lg:w-10px m-[2.65px] xs:m-5px md:m-1 lg:m-5px first:ml-0 !mt-0 rounded-full bg-gray-200" />
       ))}
