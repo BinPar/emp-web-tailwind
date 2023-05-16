@@ -1,10 +1,8 @@
-import type { WithClassName } from '../../../model/react';
-import { twMerge } from 'tailwind-merge';
 import PromirP from './PromirP';
 import CourseDetail from './CourseDetail';
 import ButtonPromir from './ButtonPromir';
-const CourseInfo: React.FC<WithClassName> = ({ className }) => (
-  <div className='w-full lg:w-2/4 pr-8'>
+const CourseInfo: React.FC = () => (
+  <div className="w-full lg:w-2/4 pr-8 mb-10 md:mb-0">
     <PromirP className="text-white pb-5 mb-5 border-b border-white">
       Dirigido a estudiantes de 6º de Medicina.
       <br />
@@ -34,7 +32,7 @@ const CourseInfo: React.FC<WithClassName> = ({ className }) => (
     </PromirP>
     <CourseDetail className="border-b border-white" />
     <CourseDetail className="border-b border-white" />
-    <ButtonPromir className='border-white text-white'>MÁS INFORMACIÓN</ButtonPromir>
+    <ButtonPromir className="border-white text-white">MÁS INFORMACIÓN</ButtonPromir>
   </div>
 );
 export default CourseInfo;

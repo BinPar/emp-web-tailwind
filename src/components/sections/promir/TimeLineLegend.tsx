@@ -1,5 +1,8 @@
-const TimeLineLegend: React.FC = () => (
-  <ul className="mt-10px flex gap-4">
+import type { WithClassName } from '../../../model/react';
+import { twMerge } from 'tailwind-merge';
+
+const TimeLineLegend: React.FC<WithClassName> = ({className}) => (
+  <ul className={twMerge('mt-10px flex gap-4', className)}>
     <li className="flex gap-10px items-center">
       <span className="w-10px h-10px bg-[#f8d473] rounded-full" />
       <span className="uppercase text-gray-400 text-2xs tracking-[1px]">calentamiento</span>

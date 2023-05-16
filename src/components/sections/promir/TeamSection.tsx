@@ -5,7 +5,7 @@ import PromirP from './PromirP';
 import TeamItem from './TeamItem';
 
 const TeamSection: React.FC = () => (
-  <section className="mt-10">
+  <section className="my-10">
     <DivWrapper>
       <div className='mb-6'>
         <HeaderPromir>CONOCE AL EQUIPO DOCENTE DE PROMIR</HeaderPromir>

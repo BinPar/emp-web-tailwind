@@ -21,10 +21,10 @@ const ButtonProduct: React.FC<ButtonProductProps> = ({
     console.log(value, title);
   }
   return (
-    <li className="relative">
+    <li className="relative w-full xs:w-[calc(50%_-_10px)] md:w-[calc(25%_-_10px)]">
       <button
         type="button"
-        className={`aria-current:min-h-[84px] min-h-[60px] rounded-xs transition-all duration-200 uppercase text-2sm max-w-[160px] py-3 px-4 peer tracking-[1px] ${bg} ${color}`}
+        className={`w-full aria-current:min-h-[84px] min-h-[60px] max-h-[60px] rounded-xs transition-all duration-200 uppercase text-sm lg2:text-2sm lg2:max-w-[160px] py-3 px-3 lg2:px-4 peer tracking-[1px] ${bg} ${color}`}
         onClick={(): void => {
           value !== title ? selected(title) : selected('');
         }}
