@@ -5,8 +5,8 @@ import PhasesList from './PhasesList'
 import PromirP from './PromirP'
 
 const PhasesSection: React.FC = () => (
-    <section className="py-10">
-    <DivWrapper className="flex flex-col lg:flex-row items-center gap-12">
+    <section className="mb-10">
+    <DivWrapper className="flex flex-col lg:flex-row items-center gap-12 py-10 border-y border-gray-300">
       <div className="lg:w-2/4 text-center lg:text-left">
         <HeaderPromir className='text-left'>Fases de estudio </HeaderPromir>
         <PromirP className="mb-7">

@@ -4,7 +4,7 @@ import ButtonPromir from './ButtonPromir';
 import PromirP from './PromirP';
 
 const CourseDetail: React.FC<WithClassName> = ({ className }) => (
-  <div className={twMerge('text-white pb-5 mb-5', className)}>
+  <div className={twMerge('text-white pt-5 mt-5', className)}>
     <PromirP className="mb-3 text-white font-semibold">CURSO DE SEXTO 2025</PromirP>
     <PromirP className="mb-3 text-white font-semibold">
       EN ESTE CURSO HAY DOS OPCIONES DE MATRICULACIÓN:

@@ -1,9 +1,8 @@
 import PromirP from './PromirP';
 import CourseDetail from './CourseDetail';
-import ButtonPromir from './ButtonPromir';
 const CourseInfo: React.FC = () => (
-  <div className="w-full lg:w-2/4 pr-8 mb-10 md:mb-0">
-    <PromirP className="text-white pb-5 mb-5 border-b border-white">
+  <div className="w-full lg:w-2/4 pr-8 mb-10 lg:mb-0">
+    <PromirP className="text-white">
       Dirigido a estudiantes de 6º de Medicina.
       <br />
       <br />
@@ -30,9 +29,9 @@ const CourseInfo: React.FC = () => (
       débiles y te dirá cuál es tu posición con respecto a otros alumnos de la plataforma que se
       vayan a presentar a tu misma convocatoria.
     </PromirP>
-    <CourseDetail className="border-b border-white" />
-    <CourseDetail className="border-b border-white" />
-    <ButtonPromir className="border-white text-white">MÁS INFORMACIÓN</ButtonPromir>
+    <CourseDetail className="border-t border-white" />
+    <CourseDetail className="border-t border-white" />
+    
   </div>
 );
 export default CourseInfo;

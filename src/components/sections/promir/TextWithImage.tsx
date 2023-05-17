@@ -3,7 +3,7 @@ import Image from 'next/image';
 import SubHeader from '../items/SubHeader';
 
 interface TextWithImageProps {
-  title: string;
+  title?: string;
   src: string;
   alt: string;
   alignRight?: boolean;
@@ -26,8 +26,8 @@ const TextWithImage: React.FC<WithChildren<TextWithImageProps>> = ({
         />
       </div>
     )}
-    <div className={`lg:w-2/4 py-10 px-8 lg:px-14${alignRight && ' order-2 lg:order-1'}`}>
-      <SubHeader className='text-center lg:text-left'>{title}</SubHeader>
+    <div className={`lg:w-2/4 py-8 px-12 lg:px-14${alignRight && ' order-2 lg:order-1'}`}>
+      {title && (<SubHeader className='text-center lg:text-left'>{title}</SubHeader>)}
       {children}
     </div>
     {alignRight && (

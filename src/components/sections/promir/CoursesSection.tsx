@@ -13,7 +13,7 @@ const CoursesSection: React.FC = () => {
   const [selected, SetSelected] = useState('');
   return (
     <section>
-      <DivWrapper className='mb-40 md:mb-0'>
+      <DivWrapper className='mb-44 md:mb-0'>
         <CourseSelection />
         <ButtonsList selected={SetSelected} value={selected} />
 
