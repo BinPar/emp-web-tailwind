@@ -49,14 +49,15 @@ module.exports = {
       boxShadow: {
         up: '0 -1px 2px rgba(0,0,0,.1), 0 -2px 4px rgba(0,0,0,.1)',
         profile: '1px 2px 3px rgba(0,0,0,0.1), 2px 2px 6px rgba(0,0,0,0.1)',
+        sp1: '0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149)',
       },
       colors: {
         primary: '#0074a7',
         primarylight: '#f0f7fa',
         primaryvariant: '#196696',
         secondary: '#eedb4c',
-        greencart: '#b1d141',
-        darkGreenCart: '#a1bf3b',
+        greencart: '#b0cd46',
+        darkGreenCart: '#91ad2d',
         yellowmenu: '#eedb4c',
         lightgray: '#f9f9f9',
         lightmidlegray: '#d2d2d2',
@@ -66,6 +67,7 @@ module.exports = {
         promirDark: '#196692',
         promirHeader: '#338fb9',
         promirGray: '#d5e0e7',
+        whiteSmoke: '#fcfcfc',
       },
       backgroundImage: {
         slide: "url('/img/home.jpeg')",
@@ -83,9 +85,6 @@ module.exports = {
         ],
         '2xs': [
           '0.6rem',
-          {
-            letterSpacing: '1.15',
-          },
         ],
         '2.5xs': [
           '0.7rem',
