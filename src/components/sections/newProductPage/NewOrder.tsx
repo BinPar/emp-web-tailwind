@@ -46,7 +46,7 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({ method, value, class
       <button
         type="button"
         onClick={(): void => {
-          value === '' && method('error');
+          value === '' ? method('error') : method('cart');
         }}
         className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
       >

@@ -7,6 +7,7 @@ import StickyBuy from '../src/components/sections/items/StickyBuy';
 import MainLayout from '../src/components/sections/MainLayout';
 import NewOrder from '../src/components/sections/newProductPage/NewOrder';
 import NewProductInfo from '../src/components/sections/newProductPage/NewProductInfo';
+import SideCart from '../src/components/sections/newProductPage/SideCart';
 
 const newProductPage: React.FC = () => {
   const [selected, setSelected] = useState('');
@@ -22,14 +23,15 @@ const newProductPage: React.FC = () => {
           <FloatingMenu />
           <section className="mt-5 lg2:mt-12 w-full lg:grid lg:grid-cols-[1fr,_270px] xl:grid-cols-[1fr,_310px] lg:gap-5 xl:gap-10">
             <div className="">
-            <NewProductInfo  method={setSelected} value={selected} />
+              <NewProductInfo method={setSelected} value={selected} />
             </div>
-            <div className='relative'>
-              <NewOrder method={setSelected} value={selected} className='hidden lg:block'/>
+            <div className="relative">
+              <NewOrder method={setSelected} value={selected} className="hidden lg:block" />
             </div>
           </section>
         </DivWrapper>
         <StickyBuy type="Expertos" oldPrice="55" price="52,25" link="#" />
+        {selected === 'cart' && <SideCart method={setSelected} value={selected} />}
       </MainLayout>
     </>
   );
