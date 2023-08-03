@@ -9,40 +9,46 @@ import InfoAcordeon from '../items/InfoAcordeon';
 import ProductSheet from './ProductSheet';
 import Book from '../../icons/Book';
 import DownLoad from '../../icons/DownLoad';
+import NewOrder from './NewOrder';
 
-const ProductInfo: React.FC = () => {
+interface ProductInfoProps {
+  method: React.Dispatch<React.SetStateAction<string>>;
+  value: string;
+}
+
+const ProductInfo: React.FC<ProductInfoProps> = ({ method, value }) => {
   const isNew = true;
   return (
-    <article className="lg:pl-12">
-      <div className="mt-12 lg:mt-0 w-full flex">
-        <div className="hidden md:flex flex-col items-center min-w-[250px] xl2:min-w-[350px] mr-10">
+    <article className="xl2:pl-12">
+      <div className="mt-5 lg:mt-0 w-full flex">
+        <div className="hidden lg2:flex flex-col items-center min-w-[250px] xl2:min-w-[350px] lg:mr-5 xl:mr-10">
           <div className="w-[200px] min-w-[200px] lg:w-[250px] lg:min-w-[250px] xl2:w-[350px] xl2:min-w-[350px] mb-5">
             <Image alt="item" src="/img/cover.jpg" width="1038" height="1046" />
           </div>
           <button
             type="button"
-            className="bg-primary text-white w-full rounded-full py-1 max-w-[150px] xl2:max-w-[250px] hover:bg-primaryvariant transition-all duration-300 flex items-center justify-center first-of-type:mb-3"
+            className="bg-primary text-white w-full rounded-full py-1 min-w-full lg:max-w-[150px] xl2:max-w-[250px] hover:bg-primaryvariant transition-all duration-300 flex items-center justify-center first-of-type:mb-3"
           >
-            <Book className='w-5 h-5 text-white mr-2'/>
+            <Book className="w-5 h-5 text-white mr-2" />
             Capítulo de muestra
           </button>
           <button
             type="button"
-            className="bg-primary text-white w-full rounded-full py-1 max-w-[150px] xl2:max-w-[250px] hover:bg-primaryvariant transition-all duration-300 flex items-center justify-center first-of-type:mb-3"
+            className="bg-primary text-white w-full rounded-full py-1 min-w-full lg:max-w-[150px] xl2:max-w-[250px] hover:bg-primaryvariant transition-all duration-300 flex items-center justify-center first-of-type:mb-3"
           >
-            <DownLoad className='w-5 h-5 text-white mr-2'/>
+            <DownLoad className="w-5 h-5 text-white mr-2" />
             Hoja Informativa
           </button>
         </div>
-        <div className="lg:p-4">
+        <div className="lg:p-4 max-w-full">
           <ProductAutor />
-          <h1 className="text-4xl lg:text-2.5xl xl:text-4xl text-gray-400 font-extralight tracking-[1px] text-center md:text-left">
+          <h1 className="text-2.5xl xl:text-4xl text-gray-400 font-extralight tracking-[1px] text-center lg2:text-left">
             Electrocardiografía
           </h1>
-          <h2 className="text-xl font-light text-gray-400 tracking-[.5px] mb-7 mt-1">
+          <h2 className="text-xl font-light text-gray-400 tracking-[.5px] mb-7 mt-1 text-center lg2:text-left">
             Interpretación práctica del ECG
           </h2>
-          <div className="block md:hidden w-[200px] min-w-[200px] lg:w-[250px] lg:min-w-[250px] m-auto mb-7 ">
+          <div className="block lg2:hidden w-[200px] min-w-[200px] lg:w-[250px] lg:min-w-[250px] m-auto mb-7 ">
             <Image alt="item" src="/img/cover.jpg" width="1038" height="1046" />
           </div>
           {isNew && (
@@ -52,9 +58,40 @@ const ProductInfo: React.FC = () => {
           )}
 
           <ProductSheet />
+          <div className="flex flex-col w-fit m-auto sm:flex-row gap-4 lg2:hidden justify-center my-5">
+            <button
+              type="button"
+              className="bg-primary text-white w-full rounded-full py-1 min-w-[250px] max-w-[250px] hover:bg-primaryvariant transition-all duration-300 flex items-center justify-center"
+            >
+              <Book className="w-5 h-5 text-white mr-2" />
+              Capítulo de muestra
+            </button>
+            <button
+              type="button"
+              className="bg-primary text-white w-full rounded-full py-1 min-w-[250px] max-w-[250px] hover:bg-primaryvariant transition-all duration-300 flex items-center justify-center"
+            >
+              <DownLoad className="w-5 h-5 text-white mr-2" />
+              Hoja Informativa
+            </button>
+          </div>
+          <div className="hidden border-[1.5px] border-primary rounded-xl sm:grid grid-cols-[2fr,_1fr] text-center overflow-hidden mt-5">
+            <p className="text-gray-500 tracking-[1.2px] leading-5 font-light py-2">
+              También puedes obtener esta obra <br />
+              como parte de nuestras colecciones
+            </p>
+            <button
+              type="button"
+              className="bg-primarylight border-l-[1.5px] border-l-primary text-primary text-sm font-bold tracking-[.8px] pt-[1px] uppercase relative leading-4 group"
+            >
+              <span className="group-hover:text-white transition-all duration-[320ms] relative z-10">
+                ver colecciones mieureka
+              </span>
+              <span className="bg-primary w-0 h-full absolute group-hover:w-full transition-all duration-300 top-0 left-0" />
+            </button>
+          </div>
         </div>
       </div>
-      <ModuleSelection className="lg:hidden block" />
+      <NewOrder method={method} value={value} className="lg:hidden block" />
       <InfoAcordeon />
     </article>
   );

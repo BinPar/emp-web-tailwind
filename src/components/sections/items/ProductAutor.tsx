@@ -44,7 +44,7 @@ const Ficha: React.FC = () => {
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 
-    <ul className="mb-4 text-center md:text-left">{author}</ul>
+    <ul className="mb-2 lg2:mb-4 text-center lg2:text-left">{author}</ul>
   );
 };
 

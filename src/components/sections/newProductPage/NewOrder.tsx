@@ -5,35 +5,44 @@ import Triangle from '../../icons/Triangle';
 import ProductOption from './ProductOption';
 import TotalPriceBox from './TotalPriceBox';
 
+import { WithClassName } from '../../../model/react';
+import { twMerge } from 'tailwind-merge';
 interface NewOrderProps {
   method: React.Dispatch<React.SetStateAction<string>>;
   value: string;
 }
 
-const NewOrder: React.FC<NewOrderProps> = ({ method, value }) => (
-  <div className="border border-gray-200 rounded-xl bg-white px-5 py-6 drop-shadow-lg relative">
-    <Triangle className="absolute w-6 top-7 -left-[22px]" />
+const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({ method, value, className }) => (
+  <div
+    className={twMerge(
+      'lg:border lg:border-gray-200 rounded-xl bg-white lg:px-5 py-6 lg:drop-shadow-lg lg:sticky top-[210px]',
+      className,
+    )}
+  >
+    <Triangle className="absolute w-6 top-7 -left-[22px] hidden lg:block" />
     <h4 className='text-xl text-gray-500 font-semibold tracking-[1.2px] mb-5 after:content-[""] after:h-[2px] after:bg-gray-200 after:w-full after:rounded-full after:block after:mt-1'>
       Tu Selección
     </h4>
-    <div className="flex gap-3 mb-4">
-      <ProductOption
-        method={method}
-        value={value}
-        type={'DUO'}
-        price={'52,25'}
-        data="papel + digital"
-      />
-      <ProductOption method={method} value={value} type={'Digital'} price={'45,59'} />
-    </div>
-    {value === 'error' && (
-      <p className="text-red-300 text-2xs font-bold tracking-[1.2px] mb-3 -mt-1">
-        * Debes elegir el tipo de producto
-      </p>
-    )}
+    <div>
+      <div className="flex gap-3 mb-4">
+        <ProductOption
+          method={method}
+          value={value}
+          type={'DUO'}
+          price={'52,25'}
+          data="papel + digital"
+        />
+        <ProductOption method={method} value={value} type={'Digital'} price={'45,59'} />
+      </div>
+      {value === 'error' && (
+        <p className="text-red-300 text-2xs font-bold tracking-[1.2px] mb-3 -mt-1">
+          * Debes elegir el tipo de producto
+        </p>
+      )}
 
-    <TotalPriceBox discount="-5% Dto. 70 aniversario" price="55" afterDiscount="52,2" />
-    <div className="mb-5">
+      <TotalPriceBox discount="-5% Dto. 70 aniversario" price="55" afterDiscount="52,2" />
+    </div>
+    <div className="mb-5 hidden lg:block">
       <button
         type="button"
         onClick={(): void => {

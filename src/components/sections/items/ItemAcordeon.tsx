@@ -12,7 +12,7 @@ const ItemAcordeon: React.FC<WithChildren<ItemAcordeonProps>> = ({ children, tit
   const [closeInfoWrap, setCloseInfoWrap] = useState<boolean>(false);
   return (
     <article id={id}
-      className={`text-lg font-normal text-gray-500 w-full${closeInfoWrap ? ' mb-0' : ' mb-5'}`}
+      className={`text-lg font-normal text-gray-500 lg:p-4 w-full${closeInfoWrap ? ' mb-0' : ' mb-5'}`}
     >
       <SubHeader className="w-full">
         <button
