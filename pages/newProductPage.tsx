@@ -31,7 +31,7 @@ const newProductPage: React.FC = () => {
           </section>
         </DivWrapper>
         <StickyBuy type="Expertos" oldPrice="55" price="52,25" link="#" />
-        {selected === 'cart' && <SideCart method={setSelected} value={selected} />}
+        <SideCart method={setSelected} value={selected} />
       </MainLayout>
     </>
   );

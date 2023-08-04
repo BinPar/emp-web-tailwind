@@ -30,6 +30,7 @@ module.exports = {
       // => @media (min-width: 1920px) { ... }
     },
     extend: {
+      
       content: {
         trianglesRight: ['url("/img/triangles-right.png")'],
         trianglesLeft: ['url("/img/triangles-top-left.png")'],
@@ -84,9 +85,7 @@ module.exports = {
             letterSpacing: '1.15px',
           },
         ],
-        '2xs': [
-          '0.6rem',
-        ],
+        '2xs': ['0.6rem'],
         '2.5xs': [
           '0.7rem',
           {
@@ -147,6 +146,20 @@ module.exports = {
     }),
     plugin(function ({ addVariant }) {
       addVariant('label-focus', "input[type='checkbox']:focus + label &");
+    }),
+    plugin(function ({ addVariant, e }) {
+      addVariant('grid-view', ({ modifySelectors, separator }) => {
+        modifySelectors(
+          ({ className }) => `.${e(`grid-view${separator}${className}`)}[data-grid="true"]`,
+        );
+      });
+      addVariant('group-grid-view', ({ modifySelectors, separator }) => {
+        modifySelectors(
+          ({ className }) => `[data-grid="true"] .${e(`group-grid-view${separator}${className}`)}`,
+        );
+      });
+      // addVariant('label-checked', "input[type='checkbox']:checked + label &");
+      // addVariant('label-focus', "input[type='checkbox']:focus + label &");
     }),
   ],
 };

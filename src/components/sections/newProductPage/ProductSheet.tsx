@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import Windows from '../../icons/Windows';
-import Mac from '../../icons/mac';
+
 import Ios from '../../icons/Ios';
 import Android from '../../icons/Android';
+import Mac from '../../icons/Mac';
 
 interface NormalItemProps {
   title: string;

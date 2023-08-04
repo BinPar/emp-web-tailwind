@@ -50,6 +50,12 @@ const Item: React.FC<SideCartItemProps> = ({ title, src, isbn, type, oldPrice, f
           <span className="-mt-[2px] text-base">+</span>
         </button>
         <p className="w-fit px-1 text-gray-500">1</p>
+        <button
+          type="button"
+          className="text-xs tracking-[.8px] font-light text-gray-400 uppercase flex items-center hover:text-primary transition-all duration-300"
+        >
+          eliminar
+        </button>
       </div>
       <div>
         <div className="flex relative justify-end items-start">
@@ -91,6 +97,6 @@ const SideCartItemList: React.FC = () => {
         )),
     );
   }, []);
-  return <ul className='max-h-[calc(100%_-_400px)] overflow-y-auto pr-2'>{sideCartItem}</ul>;
+  return <ul className="max-h-[calc(100%_-_400px)] overflow-y-auto pr-2">{sideCartItem}</ul>;
 };
 export default SideCartItemList;
