@@ -1,12 +1,15 @@
+import { WithClassName } from '../../../model/react';
+import { twMerge } from 'tailwind-merge';
 interface TotalPriceBoxProps {
   discount: string;
   price: string;
   afterDiscount: string;
+  extraClass?: string;
 }
-const TotalPriceBox: React.FC<TotalPriceBoxProps> = ({ price, afterDiscount, discount }) => (
-  <div className="rounded-lg bg-gray-100 p-4 flex justify-between mb-4">
+const TotalPriceBox: React.FC<WithClassName<TotalPriceBoxProps>> = ({ price, afterDiscount, discount, className, extraClass, }) => (
+  <div className={twMerge('rounded-lg bg-gray-100 p-4 flex justify-between mb-4', className)}>
     <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">Total:</p>
-    <div className="w-fit text-right">
+    <div className={`w-fit text-right ${!! extraClass && extraClass}`}>
       <p className="text-white bg-greencart rounded-sm font-bold text-2xs text-center tracking-[.8px] px-2 mb-1">
         {discount}
       </p>

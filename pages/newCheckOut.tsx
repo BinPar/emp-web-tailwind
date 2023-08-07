@@ -7,6 +7,11 @@ import StickyBuy from '../src/components/sections/items/StickyBuy';
 import MainLayout from '../src/components/sections/MainLayout';
 import NewOrder from '../src/components/sections/newProductPage/NewOrder';
 import NewProductInfo from '../src/components/sections/newProductPage/NewProductInfo';
+import OrderCheckout from '../src/components/sections/newCheckOut/OrderCheckout';
+import NewCheckOutInfo from '../src/components/sections/newCheckOut/NewCheckOutInfo';
+import PersonalInfo from '../src/components/sections/newCheckOut/PersonalInfo';
+import AddressInfo from '../src/components/sections/newCheckOut/AddressInfo';
+import PaymentInfo from '../src/components/sections/newCheckOut/PaymentInfo';
 
 const newCheckOut: React.FC = () => {
   const [selected, setSelected] = useState('');
@@ -21,11 +26,14 @@ const newCheckOut: React.FC = () => {
         <DivWrapper className="flex md:gap-10 flex-col md:flex-row gap-8 relative">
           
           <section className="mt-5 lg2:mt-12 w-full lg:grid lg:grid-cols-[1fr,_270px] xl:grid-cols-[1fr,_310px] lg:gap-5 xl:gap-10">
-            <div className="">
-              <NewProductInfo method={setSelected} value={selected} />
+            <div>
+              <NewCheckOutInfo/>
+              <PersonalInfo/>
+              <AddressInfo/>
+              <PaymentInfo/>
             </div>
             <div className="relative">
-              <NewOrder method={setSelected} value={selected} className="hidden lg:block" />
+              <OrderCheckout method={setSelected} value={selected} className="hidden lg:block" />
             </div>
           </section>
         </DivWrapper>
