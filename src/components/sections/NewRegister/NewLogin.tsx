@@ -3,7 +3,7 @@ import NewInputForms from './NewInputForms';
 import NewInputCheck from './NewInputCheck';
 
 const NewLogin: React.FC = () => (
-  <div className='max-w-[700px] m-auto'>
+  <div className="max-w-[700px] m-auto">
     <p className="text-base text-gray-500 font-medium tracking-[.9px] mb-2 line-clamp-2 leading-5 text-center">
       Inicia sesión para acceder a tu cuenta y continuar con el proceso de compra
     </p>
@@ -12,7 +12,7 @@ const NewLogin: React.FC = () => (
         <NewInputForms type="email" id="email" label="Email *" className="md:w-2/4" />
         <NewInputForms type="password" id="password" label="Password *" className="md:w-2/4" />
       </div>
-      <div className="flex justify-between mt-1 flex-col xs:flex-row">
+      <div className="flex justify-between mt-5 md:mt-1 flex-row">
         <NewInputCheck id="remember" label="Recuérdame" />
 
         <a
@@ -22,12 +22,18 @@ const NewLogin: React.FC = () => (
           Olvidé mi contraseña
         </a>
       </div>
-      <button
+      <a
+        href="/newCheckOut"
+        className="bg-primary w-fit flex items-center text-white text-1xs font-bold uppercase tracking-[3px] h-10 px-10 rounded-lg m-auto mt-5"
+      >
+        Entrar
+      </a>
+      {/* <button
         type="submit"
         className="bg-primary text-white text-1xs font-bold uppercase tracking-[3px] h-10 px-10 rounded-lg block m-auto mt-5"
       >
         Entrar
-      </button>
+      </button> */}
     </form>
   </div>
 );

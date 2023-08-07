@@ -16,7 +16,7 @@ const RegisterForm: React.FC = () => (
       Datos Profesionales
     </h4>
       <NewProfileSelector />
-      <div className="flex justify-between">
+      <div className="xs2:flex justify-between">
         <div className="max-w-[550px]">
           <NewInputCheck
             id="privacy"
