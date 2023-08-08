@@ -52,7 +52,7 @@ const Item: React.FC<SideCartItemProps> = ({ title, src, isbn, type, oldPrice, f
         <p className="w-fit px-1 text-gray-500">1</p>
         <button
           type="button"
-          className="text-xs tracking-[.8px] font-light text-gray-400 uppercase flex items-center hover:text-primary transition-all duration-300"
+          className="text-2.5xs xs2:text-xs tracking-[.8px] font-light text-gray-400 uppercase flex items-center hover:text-primary transition-all duration-300"
         >
           eliminar
         </button>

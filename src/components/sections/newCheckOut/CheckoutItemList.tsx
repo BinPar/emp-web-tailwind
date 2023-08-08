@@ -68,7 +68,7 @@ const Item: React.FC<CheckOutItemProps> = ({ title, src, isbn, type, oldPrice, f
                     <span className="text-2xs no-underline text-gray-400">€</span>
                   </div>
                   <div className="flex gap-1 ml-2 xs2:ml-3">
-                    <p className="text-gray-500 text-xl font-bold">{finalPrice}</p>
+                    <p className="text-gray-500 text-lg font-bold">{finalPrice}</p>
                     <span className="text-1xs text-gray-500 font-black">€</span>
                   </div>
                 </div>
@@ -111,6 +111,6 @@ const CheckoutItemList: React.FC = () => {
         )),
     );
   }, []);
-  return <ul className="pr-1 xs2:pr-2 mb-12">{checkOutItem}</ul>;
+  return <ul className="pr-1 xs2:pr-2 mb-7 xs2:mb-12">{checkOutItem}</ul>;
 };
 export default CheckoutItemList;

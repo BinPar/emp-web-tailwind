@@ -1,10 +1,12 @@
+import { twMerge } from 'tailwind-merge';
+import type { WithClassName } from '../../../model/react';
 import { Dispatch, SetStateAction } from 'react';
 
 interface SelectOptionsProps {
   setValue: Dispatch<SetStateAction<string>>;
   option: string;
 }
-const SelectOption: React.FC<SelectOptionsProps> = ({ setValue, option }) => {
+const SelectOption: React.FC<WithClassName<SelectOptionsProps>> = ({ setValue, option, className }) => {
   return (
     <li className="hover:bg-gray-50">
       <input
@@ -18,7 +20,7 @@ const SelectOption: React.FC<SelectOptionsProps> = ({ setValue, option }) => {
 
       <label
         htmlFor={option}
-        className="px-3 py-2 w-full block font-light text-gray-400 uppercase text-xs tracking-[1px] peer-checked:text-primary relative z-10"
+        className={twMerge('px-3 py-2 w-full block font-light text-gray-400 uppercase text-xs tracking-[1px] peer-checked:text-primary relative z-10', className)}
       >
         {option}
       </label>

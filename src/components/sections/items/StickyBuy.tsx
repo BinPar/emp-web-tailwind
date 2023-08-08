@@ -1,10 +1,11 @@
 interface StickyBuyProps {
+  title: string;
   type: string;
   oldPrice: string;
   price: string;
   link: string;
 }
-const StickyBuy: React.FC<StickyBuyProps> = ({ type, oldPrice, price, link }) => (
+const StickyBuy: React.FC<StickyBuyProps> = ({ type, oldPrice, price, link, title }) => (
   <div className="sticky bottom-0 shadow-up px-5 w-full py-4 bg-white lg:hidden flex justify-between items-center">
     <div className="flex justify-between w-full">
       <div className="flex flex-col ml-0 mx-5">
@@ -16,7 +17,7 @@ const StickyBuy: React.FC<StickyBuyProps> = ({ type, oldPrice, price, link }) =>
           href={link}
           className="leading-4 min-h-[20px] py-1 px-10 w-full bg-greencart rounded-lg text-center text-white text-xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
         >
-          añadir al carro
+          {title}
         </a>
         
       </div>

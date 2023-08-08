@@ -30,7 +30,7 @@ const SideCart: React.FC<SideCartProps> = ({ method, value }) => (
           <h4 className="text-xl text-gray-500 font-semibold tracking-[1.2px]">Tu Carrito</h4>
           <button
             type="button"
-            className="text-xs tracking-[.8px] font-light text-gray-400 uppercase flex items-center hover:text-primary transition-all duration-300"
+            className="text-2.5xs xs2:text-xs tracking-[.8px] font-light text-gray-400 uppercase flex items-center hover:text-primary transition-all duration-300"
           >
             vaciar el carrito
             <Trash className="w-5 h-5 ml-1" />
