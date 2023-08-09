@@ -20,11 +20,11 @@ const confirmation: React.FC = () => {
       </Head>
       <MainLayout>
         <DivWrapper className="flex md:gap-10 flex-col md:flex-row gap-8 relative">
-          <section className="mt-10 lg2:mt-12 w-full lg:grid lg:grid-cols-[1fr,_270px] xl:grid-cols-[1fr,_310px] lg:gap-5 xl:gap-10">
+          <section className="mt-8 w-full lg:grid lg:grid-cols-[1fr,_270px] xl:grid-cols-[1fr,_310px] lg:gap-5 xl:gap-10">
             <div>
               <a
                 href="/newCheckOut"
-                className="w-fit mt-3 mb-10 text-gray-400 flex justify-start gap-2 top-6 left-6 xs2:top-24 xs2:left-24 border border-gray-200 rounded-full px-4 pb-[1px] bg-whiteSmoke hover:bg-white hover:shadow-sp1 hover:border-white transition-all duration-300"
+                className="w-fit mb-8 text-gray-400 flex justify-start gap-2 top-6 left-6 xs2:top-24 xs2:left-24 border border-gray-200 rounded-full px-4 pb-[1px] bg-whiteSmoke hover:bg-white hover:shadow-sp1 hover:border-white transition-all duration-300"
               >
                 <LongArrow className="w-6 rotate-180" />
                 volver
@@ -33,11 +33,11 @@ const confirmation: React.FC = () => {
               <DataSummary/>
             </div>
             <div className="relative">
-              <OrderCheckout method={setSelected} value={selected} className="hidden lg:block" />
+              <OrderCheckout isConfirmation code={true} method={setSelected} value={selected} className="hidden lg:block mt-12" />
             </div>
           </section>
         </DivWrapper>
-        <StickyBuy type="Expertos" oldPrice="55" price="52,25" link="#" title="pagar ahora" />
+        <StickyBuy type="Expertos" oldPrice="55" price="52,25" link="#" title="finalizar y pagar" />
       </MainLayout>
     </>
   );

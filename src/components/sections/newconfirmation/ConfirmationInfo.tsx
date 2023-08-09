@@ -20,7 +20,7 @@ const ConfirmationInfo: React.FC<ConfirmationInfoProps> = ({ method, value }) =>
       </h4>
     </div>
     <ConfirmationItemList />
-    <OrderCheckout className="lg:hidden block" method={method} value={value} />
+    <OrderCheckout isConfirmation code={true} className="lg:hidden block" method={method} value={value} />
   </>
 );
 export default ConfirmationInfo;

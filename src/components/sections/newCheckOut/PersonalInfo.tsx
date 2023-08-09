@@ -9,7 +9,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({method, value}) => (
     <div className='mb-5 after:content-[""] after:h-[2px] after:bg-gray-200 after:w-full after:rounded-full after:block after:mt-1'>
       <div className="flex justify-between items-center">
         <h4 className="text-lg xs2:text-xl text-gray-500 font-semibold tracking-[.8px] xs2:tracking-[1.2px] items-center">
-          Datos Personales
+          Datos personales
         </h4>
         <button
           type="button"

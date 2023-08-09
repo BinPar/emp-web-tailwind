@@ -6,8 +6,9 @@ import OrderCheckout from './OrderCheckout';
 interface NewCheckOutInfoProps {
   method: React.Dispatch<React.SetStateAction<string>>;
   value: string;
+  code: boolean;
 }
-const NewCheckOutInfo: React.FC<NewCheckOutInfoProps> = ({method, value }) => (
+const NewCheckOutInfo: React.FC<NewCheckOutInfoProps> = ({method, value, code }) => (
   <>
     <div className='mb-5 after:content-[""] after:h-[2px] after:bg-gray-200 after:w-full after:rounded-full after:block after:mt-1'>
       <div className="flex justify-between items-center">
@@ -30,7 +31,7 @@ const NewCheckOutInfo: React.FC<NewCheckOutInfoProps> = ({method, value }) => (
       </div>
     </div>
     <CheckoutItemList/>
-    <OrderCheckout className="lg:hidden block" method={method} value={value}/>
+    <OrderCheckout code={code} className="lg:hidden block" method={method} value={value}/>
   </>
 );
 export default NewCheckOutInfo;

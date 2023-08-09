@@ -9,12 +9,16 @@ import TotalPriceBox from '../newProductPage/TotalPriceBox';
 interface OrderCheckoutProps {
   method: React.Dispatch<React.SetStateAction<string>>;
   value: string;
+  code: boolean;
+  isConfirmation?: boolean;
 }
 
 const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
   method,
   value,
   className,
+  code,
+  isConfirmation,
 }) => (
   <div
     className={twMerge(
@@ -34,6 +38,17 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
         className="flex lg:block xl:flex"
         extraClass="w-fit lg:!w-full xl:!w-fit mt-0 lg:mt-2 xl:mt-0"
       />
+      {code && (
+        <div className="rounded-lg bg-gray-100 p-4 mb-4">
+          <div className="flex justify-between items-center mt-[3px]">
+            <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">Código:</p>
+            <div className="w-fit text-right">
+              <p className="text-gray-500 text-1xs tracking-[.8px] font-bold">FIDELIDAD 30%</p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="rounded-lg bg-gray-100 p-4 mb-4">
         <div className="flex justify-between items-center">
           <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">IVA(4%):</p>
@@ -71,16 +86,28 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
       </div>
     </div>
     <div className="mb-5 hidden lg:block">
-      
-      <a
-        href='/confirmation'
-        onClick={(): void => {
-          value === '' ? method('error') : method('cart');
-        }}
-        className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
-      >
-        pagar ahora
-      </a>
+      {isConfirmation ? (
+        <a
+          href="/paymentConfirmation"
+          onClick={(): void => {
+            value === '' ? method('error') : method('cart');
+          }}
+          className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
+        >
+          Finalizar y pagar
+        </a>
+      ) : (
+        <a
+          href="/confirmation"
+          onClick={(): void => {
+            value === '' ? method('error') : method('cart');
+          }}
+          className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
+        >
+          pagar ahora
+        </a>
+      )}
+
       {/*
       <button
         type="button"
