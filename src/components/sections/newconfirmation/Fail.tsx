@@ -1,7 +1,7 @@
 const Fail: React.FC = () => (
   <>
     <h1 className="uppercase text-xl font-bold tracking-[1.2px] text-[#ff725e] mb-5 sm:text-left text-center">
-      HA HABIDO UN PROBLE CON TU PEDIDO: #333CGTD
+      HA OCURRIDO UN PROBLEMA CON TU PEDIDO: #333CGTD
     </h1>
     <div className="border-[1.5px] px-5 sm:pl-0 py-5 bg-white border-gray-200 rounded-xl drop-shadow-lg relative sm:flex items-center">
       <img
