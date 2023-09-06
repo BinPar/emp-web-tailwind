@@ -7,6 +7,7 @@ import ProductSheet from './ProductSheet';
 import Book from '../../icons/Book';
 import DownLoad from '../../icons/DownLoad';
 import NewOrder from './NewOrder';
+import CollectionDemoInfo from './CollectionDemoInfo';
 
 interface ProductInfoProps {
   method: React.Dispatch<React.SetStateAction<string>>;
@@ -47,7 +48,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ method, value, isCollection }
             </>
           )}
         </div>
-        <div className="lg:p-4 max-w-full">
+        <div className="lg:p-4 max-w-full w-full">
           {!isCollection && <ProductAutor />}
           <h1
             className={`text-2.5xl xl:text-4xl text-gray-400 font-extralight tracking-[1px] text-center lg2:text-left ${
@@ -78,6 +79,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ method, value, isCollection }
             </p>
           )}
           {!isCollection ? <ProductSheet /> : <ProductSheet isCollection />}
+          {isCollection && <CollectionDemoInfo/>}
           {!isCollection && (
             <div className="flex flex-col w-fit m-auto sm:flex-row gap-4 lg2:hidden justify-center my-5">
               <button

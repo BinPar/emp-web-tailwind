@@ -76,9 +76,9 @@ const ProductSheet: React.FC<CollectionItemProps> = ({ isCollection }) => {
 
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    <div className="pb-2 sm:p-6 sm:bg-primarylight sm:rounded-xl flex gap-5 sm:gap-0 w-[calc(100%_+_25px)] xs2:w-full overflow-x-auto">
+   <>
       {!isCollection ? (
-        <>
+         <div className="pb-2 sm:p-6 sm:bg-primarylight sm:rounded-xl flex gap-5 sm:gap-0 w-[calc(100%_+_25px)] xs2:w-full overflow-x-auto">
           <div className="rounded-lg sm:rounded-none min-w-[250px] sm:min-w-[auto] w-full bg-primarylight p-6 sm:py-0 sm:px-5 sm:first-of-type:border-r-[2px] first-of-type:border-gray-200">
             <h4 className="text-primary font-bold tracking-[.5px] mb-1">DUO</h4>
             <p className="text-secondarygray font-medium text-1xs leading-4 mb-5">
@@ -116,10 +116,10 @@ const ProductSheet: React.FC<CollectionItemProps> = ({ isCollection }) => {
               </li>
             </ul>
           </div>
-        </>
+        </div>
       ) : (
-        <>
-          <div className="rounded-lg sm:rounded-none min-w-[250px] sm:min-w-[auto] w-full bg-primarylight p-6 sm:py-0 sm:px-5">
+        <div className="pb-2 sm:p-6 sm:bg-primarylight sm:rounded-xl flex gap-5 sm:gap-0 text-center lg:text-left w-full overflow-x-auto">
+          <div className="rounded-lg sm:rounded-none sm:min-w-[auto] w-full bg-primarylight p-6 sm:py-0 sm:px-5">
             <h4 className="text-primary font-bold tracking-[.5px] mb-1">COLECCIÓN</h4>
             <p className="text-2.5xs tracking-widest uppercase text-secondarygray font-light">
               Número de obras
@@ -128,7 +128,7 @@ const ProductSheet: React.FC<CollectionItemProps> = ({ isCollection }) => {
             <p className="text-2.5xs tracking-widest uppercase text-secondarygray font-light mb-3 mt-1">
               compatibilidad
             </p>
-            <ul className="text-secondarygray flex gap-4">
+            <ul className="text-secondarygray flex-wrap xs1:flex-nowrap m-auto max-w-[180px] xs1:max-w-none justify-between xs1:justify-center lg:justify-start flex gap-4">
               <li className="flex flex-col justify-center items-center">
                 <Html className="w-7 h-7 mb-1" />
                 <span className="text-2.5xs ">HTML5</span>
@@ -155,9 +155,9 @@ const ProductSheet: React.FC<CollectionItemProps> = ({ isCollection }) => {
               </li>
             </ul>
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 export default ProductSheet;

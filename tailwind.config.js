@@ -5,6 +5,7 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
+      xs1: '480px',
       xs: '520px',
       xs2: '580px',
 
@@ -21,6 +22,8 @@ module.exports = {
 
       xl: '1280px',
       // => @media (min-width: 1280px) { ... }
+      xl1: '1400px',
+      // => @media (min-width: 1400px) { ... }
 
       xl2: '1440px',
       // => @media (min-width: 1440px) { ... }
