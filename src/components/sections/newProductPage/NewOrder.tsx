@@ -10,9 +10,15 @@ import { twMerge } from 'tailwind-merge';
 interface NewOrderProps {
   method: React.Dispatch<React.SetStateAction<string>>;
   value: string;
+  isCollection?: boolean;
 }
 
-const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({ method, value, className }) => (
+const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({
+  method,
+  value,
+  className,
+  isCollection,
+}) => (
   <div
     className={twMerge(
       'lg:border lg:border-gray-200 rounded-xl bg-white lg:px-5 py-6 lg:drop-shadow-lg lg:sticky top-[210px]',
@@ -25,22 +31,47 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({ method, value, class
     </h4>
     <div>
       <div className="flex gap-3 mb-4">
-        <ProductOption
-          method={method}
-          value={value}
-          type={'DUO'}
-          price={'52,25'}
-          data="papel + digital"
-        />
-        <ProductOption method={method} value={value} type={'Digital'} price={'45,59'} />
+        {!isCollection ? (
+          <>
+            <ProductOption
+              method={method}
+              value={value}
+              type={'DUO'}
+              price={'52,25'}
+              data="papel + digital"
+            />
+            <ProductOption method={method} value={value} type={'Digital'} price={'45,59'} />
+          </>
+        ) : (
+          <>
+            <ProductOption
+              method={method}
+              value={value}
+              type={'Pago Mensual'}
+              price={'24,90'}
+              period=" / mes"
+            />
+            <ProductOption
+              method={method}
+              value={value}
+              type={'Pago Anual'}
+              price={'249'}
+              period=" / año"
+              data="ahorro 49,80€"
+            />
+          </>
+        )}
       </div>
       {value === 'error' && (
         <p className="text-red-300 text-2xs font-bold tracking-[1.2px] mb-3 -mt-1">
           * Debes elegir el tipo de producto
         </p>
       )}
-
-      <TotalPriceBox discount="-5% Dto. 70 aniversario" price="55" afterDiscount="52,2" />
+      {!isCollection ? (
+        <TotalPriceBox discount="-5% Dto. 70 aniversario" price="55" finalPrice="52,2" />
+      ) : (
+        <TotalPriceBox finalPrice="24,90" period="/ mes" isCollection />
+      )}
     </div>
     <div className="mb-5 hidden lg:block">
       <button
@@ -50,18 +81,25 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({ method, value, class
         }}
         className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
       >
-        añadir al carrito
+        {!isCollection ?
+       <>
+       añadir al carrito
         <NewCart className="h-6 w-6 text-white ml-2" />
+       </>
+       : <>probar 30 días gratis</>
+      }
       </button>
-      <button
-        type="button"
-        onClick={(): void => {
-          value === '' && method('error');
-        }}
-        className="min-h-[40px] py-1 w-full border-2 border-greencart text-greencart rounded-lg text-center text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 hover:text-darkGreenCart hover:border-darkGreenCart transition-all duration-300"
-      >
-        comprar en un click
-      </button>
+      {!isCollection && (
+        <button
+          type="button"
+          onClick={(): void => {
+            value === '' && method('error');
+          }}
+          className="min-h-[40px] py-1 w-full border-2 border-greencart text-greencart rounded-lg text-center text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 hover:text-darkGreenCart hover:border-darkGreenCart transition-all duration-300"
+        >
+          comprar en un click
+        </button>
+      )}
     </div>
     <div className='before:content-[""] before:h-[2px] before:rounded-full before:w-full before:block before:bg-gray-200 before:mb-5'>
       <div className="flex gap-3 text-gray-400 text-2xs tracking-[.8px] text-center leading-3 mb-4">
@@ -89,9 +127,12 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({ method, value, class
         </div>
       </div>
       <ul className="text-gray-400 text-2xs tracking-[.8px] font-semibold leading-3">
-        <li className='before:content-[""] before:h-1 before:w-1 before:block before:bg-gray-500 before:float-left before:mr-1 before:rounded-full before:mt-1 overflow-hidden mb-2'>
-          Entrega Hasta 72h laborables en península. Hasta 7 días laborables en Canarias y Baleares
-        </li>
+        {!isCollection && (
+          <li className='before:content-[""] before:h-1 before:w-1 before:block before:bg-gray-500 before:float-left before:mr-1 before:rounded-full before:mt-1 overflow-hidden mb-2'>
+            Entrega Hasta 72h laborables en península. Hasta 7 días laborables en Canarias y
+            Baleares
+          </li>
+        )}
         <li className='before:content-[""] before:h-1 before:w-1 before:block before:bg-gray-500 before:float-left before:mr-1 before:rounded-full before:mt-1 overflow-hidden'>
           Tarjeta de crédito/débito, paypal o domiciliación bancaria (ago único o en cuotas)
         </li>

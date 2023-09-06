@@ -34,7 +34,7 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
       <TotalPriceBox
         discount="ahorro de: 180,45€"
         price="1.819"
-        afterDiscount="1.638,55"
+        finalPrice="1.638,55"
         className="flex lg:block xl:flex"
         extraClass="w-fit lg:!w-full xl:!w-fit mt-0 lg:mt-2 xl:mt-0"
       />

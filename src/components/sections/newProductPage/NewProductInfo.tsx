@@ -8,6 +8,7 @@ import Book from '../../icons/Book';
 import DownLoad from '../../icons/DownLoad';
 import NewOrder from './NewOrder';
 import CollectionDemoInfo from './CollectionDemoInfo';
+import CollectionInfoAcordeon from './CollectionInfoAcordeon';
 
 interface ProductInfoProps {
   method: React.Dispatch<React.SetStateAction<string>>;
@@ -118,7 +119,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ method, value, isCollection }
         </div>
       </div>
       <NewOrder method={method} value={value} className="lg:hidden block" />
-      <InfoAcordeon />
+      {!isCollection ? <InfoAcordeon /> : <CollectionInfoAcordeon/>}
     </article>
   );
 };

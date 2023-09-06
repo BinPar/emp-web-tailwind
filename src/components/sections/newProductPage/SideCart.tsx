@@ -71,7 +71,7 @@ const SideCart: React.FC<SideCartProps> = ({ method, value }) => (
             </p>
           </div>
         </div>
-        <TotalPriceBox discount="-5% Dto. 70 aniversario" price="55" afterDiscount="52,2" />
+        <TotalPriceBox discount="-5% Dto. 70 aniversario" price="55" finalPrice="52,2" />
         <div className="mb-5">
           <a href='/register'
             className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"

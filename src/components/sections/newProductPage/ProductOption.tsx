@@ -8,9 +8,10 @@ interface ProductOptionProps {
   price: string;
   method: Dispatch<SetStateAction<string>>;
   value: string;
+  period?: string;
 }
 
-const ProductOption: React.FC<ProductOptionProps> = ({ type, data, price, method, value }) => (
+const ProductOption: React.FC<ProductOptionProps> = ({ type, data, price, method, value, period }) => (
   <button
     type="button"
     aria-current={value === type}
@@ -22,6 +23,7 @@ const ProductOption: React.FC<ProductOptionProps> = ({ type, data, price, method
     <div className="font-bold text-sm tracking-[.5px] text-gray-500 flex justify-start">
       {price}
       <span className="text-2xs ml-[2px]">€</span>
+      {!!period && <span className='ml-1'>{period}</span>}
     </div>
     <div className="opacity-0 group-aria-current:opacity-100 transition-opacity duration-300 rounded-full border-[1.7px] border-greencart text-greencart bg-white outline outline-[3px] outline-white w-4 h-4 absolute -top-[6px] -right-[6px]">
       <Check className="scale-150 mt-[1px]" />

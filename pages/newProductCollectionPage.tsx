@@ -8,6 +8,7 @@ import MainLayout from '../src/components/sections/MainLayout';
 import NewOrder from '../src/components/sections/newProductPage/NewOrder';
 import NewProductInfo from '../src/components/sections/newProductPage/NewProductInfo';
 import SideCart from '../src/components/sections/newProductPage/SideCart';
+import CollectionFloatingMenu from '../src/components/sections/items/CollectionFloatingMenu';
 
 const newProductCollectionPage: React.FC = () => {
   const [selected, setSelected] = useState('');
@@ -20,13 +21,13 @@ const newProductCollectionPage: React.FC = () => {
       </Head>
       <MainLayout>
         <DivWrapper className="flex md:gap-10 flex-col md:flex-row gap-8 relative">
-          <FloatingMenu />
+          <CollectionFloatingMenu />
           <section className="mt-5 lg2:mt-12 w-full lg:grid lg:grid-cols-[1fr,_270px] xl:grid-cols-[1fr,_310px] lg:gap-5 xl:gap-10">
             <div className="">
               <NewProductInfo method={setSelected} value={selected} isCollection/>
             </div>
             <div className="relative">
-              <NewOrder method={setSelected} value={selected} className="hidden lg:block" />
+              <NewOrder method={setSelected} value={selected} className="hidden lg:block" isCollection/>
             </div>
           </section>
         </DivWrapper>
