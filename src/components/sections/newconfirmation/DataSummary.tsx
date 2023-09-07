@@ -1,33 +1,54 @@
-
-const DataSummary: React.FC = () => {
+interface DataSummaryProps {
+  mode?: string;
+}
+const DataSummary: React.FC<DataSummaryProps> = ({ mode }) => {
   const PersonalData = [
     { title: 'Nombre:', data: 'Adrián Rodríguez Amago' },
     { title: 'Email:', data: 'adrian@binpar.com' },
     { title: 'Dirección de envío:', data: 'C/ Callejo 30, 1ºD 28053 Madrid españa' },
     { title: 'Dirección de Facturacción:', data: 'C/ Roncesvalles 3, 1ºB 28007 Madrid España' },
   ];
+  const PersonalDataCollection = [
+    { title: 'Nombre:', data: 'Adrián Rodríguez Amago' },
+    { title: 'Email:', data: 'adrian@binpar.com' },
+    { title: 'Dirección de Facturacción:', data: 'C/ Roncesvalles 3, 1ºB 28007 Madrid España' },
+  ];
   const OthersData = [
     { title: 'Comentario:', data: 'Sin especificar' },
     { title: 'Horario:', data: 'Sin especificar' },
   ];
-  const comment = 'sin especificar'
+  const comment = 'sin especificar';
   return (
     <div className="mb-7 xs2:mb-12 md:grid grid-cols-[1fr_1fr] gap-10">
-      <div className='mb-7'>
+      <div className="mb-7">
         <h4 className="text-lg xs2:text-xl text-gray-500 font-semibold tracking-[.8px] xs2:tracking-[1.2px] items-center mb-5 after:content-[''] after:h-[2px] after:bg-gray-200 after:w-full after:rounded-full after:block after:mt-1">
           Datos de tu pedido
         </h4>
-        <ul>
-          {PersonalData.map((personalData, index) => (
-            <li
-              key={index}
-              className="text-xs xs:text-sm text-gray-400 font-medium tracking-[.9px] leading-5 mb-2 last:mb-0"
-            >
-              <p className="text-gray-500 font-bold">{personalData.title}</p>
-              <p className="text-sm xs:text-base">{personalData.data}</p>
-            </li>
-          ))}
-        </ul>
+        {mode !== 'collection' ? (
+          <ul>
+            {PersonalData.map((personalData, index) => (
+              <li
+                key={index}
+                className="text-xs xs:text-sm text-gray-400 font-medium tracking-[.9px] leading-5 mb-2 last:mb-0"
+              >
+                <p className="text-gray-500 font-bold">{personalData.title}</p>
+                <p className="text-sm xs:text-base">{personalData.data}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <ul>
+            {PersonalDataCollection.map((PersonalDataCollection, index) => (
+              <li
+                key={index}
+                className="text-xs xs:text-sm text-gray-400 font-medium tracking-[.9px] leading-5 mb-2 last:mb-0"
+              >
+                <p className="text-gray-500 font-bold">{PersonalDataCollection.title}</p>
+                <p className="text-sm xs:text-base">{PersonalDataCollection.data}</p>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <div>
         <div className="mb-7">
@@ -51,22 +72,27 @@ const DataSummary: React.FC = () => {
             </div>
           </div>
         </div>
-        <div>
-          <h4 className="text-lg xs2:text-xl text-gray-500 font-semibold tracking-[.8px] xs2:tracking-[1.2px] items-center mb-5 after:content-[''] after:h-[2px] after:bg-gray-200 after:w-full after:rounded-full after:block after:mt-1">
-            Otros detalles
-          </h4>
-          <ul aria-current={comment === 'sin especificar' } className='aria-current:flex items-start gap-10'>
-            {OthersData.map((othersData, index) => (
-              <li
-                key={index}
-                className="text-xs xs:text-sm text-gray-400 font-medium tracking-[.9px] leading-5 mb-2 last:mb-0"
-              >
-                <p className="text-gray-500 font-bold">{othersData.title}</p>
-                <p className="text-sm xs:text-base">{othersData.data}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {mode !== 'collection' && (
+          <div>
+            <h4 className="text-lg xs2:text-xl text-gray-500 font-semibold tracking-[.8px] xs2:tracking-[1.2px] items-center mb-5 after:content-[''] after:h-[2px] after:bg-gray-200 after:w-full after:rounded-full after:block after:mt-1">
+              Otros detalles
+            </h4>
+            <ul
+              aria-current={comment === 'sin especificar'}
+              className="aria-current:flex items-start gap-10"
+            >
+              {OthersData.map((othersData, index) => (
+                <li
+                  key={index}
+                  className="text-xs xs:text-sm text-gray-400 font-medium tracking-[.9px] leading-5 mb-2 last:mb-0"
+                >
+                  <p className="text-gray-500 font-bold">{othersData.title}</p>
+                  <p className="text-sm xs:text-base">{othersData.data}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

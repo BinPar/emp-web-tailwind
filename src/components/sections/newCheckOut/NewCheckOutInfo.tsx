@@ -51,7 +51,12 @@ const NewCheckOutInfo: React.FC<NewCheckOutInfoProps> = ({ method, value, code, 
     ) : (
       <CartItemCollection src={src} title={title} description={data} type={type} />
     )}
-    <OrderCheckout code={code} className="lg:hidden block" method={method} value={value} />
+    {mode !== 'collection' ? (
+      <OrderCheckout code={code} className="lg:hidden block" method={method} value={value} />
+    ) : (
+      <OrderCheckout code={code} className="lg:hidden block" method={method} value={value} isCollection/>
+    )}
+    
   </>
 );
 export default NewCheckOutInfo;

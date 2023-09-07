@@ -4,13 +4,21 @@ import DivWrapper from '../src/components/sections/items/DivWrapper';
 import StickyBuy from '../src/components/sections/items/StickyBuy';
 import MainLayout from '../src/components/sections/MainLayout';
 import OrderCheckout from '../src/components/sections/newCheckOut/OrderCheckout';
-import NewCheckOutInfo from '../src/components/sections/newCheckOut/NewCheckOutInfo';
 import ConfirmationInfo from '../src/components/sections/newconfirmation/ConfirmationInfo';
 import LongArrow from '../src/components/icons/LongArrow';
 import DataSummary from '../src/components/sections/newconfirmation/DataSummary';
+import { ParsedUrlQuery } from 'querystring';
+import { useRouter } from 'next/router';
+
+interface QueryParams extends ParsedUrlQuery {
+  mode?: string;
+}
 
 const confirmation: React.FC = () => {
   const [selected, setSelected] = useState('');
+  const router = useRouter();
+  const { mode } = router.query as QueryParams;
+  console.log(mode);
   return (
     <>
       <Head>
@@ -29,11 +37,32 @@ const confirmation: React.FC = () => {
                 <LongArrow className="w-6 rotate-180" />
                 volver
               </a>
-              <ConfirmationInfo method={setSelected} value={selected} />
-              <DataSummary/>
+              {mode === 'collection' ? (
+                <ConfirmationInfo method={setSelected} value={selected} mode={mode} />
+              ) : (
+                <ConfirmationInfo method={setSelected} value={selected} />
+              )}
+              {mode !== 'collection' ? <DataSummary /> : <DataSummary mode={mode} />}
             </div>
             <div className="relative">
-              <OrderCheckout isConfirmation code={true} method={setSelected} value={selected} className="hidden lg:block mt-12" />
+              {mode !== 'collection' ? (
+                <OrderCheckout
+                  isConfirmation
+                  code={true}
+                  method={setSelected}
+                  value={selected}
+                  className="hidden lg:block mt-12"
+                />
+              ) : (
+                <OrderCheckout
+                  isConfirmation
+                  code={true}
+                  method={setSelected}
+                  value={selected}
+                  className="hidden lg:block mt-12"
+                  isCollection
+                />
+              )}
             </div>
           </section>
         </DivWrapper>

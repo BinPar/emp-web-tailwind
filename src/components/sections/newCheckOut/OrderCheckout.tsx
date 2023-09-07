@@ -20,6 +20,7 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
   className,
   code,
   isConfirmation,
+  isCollection,
 }) => (
   <div
     className={twMerge(
@@ -32,13 +33,26 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
       Tu Pedido
     </h4>
     <div>
-      <TotalPriceBox
-        discount="ahorro de: 180,45€"
-        price="1.819"
-        finalPrice="1.638,55"
-        className="flex lg:block xl:flex"
-        extraClass="w-fit lg:!w-full xl:!w-fit mt-0 lg:mt-2 xl:mt-0"
-      />
+      {!isCollection ? (
+        <TotalPriceBox
+          discount="ahorro de: 180,45€"
+          price="1.819"
+          finalPrice="1.638,55"
+          className="flex lg:block xl:flex"
+          extraClass="w-fit lg:!w-full xl:!w-fit mt-0 lg:mt-2 xl:mt-0"
+        />
+      ) : (
+        <TotalPriceBox
+          discount="ahorro de: 180,45€"
+          finalPrice="24,90"
+          period="/ mes"
+          className="flex flex-col lg:flex-row lg:block"
+          extraClass="w-fit lg:!w-full xl:!w-fit mt-0"
+          isCollection
+          isConfirmation
+        />
+      )}
+
       {code && (
         <div className="rounded-lg bg-gray-100 p-4 mb-4">
           <div className="flex justify-between items-center mt-[3px]">
@@ -55,35 +69,41 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
           <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">IVA(4%):</p>
           <div className="w-fit text-right">
             <div className="flex gap-1 ml-3 justify-end text-right">
-              <p className="text-gray-500 text-lg font-bold">1.10</p>
+              <p className="text-gray-500 text-lg font-bold">{isCollection ? '0,96' : '1.10'}</p>
               <span className="text-1xs text-gray-500 font-black">€</span>
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center">
-          <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">IVA(21%):</p>
-          <div className="w-fit text-right">
-            <div className="flex gap-1 ml-3 justify-end text-right">
-              <p className="text-gray-500 text-lg font-bold">338</p>
-              <span className="text-1xs text-gray-500 font-black">€</span>
+        {!isCollection && (
+          <div className="flex justify-between items-center">
+            <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">IVA(21%):</p>
+            <div className="w-fit text-right">
+              <div className="flex gap-1 ml-3 justify-end text-right">
+                <p className="text-gray-500 text-lg font-bold">338</p>
+                <span className="text-1xs text-gray-500 font-black">€</span>
+              </div>
             </div>
           </div>
-        </div>
+        )}
         <div className="flex justify-between items-center">
           <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">Subtotal:</p>
           <div className="w-fit text-right">
             <div className="flex gap-1 ml-3 justify-end text-right">
-              <p className="text-gray-500 text-lg font-bold">1.573</p>
+              <p className="text-gray-500 text-lg font-bold">{isCollection ? '23,94' : '1.573'}</p>
               <span className="text-1xs text-gray-500 font-black">€</span>
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center mt-[3px]">
-          <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">Gastos de envío:</p>
-          <div className="w-fit text-right">
-            <p className="text-greencart text-sm tracking-[.8px] font-bold">GRATIS</p>
+        {!isCollection && (
+          <div className="flex justify-between items-center mt-[3px]">
+            <p className="text-xs tracking-[.5px] font-bold text-gray-500 -mt-1">
+              Gastos de envío:
+            </p>
+            <div className="w-fit text-right">
+              <p className="text-greencart text-sm tracking-[.8px] font-bold">GRATIS</p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
     <div className="mb-5 hidden lg:block">
@@ -99,7 +119,7 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
         </a>
       ) : (
         <a
-          href="/confirmation"
+          href={isCollection ? '/confirmation?mode=collection' : '/confirmation'}
           onClick={(): void => {
             value === '' ? method('error') : method('cart');
           }}
@@ -147,9 +167,12 @@ const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({
         </div>
       </div>
       <ul className="text-gray-400 text-2xs tracking-[.8px] font-semibold leading-3">
-        <li className='before:content-[""] before:h-1 before:w-1 before:block before:bg-gray-500 before:float-left before:mr-1 before:rounded-full before:mt-1 overflow-hidden mb-2'>
-          Entrega Hasta 72h laborables en península. Hasta 7 días laborables en Canarias y Baleares
-        </li>
+        {!isCollection && (
+          <li className='before:content-[""] before:h-1 before:w-1 before:block before:bg-gray-500 before:float-left before:mr-1 before:rounded-full before:mt-1 overflow-hidden mb-2'>
+            Entrega Hasta 72h laborables en península. Hasta 7 días laborables en Canarias y
+            Baleares
+          </li>
+        )}
         <li className='before:content-[""] before:h-1 before:w-1 before:block before:bg-gray-500 before:float-left before:mr-1 before:rounded-full before:mt-1 overflow-hidden'>
           Tarjeta de crédito/débito, paypal o domiciliación bancaria (ago único o en cuotas)
         </li>
