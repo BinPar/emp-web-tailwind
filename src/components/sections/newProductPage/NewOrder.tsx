@@ -74,31 +74,39 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({
       )}
     </div>
     <div className="mb-5 hidden lg:block">
-      <button
-        type="button"
-        onClick={(): void => {
-          value === '' ? method('error') : method('cart');
-        }}
-        className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
-      >
-        {!isCollection ?
-       <>
-       añadir al carrito
-        <NewCart className="h-6 w-6 text-white ml-2" />
-       </>
-       : <>probar 30 días gratis</>
-      }
-      </button>
       {!isCollection && (
-        <button
-          type="button"
+        <>
+          <button
+            type="button"
+            onClick={(): void => {
+              value === '' ? method('error') : method('cart');
+            }}
+            className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
+          >
+            añadir al carrito
+            <NewCart className="h-6 w-6 text-white ml-2" />
+          </button>
+          <button
+            type="button"
+            onClick={(): void => {
+              value === '' && method('error');
+            }}
+            className="min-h-[40px] py-1 w-full border-2 border-greencart text-greencart rounded-lg text-center text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 hover:text-darkGreenCart hover:border-darkGreenCart transition-all duration-300"
+          >
+            comprar en un click
+          </button>
+        </>
+      )}
+      {isCollection && (
+        <a
           onClick={(): void => {
             value === '' && method('error');
           }}
-          className="min-h-[40px] py-1 w-full border-2 border-greencart text-greencart rounded-lg text-center text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 hover:text-darkGreenCart hover:border-darkGreenCart transition-all duration-300"
+          href={value === 'error' ? '#' : '/register?mode=collection'}
+          className="min-h-[40px] py-1 w-full bg-greencart rounded-lg text-center text-white text-1xs font-bold uppercase tracking-[1.2px] mb-3 last-of-type:mb-0 flex justify-center items-center hover:bg-darkGreenCart transition-all duration-300"
         >
-          comprar en un click
-        </button>
+          Probar 30 días gratis
+        </a>
       )}
     </div>
     <div className='before:content-[""] before:h-[2px] before:rounded-full before:w-full before:block before:bg-gray-200 before:mb-5'>

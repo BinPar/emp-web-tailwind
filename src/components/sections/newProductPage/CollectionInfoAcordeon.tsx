@@ -6,7 +6,7 @@ import CollectionIncludedList from './CollectionIncludedList';
 
 const CollectionInfoAcordeon: React.FC = () => (
   <>
-    <ItemAcordeon id="description" title="DESCRIPCIÓN">
+    <ItemAcordeon id="description" title="Descripción">
       <InfoText>
         La colección <span className="font-bold">Mi Eureka Biblioteca de Anestesia</span> ofrece
         acceso a todo el contenido de Editorial Médica Panamericana en el campo de la{' '}
@@ -42,10 +42,10 @@ const CollectionInfoAcordeon: React.FC = () => (
         barreras para acceder al conocimiento como, cuando y donde sea necesario.
       </InfoText>
     </ItemAcordeon>
-    <ItemAcordeon id="addressed" title="DIRIGIDO A">
+    <ItemAcordeon id="addressed" title="Dirigido a">
       <InfoText>Profesionales de Anestesia</InfoText>
     </ItemAcordeon>
-    <ItemAcordeon title='OBRAS INCLUIDAS' id='included'>
+    <ItemAcordeon title='Obras incluidas' id='included'>
       <CollectionIncludedList/>
     </ItemAcordeon>
   </>

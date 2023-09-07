@@ -2,7 +2,11 @@ import { Dispatch, SetStateAction } from 'react';
 import NewInputForms from './NewInputForms';
 import NewInputCheck from './NewInputCheck';
 
-const NewLogin: React.FC = () => (
+interface NewLoginProps {
+  href: string;
+}
+
+const NewLogin: React.FC<NewLoginProps> = ({href}) => (
   <div className="max-w-[700px] m-auto">
     <p className="text-base text-gray-500 font-medium tracking-[.9px] mb-2 line-clamp-2 leading-5 text-center">
       Inicia sesión para acceder a tu cuenta y continuar con el proceso de compra
@@ -23,7 +27,7 @@ const NewLogin: React.FC = () => (
         </a>
       </div>
       <a
-        href="/newCheckOut"
+        href={href}
         className="bg-primary w-fit flex items-center text-white text-1xs font-bold uppercase tracking-[3px] h-10 px-10 rounded-lg m-auto mt-5"
       >
         Entrar

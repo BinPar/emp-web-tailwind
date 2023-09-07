@@ -11,6 +11,7 @@ interface OrderCheckoutProps {
   value: string;
   code: boolean;
   isConfirmation?: boolean;
+  isCollection?: boolean;
 }
 
 const OrderCheckout: React.FC<WithClassName<OrderCheckoutProps>> = ({

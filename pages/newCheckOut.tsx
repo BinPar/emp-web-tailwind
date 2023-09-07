@@ -17,11 +17,19 @@ import PersonalInfoPopUp from '../src/components/sections/newCheckOut/popUp/Pers
 import NewAddress from '../src/components/sections/newCheckOut/popUp/NewAddress';
 import NewCard from '../src/components/sections/newCheckOut/popUp/NewCard';
 import CouponsInfo from '../src/components/sections/newCheckOut/CouponsInfo';
+import { ParsedUrlQuery } from 'querystring';
+import { useRouter } from 'next/router';
 
-const newCheckOut: React.FC = () => {
+interface QueryParams extends ParsedUrlQuery {
+  mode?: string;
+}
+
+const newCheckOut: React.FC<QueryParams> = () => {
   const [selected, setSelected] = useState('');
   const [areaSelected, SetAreaSelected] = useState('');
   const [codeApply, SetCodeApply] = useState(false);
+  const router = useRouter();
+  const { mode } = router.query as QueryParams;
   return (
     <>
       <Head>
@@ -33,20 +41,27 @@ const newCheckOut: React.FC = () => {
         <DivWrapper className="flex md:gap-10 flex-col md:flex-row gap-8 relative">
           <section className="mt-10 lg2:mt-12 w-full lg:grid lg:grid-cols-[1fr,_270px] xl:grid-cols-[1fr,_310px] lg:gap-5 xl:gap-10">
             <div>
-              <NewCheckOutInfo code={codeApply} method={setSelected} value={selected} />
+              <NewCheckOutInfo code={codeApply} method={setSelected} value={selected} mode={mode}/>
               <CouponsInfo codeMethod={SetCodeApply} codeValue={codeApply} />
               <PersonalInfo method={SetAreaSelected} value={areaSelected} />
-              <AddressInfo method={SetAreaSelected} value={areaSelected} />
-              <PaymentInfo method={SetAreaSelected} value={areaSelected} />
-              <OtherInfo />
+              <AddressInfo method={SetAreaSelected} value={areaSelected} mode={mode} />
+              <PaymentInfo method={SetAreaSelected} value={areaSelected} mode={mode}/>
+              {mode !== 'collection' && <OtherInfo />}
             </div>
             <div className="relative">
-              <OrderCheckout
+              {mode !== 'collection' ? <OrderCheckout
                 code={codeApply}
                 method={setSelected}
                 value={selected}
                 className="hidden lg:block -mt-3"
-              />
+              /> : <OrderCheckout
+              code={codeApply}
+              method={setSelected}
+              value={selected}
+              className="hidden lg:block -mt-3"
+              isCollection
+            /> }
+              
             </div>
           </section>
         </DivWrapper>

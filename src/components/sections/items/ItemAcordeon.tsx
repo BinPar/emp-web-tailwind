@@ -16,7 +16,7 @@ const ItemAcordeon: React.FC<WithChildren<ItemAcordeonProps>> = ({ children, tit
     >
       <SubHeader className="w-full">
         <button
-          className="flex justify-between w-full pr-2 items-center"
+          className="flex justify-between w-full pr-2 items-center text-xl text-gray-500 font-semibold tracking-[1.2px]"
           type="button"
           onClick={(): void => setCloseInfoWrap(!closeInfoWrap)}
         >

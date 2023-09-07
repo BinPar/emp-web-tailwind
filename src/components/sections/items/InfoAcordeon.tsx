@@ -15,42 +15,42 @@ import TitleModule from './TitleModule';
 
 const InfoAcordeon: React.FC = () => (
   <>
-    <ItemAcordeon id="introduction" title="INTRODUCCION">
+    <ItemAcordeon id="introduction" title="Introducción">
       <IntroductionModule />
     </ItemAcordeon>
-    <ItemAcordeon id="university" title="UNIVERSIDAD">
+    <ItemAcordeon id="university" title="Universidad">
       <div className="w-52 m-auto">
         <Image alt="ufv" src="/assets/ufv.png" width={1400} height={377} />
       </div>
     </ItemAcordeon>
-    <ItemAcordeon id="description" title="DESCRIPCIÓN">
+    <ItemAcordeon id="description" title="Descripción">
       <DescriptionModule />
     </ItemAcordeon>
-    <ItemAcordeon id="addressed" title="DIRIGIDO A">
+    <ItemAcordeon id="addressed" title="Dirigido a">
       <AddressedModule />
     </ItemAcordeon>
-    <ItemAcordeon id="objectives" title="OBJETIVOS">
+    <ItemAcordeon id="objectives" title="Objetivos">
       <ObjetivesModule />
     </ItemAcordeon>
-    <ItemAcordeon id="contents" title="CONTENIDOS">
+    <ItemAcordeon id="contents" title="Contenidos">
       <ContentModule />
     </ItemAcordeon>
-    <ItemAcordeon id="sample" title="TEMA DE MUESTRA">
+    <ItemAcordeon id="sample" title="Tema de muestra">
       <SampleModule />
     </ItemAcordeon>
-    <ItemAcordeon id="title" title="TITULACIÓN">
+    <ItemAcordeon id="title" title="Titulación">
       <TitleModule />
     </ItemAcordeon>
-    <ItemAcordeon id="method" title="MÉTODO">
+    <ItemAcordeon id="method" title="Método">
       <MethodModule />
     </ItemAcordeon>
-    <ItemAcordeon id="payment" title="MÉTODOS DE PAGO">
+    <ItemAcordeon id="payment" title="Métodos de pago">
       <PaymentModule />
     </ItemAcordeon>
-    <ItemAcordeon id="author" title="AUTORES">
+    <ItemAcordeon id="author" title="Autores">
       <AuthorsModule />
     </ItemAcordeon>
-    <ItemAcordeon id="tags" title="ETIQUETAS">
+    <ItemAcordeon id="tags" title="Etiquetas">
       <TagsModule />
     </ItemAcordeon>
   </>
