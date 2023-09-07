@@ -123,7 +123,7 @@ const ProductSheet: React.FC<CollectionItemProps> = ({ isCollection }) => {
             <h4 className="text-primary font-bold tracking-[.5px] mb-1">COLECCIÓN</h4>
             <p className="text-2.5xs tracking-widest uppercase text-secondarygray font-light">
               Número de obras
-              <span className="normal-case font-bold text-1xs ml-2">40</span>
+              <span className="normal-case font-bold text-1xs ml-2">24</span>
             </p>
             <p className="text-2.5xs tracking-widest uppercase text-secondarygray font-light mb-3 mt-1">
               compatibilidad

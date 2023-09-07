@@ -2,6 +2,7 @@ import ItemAcordeon from '../items/ItemAcordeon';
 import DescriptionModule from '../items/DescriptionModule';
 import AddressedModule from '../items/AddressedModule';
 import InfoText from '../items/InfoText';
+import CollectionIncludedList from './CollectionIncludedList';
 
 const CollectionInfoAcordeon: React.FC = () => (
   <>
@@ -43,6 +44,9 @@ const CollectionInfoAcordeon: React.FC = () => (
     </ItemAcordeon>
     <ItemAcordeon id="addressed" title="DIRIGIDO A">
       <InfoText>Profesionales de Anestesia</InfoText>
+    </ItemAcordeon>
+    <ItemAcordeon title='OBRAS INCLUIDAS' id='included'>
+      <CollectionIncludedList/>
     </ItemAcordeon>
   </>
 );

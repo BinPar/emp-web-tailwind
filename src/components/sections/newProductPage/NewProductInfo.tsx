@@ -118,7 +118,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ method, value, isCollection }
           )}
         </div>
       </div>
-      <NewOrder method={method} value={value} className="lg:hidden block" />
+      <NewOrder method={method} value={value} className="lg:hidden block" isCollection/>
       {!isCollection ? <InfoAcordeon /> : <CollectionInfoAcordeon/>}
     </article>
   );

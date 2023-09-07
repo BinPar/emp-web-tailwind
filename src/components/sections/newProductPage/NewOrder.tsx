@@ -30,7 +30,7 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({
       Tu Selección
     </h4>
     <div>
-      <div className="flex gap-3 mb-4">
+      <div className="grid grid-cols-2 gap-3 mb-4">
         {!isCollection ? (
           <>
             <ProductOption
@@ -47,16 +47,16 @@ const NewOrder: React.FC<WithClassName<NewOrderProps>> = ({
             <ProductOption
               method={method}
               value={value}
-              type={'Pago Mensual'}
+              type={'Mensual'}
               price={'24,90'}
-              period=" / mes"
+              period="mes"
             />
             <ProductOption
               method={method}
               value={value}
-              type={'Pago Anual'}
+              type={'Anual'}
               price={'249'}
-              period=" / año"
+              period="año"
               data="ahorro 49,80€"
             />
           </>

@@ -36,12 +36,12 @@ const TotalPriceBox: React.FC<WithClassName<TotalPriceBoxProps>> = ({
         )}
 
         <div className="flex gap-1 ml-3">
-          <p className="text-gray-500 text-2xl font-bold">{finalPrice}</p>
-          <span className="text-1xs text-gray-500 font-black">€</span>
-          {isCollection && <span className='ml-1 uppercase text-gray-500 text-2xl font-bold'>{period}</span>}
+          <p aria-current={isCollection} className="text-gray-500 text-2xl font-bold aria-current:leading-5">{finalPrice}</p>
+          <span aria-current={!isCollection} className="text-1xs text-gray-500 font-black aria-current:leading-7 leading-4">€</span>
+          {isCollection && <span className='ml-[2px] uppercase text-gray-500 leading-5 text-lg font-bold'>{period}</span>}
         </div>
       </div>
-      <p className="text-gray-400 text-2xs tracking-[.8px] -mt-1">(IVA incluido)</p>
+      <p aria-current={isCollection} className="text-gray-400 text-2xs tracking-[.8px] -mt-[2px] aria-current:mt-[2px]">(IVA incluido)</p>
     </div>
   </div>
 );

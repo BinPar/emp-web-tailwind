@@ -12,7 +12,7 @@ const TagsModule: React.FC = () => (
         <a href="#" className="text-xs tracking-[1px] text-gray-400 hover:text-primary">
           Médico/a
         </a>
-        <ul className="pl-5 list-disc li">
+        <ul className="pl-5 list-disc">
           <TagsItem link="#">Anestesiología y reanimación</TagsItem>
           <TagsItem link="#">Rehabilitación y medicina física</TagsItem>
           <TagsItem link="#">Reumatología</TagsItem>
@@ -27,7 +27,7 @@ const TagsModule: React.FC = () => (
         <a href="#" className="text-xs tracking-[1px] text-gray-400 hover:text-primary">
           Fisioterapeuta
         </a>
-        <ul className="pl-5 list-disc li">
+        <ul className="pl-5 list-disc">
           <TagsItem link="#">Anestesiología y reanimación</TagsItem>
         </ul>
       </InfoListItem>
